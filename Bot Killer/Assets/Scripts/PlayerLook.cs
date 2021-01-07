@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
@@ -11,7 +9,7 @@ public class PlayerLook : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;  // To hide and lock cursor on game screen .
     }
 
     private void Update()
@@ -25,13 +23,13 @@ public class PlayerLook : MonoBehaviour
         lookUpDown();
     }
 
-    private void lookLeftRight()
+    private void lookLeftRight() // Look Left ,Right by mouse.
     {
         float lookX = Input.GetAxis("Mouse X") * lookSensitivity * Time.deltaTime;
         playerBody.Rotate(Vector3.up * lookX);
     }
  
-    private void lookUpDown()
+    private void lookUpDown() // Look Up ,Down by mouse.
     {
         float lookY = Input.GetAxis("Mouse Y") * lookSensitivity * Time.deltaTime;
         xRotation -= lookY;
