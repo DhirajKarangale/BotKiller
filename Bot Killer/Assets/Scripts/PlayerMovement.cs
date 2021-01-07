@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -19,14 +17,14 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Movement();
-        Gravity();
+        Gravity();   
         Jump();
     }
 
     private void Movement()  // Adding left, right, forward, backword movement; 
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = SimpleInput.GetAxis("Horizontal");
+        float z = SimpleInput.GetAxis("Vertical");
 
         Vector3 move = (transform.right * x) + (transform.forward * z);
         controller.Move(move * speed * Time.deltaTime);
@@ -50,10 +48,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump() // Adding Jump to Player.
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump"))
+        {
+            JumpButton();
+        }
+    }
+
+    public void JumpButton()
+    {
+       if(isGrounded)
         {
             gravityDownVelocity.y = Mathf.Sqrt(jumpHeight * (-2f) * gravity);
         }
     }
-
 }
