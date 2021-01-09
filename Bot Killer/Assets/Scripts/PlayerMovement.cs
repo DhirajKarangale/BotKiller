@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            JumpButton();
+            JumpButton(); 
         }
     }
 
