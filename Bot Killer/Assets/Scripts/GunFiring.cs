@@ -20,7 +20,7 @@ public class GunFiring : MonoBehaviour
     [SerializeField] GameObject muzzelFlash;
     [SerializeField] TextMeshProUGUI ammoDisplay;
 
-    [SerializeField] Camera camera;
+    [SerializeField] Camera fpscamera;
     [SerializeField] Transform attackPoint;
 
     [SerializeField] bool allowInvoke = true;
@@ -29,12 +29,12 @@ public class GunFiring : MonoBehaviour
 
     public void PointerUp()
     {
-        shotting = false;
+        isFiring = true;
     }
 
     public void PointerDown()
     {
-        shotting = true;
+        isFiring = false;
     }
 
     private void Awake()
@@ -45,36 +45,11 @@ public class GunFiring : MonoBehaviour
 
     private void Update() 
     {
-        if(shotting)
+        if(isFiring)
         {
-
-            if (readyToShoot && shotting && !reloading && (bulletsLeft > 0))
-            {
-                Shoot();
-            }
-
-            // Automatically Reload.
-            if (readyToShoot && shotting && !reloading && (bulletsLeft <= 0))
-            {
-                Reload();
-            }
-
-            // Ammo Display.
-            if (ammoDisplay != null)
-            {
-                ammoDisplay.SetText(bulletsLeft + " / " + magazineSize);
-            }
-
-            // reload.
-            if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
-            {
-                Reload();
-            }
-
+            MyInput();
         }
-        MyInput();
     }
-
 
 
    
@@ -119,11 +94,11 @@ public class GunFiring : MonoBehaviour
 
 
 
-    private void Shoot()
+    public void Shoot()
     {
         readyToShoot = false;
 
-        Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Setting target posotion to middle of screen.
+        Ray ray = fpscamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Setting target posotion to middle of screen.
 
         RaycastHit hit;
 
@@ -158,7 +133,7 @@ public class GunFiring : MonoBehaviour
 
         // Add force to bullet.
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
-        currentBullet.GetComponent<Rigidbody>().AddForce(camera.transform.up * upwardForce , ForceMode.Impulse);
+        currentBullet.GetComponent<Rigidbody>().AddForce(fpscamera.transform.up * upwardForce , ForceMode.Impulse);
 
        
         // Destroy Bullets.
@@ -174,7 +149,7 @@ public class GunFiring : MonoBehaviour
 
         if(allowInvoke)
         {
-            Invoke("ResetShot", timeBetweenShotting);
+            Invoke("ResetShot", timeBetweenShotting);  
             allowInvoke = false;
 
         }
