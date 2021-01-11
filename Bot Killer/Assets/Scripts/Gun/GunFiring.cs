@@ -9,16 +9,19 @@ public class GunFiring : MonoBehaviour
 
     [SerializeField] float shootForce, upwardForce;
 
+    [SerializeField] float impactForce;
     [SerializeField] int damage;
     [SerializeField] float timeBetweenShotting, spread, reloadTime, timeBetweenShots;
     [SerializeField] int magazineSize, bulletsPerTrap;
     [SerializeField] bool allowHoldButton;
 
-
+    
     private int bulletsLeft, bulletsShots;
 
     private bool shotting, readyToShoot, reloading;
 
+    [SerializeField] Animator animator;
+    [SerializeField] GameObject impactEffect;
     [SerializeField] GameObject muzzelFlash;
     [SerializeField] TextMeshProUGUI ammoDisplay;
 
@@ -144,7 +147,6 @@ public class GunFiring : MonoBehaviour
             if(item !=null)
             {
                 item.TakeDamage(damage);
-                Destroy(currentBullet);
             }
         }
         else
@@ -174,8 +176,8 @@ public class GunFiring : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpscamera.transform.up * upwardForce , ForceMode.Impulse);
 
-        // Destroy Bullets Automatically.
-        Destroy(currentBullet, 5f);
+        // Destroy Bullets Automatically. 
+        Destroy(currentBullet, 3f);    
 
       
 
@@ -186,6 +188,17 @@ public class GunFiring : MonoBehaviour
           
         }
 
+        // Add force to object
+        if(hit.rigidbody !=null)
+        {
+            hit.rigidbody.AddForce(hit.normal * impactForce);
+        }
+
+        if(impactEffect !=null)
+        {
+          GameObject currentImpactEffect = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(currentImpactEffect, 5f);
+        }
 
         bulletsLeft--;
         bulletsShots++;
@@ -211,7 +224,9 @@ public class GunFiring : MonoBehaviour
     public void Reload()
     {
         reloading = true;
+        animator.SetBool("Reloading", true);
         Invoke("ReloadingFinish", reloadTime);
+        animator.SetBool("Reloading", false);
     }
 
     private void ReloadingFinish()
