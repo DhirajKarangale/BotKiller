@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GunFiring : MonoBehaviour
 {
+    AudioSource audioSource;
+
     [SerializeField] GameObject bullets;
 
     [SerializeField] float shootForce, upwardForce;
@@ -23,18 +25,19 @@ public class GunFiring : MonoBehaviour
     [SerializeField] Camera fpscamera;
     [SerializeField] Transform attackPoint;
 
+   
     [SerializeField] bool allowInvoke = true;
-
-    bool isFiring;
+ 
+   GameObject currentBullet;
 
     public void PointerUp()
     {
-        isFiring = true;
+        shotting = false;
     }
 
     public void PointerDown()
     {
-        isFiring = false;
+        shotting = true;
     }
 
     private void Awake()
@@ -43,11 +46,38 @@ public class GunFiring : MonoBehaviour
         readyToShoot = true;     
     }
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Update() 
     {
-        if(isFiring)
+        // Ammo Display.
+        if (ammoDisplay != null)
         {
-            MyInput();
+            ammoDisplay.SetText(bulletsLeft + " / " + magazineSize);
+        }
+      
+        // Automatically Reload.
+        if (!reloading && (bulletsLeft <= 0))
+        {
+            Reload();
+        }
+
+        // reload.
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
+        {
+            Reload();
+        }
+
+        if (shotting)
+        {
+            if (readyToShoot && shotting && !reloading && (bulletsLeft > 0))
+            {
+                Shoot();
+            }
+
         }
     }
 
@@ -67,7 +97,7 @@ public class GunFiring : MonoBehaviour
             shotting = Input.GetKeyDown(KeyCode.Z);
         }
 
-        if (readyToShoot && shotting && !reloading && (bulletsLeft > 0))
+        if (readyToShoot && !reloading && (bulletsLeft > 0))
         {
             Shoot();
         }
@@ -96,17 +126,26 @@ public class GunFiring : MonoBehaviour
 
     public void Shoot()
     {
+        audioSource.Play();
         readyToShoot = false;
-
+        RaycastHit hit;
         Ray ray = fpscamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Setting target posotion to middle of screen.
 
-        RaycastHit hit;
+
 
         // Checking what ray is hitting.
-        Vector3 targetPoint;
+         Vector3 targetPoint;
+  
         if(Physics.Raycast(ray,out hit))
         {
             targetPoint = hit.point;
+          
+           ItemsDestroy item =  hit.transform.GetComponent<ItemsDestroy>();
+            if(item !=null)
+            {
+                item.TakeDamage(damage);
+                Destroy(currentBullet);
+            }
         }
         else
         {
@@ -126,7 +165,7 @@ public class GunFiring : MonoBehaviour
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
         // Instantiate bullets.
-        GameObject currentBullet = Instantiate(bullets, attackPoint.position, Quaternion.identity);
+         currentBullet = Instantiate(bullets, attackPoint.position, Quaternion.identity);
 
         // Rotate Bullets to Shoot Direction.
         currentBullet.transform.forward = directionWithoutSpread.normalized;
@@ -135,14 +174,18 @@ public class GunFiring : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpscamera.transform.up * upwardForce , ForceMode.Impulse);
 
-       
-        // Destroy Bullets.
+        // Destroy Bullets Automatically.
         Destroy(currentBullet, 5f);
 
-        if(muzzelFlash != null)
+      
+
+        if (muzzelFlash != null)
         {
-            Instantiate(muzzelFlash, attackPoint.position, Quaternion.identity);
+          GameObject currentMuzzelFlash = Instantiate(muzzelFlash, attackPoint.position, Quaternion.identity);
+            Destroy(currentMuzzelFlash, 5f);
+          
         }
+
 
         bulletsLeft--;
         bulletsShots++;
