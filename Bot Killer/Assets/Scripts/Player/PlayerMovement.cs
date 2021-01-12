@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] CharacterController controller;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask groundMask;
-
-     Vector3 gravityDownVelocity;
-     bool isGrounded;
-
+    [Header("Player Attributes")]
     [SerializeField] float speed = 25f;
     [SerializeField] float gravity = -25f;
     [SerializeField] float groundDistance = 0.4f;
     [SerializeField] float jumpHeight = 5f;
+
+    [Header("Points")]
+    [SerializeField] CharacterController controller;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] LayerMask groundMask;
+
+    private Vector3 gravityDownVelocity;
+    private bool isGrounded;
 
     private void Update()
     {
