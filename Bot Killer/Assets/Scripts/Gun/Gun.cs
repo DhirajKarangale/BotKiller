@@ -61,8 +61,8 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
-        originalPosotion = transform.localPosition;
-        originalRotation = transform.localEulerAngles;
+        originalPosotion = this.gameObject.transform.position;
+        originalRotation = this.gameObject.transform.eulerAngles;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -74,15 +74,16 @@ public class Gun : MonoBehaviour
             {
                 bulletsShots = 0;
                 Shoot();
+               
             }
         }
+        Recoil();
 
         UpdatingBulletsMaterial();
     }
 
     private void UpdatingBulletsMaterial()
     {
-            
         // Ammo Display.
         if (ammoDisplay != null)
         {
@@ -98,7 +99,6 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
-        Recoil();
         readyToShoot = false;
         GunSound();
         AttackPosition();
@@ -234,14 +234,14 @@ public class Gun : MonoBehaviour
     // Add Recoil.
     private void AddRecoil()
     {
-        transform.localPosition += RecoilPosition;
-        transform.localEulerAngles += RecoilRotation;
+        this.gameObject.transform.position += RecoilPosition;
+        this.gameObject.transform.eulerAngles += RecoilRotation;
     }
 
     // Stop Recoil.
     private void StopRecoil()
     {
-        transform.localPosition = originalPosotion;
-        transform.localEulerAngles = originalRotation;
+        this.gameObject.transform.position = originalPosotion;
+        this.gameObject.transform.eulerAngles = originalRotation;
     }
 }
