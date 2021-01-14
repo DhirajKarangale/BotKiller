@@ -3206,7 +3206,6 @@ GameObject:
   - component: {fileID: 1385895666}
   - component: {fileID: 1385895667}
   - component: {fileID: 1385895668}
-  - component: {fileID: 1385895669}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -3264,7 +3263,7 @@ MonoBehaviour:
   fpscamera: {fileID: 963194227}
   attackPoint: {fileID: 986293550}
   animator: {fileID: 1385895668}
-  RecoilPosition: {x: 5, y: 0, z: 0}
+  RecoilPosition: {x: -1, y: 0, z: 0}
   RecoilRotation: {x: 0, y: 0, z: 0}
 --- !u!82 &1385895667
 AudioSource:
@@ -3381,18 +3380,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1385895669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385895664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580e33788a73a3840860e30c6547f146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1448069428
 GameObject:
   m_ObjectHideFlags: 0
