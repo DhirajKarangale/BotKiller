@@ -34,15 +34,15 @@ public class Gun : MonoBehaviour
     [Header("Animatation")]
     [SerializeField] Animator animator;
 
-    private Vector3 originalRotation;
-    private Vector3 originalPosotion;
+    private Vector3 bulletOriginalPosotion;
     [Header("Recoil Posotion")]
-    [SerializeField] Vector3 RecoilPosition;
-    [SerializeField] Vector3 RecoilRotation;
+    public Vector3 bulletPosition;
 
     private bool readyToShoot, reloading, shotting;
     private bool allowInvoke = true;
 
+   public Recoil recoil;
+    
     public void PointerUp()
     {
         shotting = false;
@@ -60,30 +60,22 @@ public class Gun : MonoBehaviour
     }
 
     private void Start()
-    {
-        originalPosotion = this.gameObject.transform.position;
-        originalRotation = this.gameObject.transform.eulerAngles;
+    { 
+        bulletOriginalPosotion = gameObject.transform.localPosition;
         audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() 
-    {
+    {  
         if (shotting)
         {
             if (readyToShoot && !reloading && (bulletsLeft > 0))
             {
                 bulletsShots = 0;
                 Shoot();
-               
             }
         }
-        Recoil();
-
-        UpdatingBulletsMaterial();
-    }
-
-    private void UpdatingBulletsMaterial()
-    {
+      
         // Ammo Display.
         if (ammoDisplay != null)
         {
@@ -96,9 +88,11 @@ public class Gun : MonoBehaviour
             Reload();
         }
     }
-
+    
     public void Shoot()
     {
+        recoil.Fire();
+        BulletPosition();
         readyToShoot = false;
         GunSound();
         AttackPosition();
@@ -170,7 +164,7 @@ public class Gun : MonoBehaviour
     // Adding Bullets.
     private void AddingBullets()
     {
-         // Instantiate bullets.
+        // Instantiate bullets.
         currentBullet = Instantiate(bullets, attackPoint.position, Quaternion.identity);
 
         // Rotate Bullets to Shoot Direction.
@@ -195,7 +189,7 @@ public class Gun : MonoBehaviour
             GameObject currentMuzzelFlash = Instantiate(muzzelFlash, attackPoint.position, Quaternion.identity);
             Destroy(currentMuzzelFlash, 5f);
         }
-
+          
         if (impactEffect != null)
         {
             GameObject currentImpactEffect = Instantiate(impactEffect, targetPoint, Quaternion.LookRotation(directionOfAttackAndHitPoint.normalized));
@@ -219,29 +213,9 @@ public class Gun : MonoBehaviour
         reloading = false;
     }
 
-    private void Recoil()
+    // Bullet Position
+    private void BulletPosition()
     {
-        if ((shotting && !reloading) == true)
-        {
-            AddRecoil();
-        }
-        else if ((shotting && !reloading) == false)
-        {
-            StopRecoil();
-        }
-    }
-
-    // Add Recoil.
-    private void AddRecoil()
-    {
-        this.gameObject.transform.position += RecoilPosition;
-        this.gameObject.transform.eulerAngles += RecoilRotation;
-    }
-
-    // Stop Recoil.
-    private void StopRecoil()
-    {
-        this.gameObject.transform.position = originalPosotion;
-        this.gameObject.transform.eulerAngles = originalRotation;
+        gameObject.transform.localPosition += bulletPosition;
     }
 }
