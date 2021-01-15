@@ -3826,7 +3826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986293549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.647, y: 0.56, z: 1.51}
+  m_LocalPosition: {x: -0.647, y: 0.56, z: 0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1385895665}
@@ -4591,7 +4591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootForce: 20
-  impactForce: 400
+  impactForce: 700
   damage: 10
   timeBetweenShotting: 0.5
   reloadTime: 2
@@ -4600,12 +4600,12 @@ MonoBehaviour:
   bulletsPerTrap: 1
   bullets: {fileID: 1012668721457418666, guid: 8b8503aeaa4ec554ba52232ae1a03afb, type: 3}
   impactEffect: {fileID: 4110541473448793614, guid: 1ca276339c5f75f408c19de97718caf3, type: 3}
-  muzzelFlash: {fileID: 8947974817962594530, guid: 9842a3036f3d07642bf8d834eeb5d1e5, type: 3}
+  muzzelFlash: {fileID: 0}
   ammoDisplay: {fileID: 391635696}
   fpscamera: {fileID: 963194227}
   attackPoint: {fileID: 986293550}
   animator: {fileID: 1385895668}
-  bulletPosition: {x: 0, y: 0, z: 2}
+  bulletPosition: {x: 0, y: 0, z: 0.5}
   recoil: {fileID: 1385895669}
 --- !u!82 &1385895667
 AudioSource:
@@ -4739,8 +4739,8 @@ MonoBehaviour:
   PositionDampTime: 6
   RotationDampTime: 5
   BackForce: 30
-  RotationRecoil: {x: 0, y: 0, z: 0}
-  PushBackRecoil: {x: 0, y: 0, z: -2}
+  RotationRecoil: {x: -20, y: 0, z: 0}
+  PushBackRecoil: {x: 0, y: 0, z: -3}
 --- !u!1 &1436497645
 GameObject:
   m_ObjectHideFlags: 0

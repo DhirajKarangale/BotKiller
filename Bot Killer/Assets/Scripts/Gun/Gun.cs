@@ -35,9 +35,9 @@ public class Gun : MonoBehaviour
     [SerializeField] Animator animator;
 
     private Vector3 bulletOriginalPosotion;
-    [Header("Recoil Posotion")]
-    public Vector3 bulletPosition;
-
+    [Header("Bullet Posotion")]
+    [SerializeField] Vector3 bulletPosition;
+    
     private bool readyToShoot, reloading, shotting;
     private bool allowInvoke = true;
 
