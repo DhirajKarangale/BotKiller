@@ -19,12 +19,13 @@ public class Gun : MonoBehaviour
     [SerializeField] int magazineSize, bulletsPerTrap;
     private int bulletsLeft, bulletsShots;
 
-    [Header("Bullet Prefab")]
+    [Header("Prefab")]
     [SerializeField] GameObject bullets;
+    public Recoil recoil;
+    public ParticleSystem muzzelFlash;
 
     [Header("Display")]
     [SerializeField] GameObject impactEffect;
-    [SerializeField] GameObject muzzelFlash;
     [SerializeField] TextMeshProUGUI ammoDisplay;
     [SerializeField] Camera fpscamera;
 
@@ -33,16 +34,15 @@ public class Gun : MonoBehaviour
 
     [Header("Animatation")]
     [SerializeField] Animator animator;
-
-    private Vector3 bulletOriginalPosotion;
-    [Header("Bullet Posotion")]
-    [SerializeField] Vector3 bulletPosition;
-    
+      
     private bool readyToShoot, reloading, shotting;
     private bool allowInvoke = true;
 
-   public Recoil recoil;
+   
     
+
+
+
     public void PointerUp()
     {
         shotting = false;
@@ -61,7 +61,6 @@ public class Gun : MonoBehaviour
 
     private void Start()
     { 
-        bulletOriginalPosotion = gameObject.transform.localPosition;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -91,8 +90,8 @@ public class Gun : MonoBehaviour
     
     public void Shoot()
     {
+        muzzelFlash.Play();
         recoil.Fire();
-        BulletPosition();
         readyToShoot = false;
         GunSound();
         AttackPosition();
@@ -184,12 +183,6 @@ public class Gun : MonoBehaviour
     // Adding Gun Effects.
     private void GunEffects()
     {
-        if (muzzelFlash != null)
-        {
-            GameObject currentMuzzelFlash = Instantiate(muzzelFlash, attackPoint.position, Quaternion.identity);
-            Destroy(currentMuzzelFlash, 5f);
-        }
-          
         if (impactEffect != null)
         {
             GameObject currentImpactEffect = Instantiate(impactEffect, targetPoint, Quaternion.LookRotation(directionOfAttackAndHitPoint.normalized));
@@ -212,10 +205,5 @@ public class Gun : MonoBehaviour
         bulletsLeft = magazineSize;
         reloading = false;
     }
-
-    // Bullet Position
-    private void BulletPosition()
-    {
-        gameObject.transform.localPosition += bulletPosition;
-    }
+      
 }
