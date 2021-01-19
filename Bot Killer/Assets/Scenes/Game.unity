@@ -1355,6 +1355,7 @@ GameObject:
   - component: {fileID: 275233090}
   - component: {fileID: 275233092}
   - component: {fileID: 275233093}
+  - component: {fileID: 275233094}
   m_Layer: 0
   m_Name: FPS Player
   m_TagString: Untagged
@@ -1433,6 +1434,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &275233094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275233089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f496e99551a10c4c95467e500e56151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotting: 0
+  isReload: 0
 --- !u!1 &304292271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 777134183}
+  - component: {fileID: 777134184}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -2712,6 +2728,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &777134184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777134182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88520e7ab071c1f4b8321e817780eed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponManager: {fileID: 275233094}
 --- !u!1 &788173119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,8 +3203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1710012961}
-        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+      - m_Target: {fileID: 777134184}
+        m_TargetAssemblyTypeName: WeaponButton, Assembly-CSharp
         m_MethodName: Reload
         m_Mode: 1
         m_Arguments:
@@ -5393,8 +5422,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1710012961}
-          m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        - m_Target: {fileID: 777134184}
+          m_TargetAssemblyTypeName: WeaponButton, Assembly-CSharp
           m_MethodName: PointerUp
           m_Mode: 1
           m_Arguments:
@@ -5409,8 +5438,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1710012961}
-          m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        - m_Target: {fileID: 777134184}
+          m_TargetAssemblyTypeName: WeaponButton, Assembly-CSharp
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -6027,6 +6056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 1710012961}
+  weaponManager: {fileID: 275233094}
   animator: {fileID: 1722660707}
 --- !u!95 &1722660707
 Animator:
@@ -7877,9 +7907,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: ammoDisplay
       value: 
       objectReference: {fileID: 391635696}
+    - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 777134184}
+    - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
+      propertyPath: weaponManager
+      value: 
+      objectReference: {fileID: 275233094}
     - target: {fileID: 923428660095372490, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: PushBackRecoilPositionPoint
       value: 
@@ -7961,10 +8003,22 @@ PrefabInstance:
       propertyPath: RotationRecoilPositionPoint
       value: 
       objectReference: {fileID: 1722660705}
+    - target: {fileID: 1352346403, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352346403, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: fpscamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: ammoDisplay
       value: 
@@ -7973,6 +8027,14 @@ PrefabInstance:
       propertyPath: muzzelFlash
       value: 
       objectReference: {fileID: 5278222020006911278, guid: 188e3099f12e05441b0374e22a304b51, type: 3}
+    - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 777134184}
+    - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
+      propertyPath: weaponManager
+      value: 
+      objectReference: {fileID: 275233094}
     - target: {fileID: 8295371382366911092, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: m_RootOrder
       value: 1
