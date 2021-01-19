@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Attributes")]
-    [SerializeField] float speed = 25f;
+    [SerializeField] float walkSpeed = 25f;
     [SerializeField] float gravity = -25f;
     [SerializeField] float groundDistance = 0.4f;
     [SerializeField] float jumpHeight = 5f;
@@ -15,12 +15,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 gravityDownVelocity;
     private bool isGrounded;
-
+       
+    
     private void Update()
     {
         Movement();
         Gravity();   
         Jump();
+
     }
 
     private void Movement()  // Adding left, right, forward, backword movement; 
@@ -29,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         float z = SimpleInput.GetAxis("Vertical");
 
         Vector3 move = (transform.right * x) + (transform.forward * z);
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * walkSpeed * Time.deltaTime);
     }
 
     private void Gravity()   // Adding Gravity.
