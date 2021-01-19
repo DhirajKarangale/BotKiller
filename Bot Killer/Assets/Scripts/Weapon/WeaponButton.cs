@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class WeaponButton : MonoBehaviour
 { 
-    [SerializeField] WeaponManager weaponManager;
+    public bool shotting,isReload;
     
     public void PointerUp()
     {
-      weaponManager.shotting = false;
+      shotting = false;
     }
 
     public void PointerDown()
     {
-      weaponManager.shotting = true;
+      shotting = true;
     }
     
     public void Reload()
     {
-        weaponManager.isReload = true;
+      isReload = true;
     }
   
 }

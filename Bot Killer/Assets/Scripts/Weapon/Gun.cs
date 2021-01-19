@@ -23,9 +23,8 @@ public class Gun : MonoBehaviour
     [Header("Prefab")]
     [SerializeField] GameObject bullets;
     [SerializeField] Recoil recoil;
-    public WeaponButton weaponButton;
-    public WeaponManager weaponManager;
-
+    [SerializeField] WeaponButton weaponButton;
+     
     [Header("Display")]
     [SerializeField] GameObject muzzelFlash;
     [SerializeField] GameObject impactEffect;
@@ -34,7 +33,7 @@ public class Gun : MonoBehaviour
 
     [Header("Points")]
     [SerializeField] Transform attackPoint;
-
+    
     public bool reloading;
     private bool readyToShoot;
     private bool allowInvoke = true;
@@ -64,7 +63,7 @@ public class Gun : MonoBehaviour
 
     private void Update() 
     {  
-        if (weaponManager.shotting)
+        if (weaponButton.shotting)
         {
             if (readyToShoot && !reloading && (bulletsLeft > 0))
             {
@@ -86,12 +85,10 @@ public class Gun : MonoBehaviour
         }
 
         // Reload Button.
-        if(weaponManager.isReload)
+        if(weaponButton.isReload)
         {
-          if(bulletsLeft<magazineSize)
-           {
-              Reload();
-           }
+             Reload();
+         
         }
     }
     
@@ -215,6 +212,5 @@ public class Gun : MonoBehaviour
         bulletsLeft = magazineSize;
         reloading = false;
     }
-      
-  
+       
 }

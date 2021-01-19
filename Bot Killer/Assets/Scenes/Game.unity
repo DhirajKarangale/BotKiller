@@ -1355,7 +1355,6 @@ GameObject:
   - component: {fileID: 275233090}
   - component: {fileID: 275233092}
   - component: {fileID: 275233093}
-  - component: {fileID: 275233094}
   m_Layer: 0
   m_Name: FPS Player
   m_TagString: Untagged
@@ -1434,20 +1433,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &275233094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275233089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f496e99551a10c4c95467e500e56151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotting: 0
-  isReload: 0
 --- !u!1 &304292271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,7 +2725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88520e7ab071c1f4b8321e817780eed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponManager: {fileID: 275233094}
+  shotting: 0
+  isReload: 0
 --- !u!1 &788173119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3757,6 +3743,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookSensitivity: 160
   playerBody: {fileID: 275233091}
+--- !u!114 &1052115964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
+  m_PrefabInstance: {fileID: 923428659510572777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc994f2c1f7564498f64eb4fc92d5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1111071652
 GameObject:
   m_ObjectHideFlags: 0
@@ -5903,17 +5900,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700687533}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1710012961 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
-  m_PrefabInstance: {fileID: 923428659510572777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc994f2c1f7564498f64eb4fc92d5fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1721083269
 GameObject:
   m_ObjectHideFlags: 0
@@ -6055,8 +6041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7edb1456c4b921f469fc38296b4f68b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1710012961}
-  weaponManager: {fileID: 275233094}
+  gun: {fileID: 1052115964}
+  weaponButton: {fileID: 777134184}
   animator: {fileID: 1722660707}
 --- !u!95 &1722660707
 Animator:
@@ -7903,6 +7889,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1722660705}
     m_Modifications:
     - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
+      propertyPath: ani
+      value: 
+      objectReference: {fileID: 1722660706}
+    - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: fpscamera
       value: 
       objectReference: {fileID: 963194227}
@@ -7915,13 +7905,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391635696}
     - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
+      propertyPath: animatation
+      value: 
+      objectReference: {fileID: 1722660706}
+    - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 777134184}
     - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: weaponManager
       value: 
-      objectReference: {fileID: 275233094}
+      objectReference: {fileID: 0}
     - target: {fileID: 923428660095372490, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: PushBackRecoilPositionPoint
       value: 
@@ -8024,9 +8018,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391635696}
     - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
+      propertyPath: animatation
+      value: 
+      objectReference: {fileID: 1722660706}
+    - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: muzzelFlash
       value: 
-      objectReference: {fileID: 5278222020006911278, guid: 188e3099f12e05441b0374e22a304b51, type: 3}
+      objectReference: {fileID: 4210367709866453527, guid: 79b2759b8387e3a4e89e1524d6ec7309, type: 3}
     - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: weaponButton
       value: 
@@ -8034,7 +8032,7 @@ PrefabInstance:
     - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: weaponManager
       value: 
-      objectReference: {fileID: 275233094}
+      objectReference: {fileID: 0}
     - target: {fileID: 8295371382366911092, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: m_RootOrder
       value: 1
