@@ -3743,17 +3743,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookSensitivity: 160
   playerBody: {fileID: 275233091}
---- !u!114 &1052115964 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
-  m_PrefabInstance: {fileID: 923428659510572777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc994f2c1f7564498f64eb4fc92d5fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1111071652
 GameObject:
   m_ObjectHideFlags: 0
@@ -6041,7 +6030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7edb1456c4b921f469fc38296b4f68b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1052115964}
+  reloading: 0
   weaponButton: {fileID: 777134184}
   animator: {fileID: 1722660707}
 --- !u!95 &1722660707
@@ -7891,7 +7880,7 @@ PrefabInstance:
     - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: ani
       value: 
-      objectReference: {fileID: 1722660706}
+      objectReference: {fileID: 0}
     - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: fpscamera
       value: 
@@ -7930,7 +7919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 924582340403765406, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 927429437259170006, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: m_RootOrder
@@ -8083,7 +8072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295371382367153830, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
