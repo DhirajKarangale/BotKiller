@@ -1,21 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class Drop_Pick_Gun : MonoBehaviour
+public class PickUpController : MonoBehaviour
 {
-    [SerializeField] Gun gunScript;
-    [SerializeField] Rigidbody rb;
-    [SerializeField] BoxCollider coll;
-    [SerializeField] Transform player, gunContainer, fpsCam;
-    [SerializeField] WeaponButton weaponButton;
-    [SerializeField] Button PickUpButton;
+    public Gun gunScript;
+    public Rigidbody rb;
+    public BoxCollider coll;
+    public Transform player, gunContainer, fpsCam;
+    public WeaponButton weaponButton;
+    public Button DropButton,PickUpButton;
 
+    public float pickUpRange;
+    public float dropForwardForce, dropUpwardForce;
 
-    [SerializeField] float dropForwardForce, dropUpwardForce,gunPickUpRange;
-    [SerializeField] bool equipped;
+    public bool equipped;
     public static bool slotFull;
-    private Vector3 distanceToPlayer;
 
     private void Start()
     {
@@ -33,37 +34,22 @@ public class Drop_Pick_Gun : MonoBehaviour
             coll.isTrigger = true;
             slotFull = true;
         }
-
     }
 
     private void Update()
     {
-        // Check if player is in range.
-        distanceToPlayer = player.position - transform.position;
-        PickUpButtonControl();  
+        DropButtonControler();
+        PickUpButtonControler();
+        //Check if player is in range and "E" is pressed
+        Vector3 distanceToPlayer = player.position - transform.position;
+        if (!equipped && distanceToPlayer.magnitude <= pickUpRange &&  weaponButton.isPickUp && !slotFull) PickUp();
 
-        // Activate PickUp Button.
-        if(!equipped && distanceToPlayer.magnitude<=gunPickUpRange && weaponButton.isPickUp && !slotFull) PickUp();
-
-        // Activate Drop Button.
-        if(equipped && weaponButton.isDrop) Drop();
+        //Drop if equipped and "Q" is pressed
+        if (equipped &&  weaponButton.isDrop) Drop();
+         
         
     }
 
-    private void PickUpButtonControl()
-    {
-         // Turn pn PickUp Button.        
-        if(distanceToPlayer.magnitude <= gunPickUpRange)
-        {
-            PickUpButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            PickUpButton.gameObject.SetActive(false);
-        }
-
-    }
-   
     private void PickUp()
     {
         equipped = true;
@@ -81,7 +67,8 @@ public class Drop_Pick_Gun : MonoBehaviour
 
         //Enable script
         gunScript.enabled = true;
-        this.gameObject.SetActive(true);
+
+        weaponButton.isPickUp = false;
     }
 
     private void Drop()
@@ -108,6 +95,34 @@ public class Drop_Pick_Gun : MonoBehaviour
 
         //Disable script
         gunScript.enabled = false;
-       this.gameObject.SetActive(false);
+        
+        //Stop Drop Button.
+        weaponButton.isDrop = false;
+    }
+
+    private void DropButtonControler()
+    {
+        if(slotFull == true)
+        {
+            DropButton.gameObject.SetActive(true);
+        }
+        else if(slotFull == false)
+        {
+            DropButton.gameObject.SetActive(false);
+        }
+
+    }
+
+    private void PickUpButtonControler()
+    {
+         Vector3 distanceToPlayer = player.position - transform.position;
+        if(distanceToPlayer.magnitude <= pickUpRange)
+        {
+            PickUpButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            PickUpButton.gameObject.SetActive(false);
+        }
     }
 }

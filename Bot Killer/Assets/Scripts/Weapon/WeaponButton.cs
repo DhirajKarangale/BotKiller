@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class WeaponButton : MonoBehaviour
 { 
-    public bool shotting,isReload;
+    public bool shotting,isReload,isPickUp,isDrop;
     
+    
+     
     public void PointerUp()
     {
       shotting = false;
@@ -18,5 +20,15 @@ public class WeaponButton : MonoBehaviour
     {
       isReload = true;
     }
-  
+
+    public void PickupButton()
+    {
+      isPickUp = true;
+    }
+    
+    public void DropButton()
+    {
+      isDrop = true;
+    }
+
 }

@@ -74,10 +74,13 @@ public class Gun : MonoBehaviour
             }
         }
        // Ammo Display.
-        if (ammoDisplay != null)
+          if(ammoDisplay != null)
         {
-            ammoDisplay.SetText((bulletsLeft/bulletsPerTrap) + " / " + (magazineSize/bulletsPerTrap));
+          ammoDisplay.SetText((bulletsLeft/bulletsPerTrap) + " / " + (magazineSize/bulletsPerTrap));
         }
+     
+           // ammoDisplay.enabled = false;
+        
 
        
         // Automatically Reload.
@@ -87,7 +90,7 @@ public class Gun : MonoBehaviour
         }
 
         // Reload Button.
-        if(weaponButton.isReload)
+        if(weaponButton.isReload && (bulletsLeft<magazineSize))
         {
              Reload();
         }
