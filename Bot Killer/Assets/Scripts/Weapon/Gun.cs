@@ -19,10 +19,12 @@ public class Gun : MonoBehaviour
     [SerializeField] float timeBetweenShotting, reloadTime, timeBetweenShots;
     [SerializeField] int magazineSize, bulletsPerTrap;
     private int bulletsLeft, bulletsShots;
+    public Vector3 upRecoil;
+    Vector3 originalPosition;
 
     [Header("Prefab")]
     [SerializeField] GameObject bullets;
-    [SerializeField] Recoil recoil;
+    [SerializeField] RecoilPushBack recoil;
     [SerializeField] WeaponButton weaponButton;
     [SerializeField] Animatation animatation;
      
@@ -58,12 +60,20 @@ public class Gun : MonoBehaviour
 
     private void Start()
     { 
+        originalPosition = transform.localEulerAngles;
         audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() 
     {  
-        
+        if(weaponButton.shotting == true)
+        {
+            AddRecoil();
+        }
+        else if(weaponButton.shotting == false)
+        {
+            StopRecoil();
+        }
 
         if (weaponButton.shotting)
         {
@@ -214,5 +224,17 @@ public class Gun : MonoBehaviour
         bulletsLeft = magazineSize;
         animatation.reloading = false;
     }
+
+      private void AddRecoil()
+      {
+        transform.localEulerAngles += upRecoil;
+        fpscamera.transform.eulerAngles += upRecoil;
+      }
+
+      private void StopRecoil()
+      {
+        transform.localEulerAngles = originalPosition;
+        fpscamera.transform.eulerAngles = originalPosition;
+      } 
        
 }

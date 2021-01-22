@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Recoil : MonoBehaviour
+public class RecoilPushBack : MonoBehaviour
 {
    [Header("Recoiler Position")]
    [SerializeField] Transform PushBackRecoilPositionPoint;
