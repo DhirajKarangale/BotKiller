@@ -13,18 +13,18 @@ public class PickUpController : MonoBehaviour
     public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
 
-    public bool equipped,gunInHand;
+    public bool equipped;
     public static bool slotFull;
 
     private void Start()
-    {
+    { 
         //Setup
         if (!equipped)
         {
             gunScript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
-            gunInHand = false;
+          
         }
         if (equipped)
         {
@@ -32,20 +32,28 @@ public class PickUpController : MonoBehaviour
             rb.isKinematic = true;
             coll.isTrigger = true;
             slotFull = true;
-            gunInHand = true;
+            
         }
     }
 
     private void Update()
     {
-      
-
-        //Check if player is in range and "E" is pressed
+      if(slotFull == true)
+      {
+        gunScript.ammoDisplay.enabled = true;
+      }
+      if(slotFull == false)
+      {
+        gunScript.ammoDisplay.enabled = false;
+      }
+     
+        //Check if player is in range 
         Vector3 distanceToPlayer = player.position - transform.position;
-             
-        if( distanceToPlayer.magnitude <= pickUpRange  && !slotFull && !equipped && weaponButton.isPickUp) PickUp();
-        //Drop if equipped and "Q" is pressed
+        if(distanceToPlayer.magnitude <= pickUpRange && !slotFull && !equipped && weaponButton.isPickUp) PickUp();
+        //Drop if equipped 
         if ( slotFull && equipped && weaponButton.isPickUp) Drop();
+
+        
     }
 
     private void PickUp()
@@ -92,6 +100,6 @@ public class PickUpController : MonoBehaviour
 
         //Disable script
         gunScript.enabled = false;
-         weaponButton.isPickUp = false;
+        weaponButton.isPickUp = false;
     }
 }

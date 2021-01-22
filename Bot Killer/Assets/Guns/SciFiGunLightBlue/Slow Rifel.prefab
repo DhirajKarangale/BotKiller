@@ -41,14 +41,13 @@ GameObject:
   - component: {fileID: 8295371382366911092}
   - component: {fileID: 8295371382366044454}
   - component: {fileID: 8295371382364638706}
-  - component: {fileID: 8295371381677772699}
   - component: {fileID: 8295371381677772698}
   - component: {fileID: 1352346401}
   - component: {fileID: 1352346400}
   - component: {fileID: 1352346403}
   - component: {fileID: 1352346402}
   m_Layer: 0
-  m_Name: SciFiGunLightBlue
+  m_Name: Slow Rifel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,25 +117,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &8295371381677772699
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8295371382367153830}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8295371381677772698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +139,8 @@ MonoBehaviour:
   bulletsPerTrap: 1
   bullets: {fileID: 1012668721457418666, guid: 942f86a1af78b804cb9aaa30405e1d5f, type: 3}
   recoil: {fileID: 1352346402}
+  weaponButton: {fileID: 0}
+  animatation: {fileID: 0}
   muzzelFlash: {fileID: 0}
   impactEffect: {fileID: 4110541473448793614, guid: 1ca276339c5f75f408c19de97718caf3, type: 3}
   ammoDisplay: {fileID: 0}

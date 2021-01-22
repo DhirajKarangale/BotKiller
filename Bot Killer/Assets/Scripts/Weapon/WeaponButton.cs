@@ -21,7 +21,12 @@ public class WeaponButton : MonoBehaviour
       isReload = true;
     }
 
-    public void PickUpDropButton()
+     public void PickUpDropButtonPointerUP()
+    {
+      isPickUp = false;
+    }
+
+    public void PickUpDropButtonPointerDown()
     {
       isPickUp = true;
     }
