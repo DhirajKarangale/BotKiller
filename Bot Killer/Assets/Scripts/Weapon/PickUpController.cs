@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PickUpController : MonoBehaviour
 {
@@ -10,12 +9,11 @@ public class PickUpController : MonoBehaviour
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
     public WeaponButton weaponButton;
-    public Button DropButton,PickUpButton;
 
     public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
 
-    public bool equipped;
+    public bool equipped,gunInHand;
     public static bool slotFull;
 
     private void Start()
@@ -26,6 +24,7 @@ public class PickUpController : MonoBehaviour
             gunScript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
+            gunInHand = false;
         }
         if (equipped)
         {
@@ -33,21 +32,20 @@ public class PickUpController : MonoBehaviour
             rb.isKinematic = true;
             coll.isTrigger = true;
             slotFull = true;
+            gunInHand = true;
         }
     }
 
     private void Update()
     {
-        DropButtonControler();
-        PickUpButtonControler();
+      
+
         //Check if player is in range and "E" is pressed
         Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && distanceToPlayer.magnitude <= pickUpRange &&  weaponButton.isPickUp && !slotFull) PickUp();
-
+             
+        if( distanceToPlayer.magnitude <= pickUpRange  && !slotFull && !equipped && weaponButton.isPickUp) PickUp();
         //Drop if equipped and "Q" is pressed
-        if (equipped &&  weaponButton.isDrop) Drop();
-         
-        
+        if ( slotFull && equipped && weaponButton.isPickUp) Drop();
     }
 
     private void PickUp()
@@ -67,7 +65,6 @@ public class PickUpController : MonoBehaviour
 
         //Enable script
         gunScript.enabled = true;
-
         weaponButton.isPickUp = false;
     }
 
@@ -95,34 +92,6 @@ public class PickUpController : MonoBehaviour
 
         //Disable script
         gunScript.enabled = false;
-        
-        //Stop Drop Button.
-        weaponButton.isDrop = false;
-    }
-
-    private void DropButtonControler()
-    {
-        if(slotFull == true)
-        {
-            DropButton.gameObject.SetActive(true);
-        }
-        else if(slotFull == false)
-        {
-            DropButton.gameObject.SetActive(false);
-        }
-
-    }
-
-    private void PickUpButtonControler()
-    {
-         Vector3 distanceToPlayer = player.position - transform.position;
-        if(distanceToPlayer.magnitude <= pickUpRange)
-        {
-            PickUpButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            PickUpButton.gameObject.SetActive(false);
-        }
+         weaponButton.isPickUp = false;
     }
 }

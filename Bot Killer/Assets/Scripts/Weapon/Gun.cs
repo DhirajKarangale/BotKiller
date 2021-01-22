@@ -18,6 +18,7 @@ public class Gun : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] float timeBetweenShotting, reloadTime, timeBetweenShots;
     [SerializeField] int magazineSize, bulletsPerTrap;
+    [SerializeField] PickUpController pickUpController;
     private int bulletsLeft, bulletsShots;
 
     [Header("Prefab")]
@@ -74,15 +75,22 @@ public class Gun : MonoBehaviour
             }
         }
        // Ammo Display.
-          if(ammoDisplay != null)
+        if(pickUpController.gunInHand)
         {
-          ammoDisplay.SetText((bulletsLeft/bulletsPerTrap) + " / " + (magazineSize/bulletsPerTrap));
+            ammoDisplay.enabled = true;
+        }
+        else
+        {
+           ammoDisplay.enabled = false; 
         }
      
-           // ammoDisplay.enabled = false;
         
+       if(ammoDisplay != null)
+       {
+            ammoDisplay.SetText((bulletsLeft/bulletsPerTrap) + " / " + (magazineSize/bulletsPerTrap));
+       }
 
-       
+          
         // Automatically Reload.
         if (!animatation.reloading && (bulletsLeft <= 0))
         {
