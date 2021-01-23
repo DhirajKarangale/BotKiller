@@ -66,15 +66,7 @@ public class Gun : MonoBehaviour
 
     private void Update() 
     {  
-        if(weaponButton.shotting == true)
-        {
-            AddRecoil();
-        }
-        else if(weaponButton.shotting == false)
-        {
-            StopRecoil();
-        }
-
+      
         if (weaponButton.shotting)
         {
             if (readyToShoot && !animatation.reloading && (bulletsLeft > 0))
@@ -120,7 +112,7 @@ public class Gun : MonoBehaviour
         // Add force to object
         if (hit.rigidbody != null)
         {
-            hit.rigidbody.AddForce(hit.normal * impactForce);
+            hit.rigidbody.AddForce(hit.normal * -impactForce);
         }
 
         if (allowInvoke)
@@ -228,13 +220,11 @@ public class Gun : MonoBehaviour
       private void AddRecoil()
       {
         transform.localEulerAngles += upRecoil;
-        fpscamera.transform.eulerAngles += upRecoil;
       }
 
       private void StopRecoil()
       {
         transform.localEulerAngles = originalPosition;
-        fpscamera.transform.eulerAngles = originalPosition;
       } 
        
 }
