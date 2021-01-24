@@ -13,8 +13,8 @@ public class Gun : MonoBehaviour
     private Ray ray;
 
     [Header("Bullets Attributes")]
-    [SerializeField] float shootForce;
-    [SerializeField] float impactForce;
+    [SerializeField] int shootForce;
+    [SerializeField] int impactForce;
     [SerializeField] int damage;
     [SerializeField] float timeBetweenShotting, reloadTime, timeBetweenShots;
     [SerializeField] int magazineSize, bulletsPerTrap;
