@@ -3,43 +3,42 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+   [Header("Refrences")]
    [SerializeField] NavMeshAgent agent;
    [SerializeField] Transform player;
    [SerializeField] LayerMask whatIsGround,whatIsPlayer;
 
-   // Petoriling
+  [Header("Petroling")]
    [SerializeField] Vector3 walkPoint;
    private bool walkPointSet;
    [SerializeField] float walkPointRange;
 
-   // Attacking
-   [SerializeField] public float timeBetweenAttack;
-   private bool alreadyAttack;
-   public GameObject projectile;
+   [Header("Range")]
+   [SerializeField] float sightRange;
+   [SerializeField] float attackRange;
+   private bool playerInSightRange,playerInAttackRange;
 
-   // States
-   [SerializeField] float sightRange,attackRange;
-   [SerializeField] bool playerInSightRange,playerInAttackRange;
-
+   [Space(10)]
    // Health 
    [SerializeField] int health;
+ 
 
-   // Shotting
     [Header("Shotting")]
-    private GameObject currentBullet;
-    private Vector3 directionOfAttackAndHitPoint;
-    private Vector3 targetPoint;
-    private RaycastHit hit;
-    private Ray ray;
-    [SerializeField] int shootForce;
-    [SerializeField] int impactForce;
-    [SerializeField] int damage;
-    [SerializeField] float timeBetweenShotting;
     [SerializeField] GameObject bullets;
     [SerializeField] GameObject muzzelFlash;
-    [SerializeField] Camera fpscamera;
     [SerializeField] Transform attackPoint;
-    private bool allowInvoke = true;
+    [SerializeField] int shootForce;
+    [SerializeField] int impactForce;
+    [SerializeField] float timeBetweenAttack;
+    [SerializeField] int damage;
+    private GameObject currentBullet;
+    private Vector3 directionOfBullet;
+    private Vector3 targetPoint;
+    private bool alreadyAttack;
+    RaycastHit hit;
+   
+
+   
 
    private void Awake()
    {
@@ -55,6 +54,11 @@ public class Enemy : MonoBehaviour
        if(!playerInSightRange && !playerInAttackRange) Petoriling();
        if(playerInSightRange && !playerInAttackRange) ChasePlayer();
        if(playerInSightRange && playerInAttackRange) AttackPlayer();
+
+         if (hit.rigidbody != null)
+        {
+            hit.rigidbody.AddForce(hit.normal * -impactForce);
+        }
    }
 
    private void Petoriling()
@@ -98,9 +102,7 @@ public class Enemy : MonoBehaviour
      {
          // Attack Code here,
           Shoot();
-           
-
-
+         
         alreadyAttack =true;
         Invoke("ResetAttack",timeBetweenAttack);
      }
@@ -134,56 +136,16 @@ public class Enemy : MonoBehaviour
     }
 
    private void Shoot()
-   {
-  
+   { 
+     targetPoint = player.transform.position; 
+     directionOfBullet = targetPoint - attackPoint.position;
+     currentBullet = Instantiate(bullets,attackPoint.position,Quaternion.identity);
+     currentBullet.transform.forward = directionOfBullet.normalized;
 
-
-        
-        // Instantiate bullets.
-        currentBullet = Instantiate(bullets, attackPoint.position, Quaternion.identity);
-
-        // Rotate Bullets to Shoot Direction.
-       // currentBullet.transform.forward = directionOfAttackAndHitPoint.normalized;
-
-        // Add force to bullet.
-        currentBullet.GetComponent<Rigidbody>().AddForce(attackPoint.position.normalized * shootForce, ForceMode.Impulse);
-
-        // Destroy Bullets Automatically. 
-        Destroy(currentBullet, 3f);
-
-
-
-         if(muzzelFlash != null)
-        {
-            GameObject currentMuzzelFlash = Instantiate(muzzelFlash,attackPoint.position,Quaternion.identity);
-            Destroy(currentMuzzelFlash,5f);
-        }
-
-
-
-
-        // Add force to object
-        if (hit.rigidbody != null)
-        {
-            hit.rigidbody.AddForce(hit.normal * -impactForce);
-        }
-
-
-
-          if (allowInvoke)
-        {
-            Invoke("ResetShot", timeBetweenShotting);
-            allowInvoke = false;
-        }
-
+     currentBullet.GetComponent<Rigidbody>().AddForce(directionOfBullet.normalized * shootForce,ForceMode.Impulse);
+     currentBullet.GetComponent<Rigidbody>().AddForceAtPosition(directionOfBullet.normalized * impactForce,targetPoint);
+      
+     Destroy(currentBullet,3f);
    }
-
-
-    private void ResetShot()
-    {
-        allowInvoke = true;
-    }
-
-
 
 }
