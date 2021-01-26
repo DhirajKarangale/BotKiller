@@ -112,7 +112,7 @@ public class Gun : MonoBehaviour
         // Add force to object
         if (hit.rigidbody != null)
         {
-            hit.rigidbody.AddForce(hit.normal * -impactForce);
+            hit.rigidbody.AddForce(-hit.normal * impactForce);
         }
 
         if (allowInvoke)
@@ -156,7 +156,12 @@ public class Gun : MonoBehaviour
         {
             targetPoint = hit.point;
             ItemsDestroy item = hit.transform.GetComponent<ItemsDestroy>();
-            if (item != null)
+            Enemy enemy = hit.transform.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+            if(item != null)
             {
                 item.TakeDamage(damage);
             }

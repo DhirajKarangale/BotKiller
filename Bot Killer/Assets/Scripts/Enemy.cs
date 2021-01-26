@@ -35,7 +35,8 @@ public class Enemy : MonoBehaviour
     private Vector3 directionOfBullet;
     private Vector3 targetPoint;
     private bool alreadyAttack;
-    RaycastHit hit;
+   
+    private Ray ray;
    
 
    
@@ -55,10 +56,6 @@ public class Enemy : MonoBehaviour
        if(playerInSightRange && !playerInAttackRange) ChasePlayer();
        if(playerInSightRange && playerInAttackRange) AttackPlayer();
 
-         if (hit.rigidbody != null)
-        {
-            hit.rigidbody.AddForce(hit.normal * -impactForce);
-        }
    }
 
    private void Petoriling()
@@ -137,14 +134,26 @@ public class Enemy : MonoBehaviour
 
    private void Shoot()
    { 
-     targetPoint = player.transform.position; 
+      RaycastHit hit;
+     if (Physics.Raycast(attackPoint.position,-attackPoint.forward,out hit))
+     {
+        targetPoint = hit.point;
+        
+     }
+     else
+     {
+         targetPoint =  ray.GetPoint(100);
+     }
      directionOfBullet = targetPoint - attackPoint.position;
      currentBullet = Instantiate(bullets,attackPoint.position,Quaternion.identity);
      currentBullet.transform.forward = directionOfBullet.normalized;
 
      currentBullet.GetComponent<Rigidbody>().AddForce(directionOfBullet.normalized * shootForce,ForceMode.Impulse);
-     currentBullet.GetComponent<Rigidbody>().AddForceAtPosition(directionOfBullet.normalized * impactForce,targetPoint);
-      
+     if(hit.rigidbody != null)
+     {
+       hit.rigidbody.AddForce(-hit.normal * impactForce);
+     }
+  
      Destroy(currentBullet,3f);
    }
 
