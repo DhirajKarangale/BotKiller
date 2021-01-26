@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
    [SerializeField] LayerMask whatIsGround,whatIsPlayer;
 
   [Header("Petroling")]
-   [SerializeField] Vector3 walkPoint;
+   private Vector3 walkPoint;
    private bool walkPointSet;
    [SerializeField] float walkPointRange;
 
@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
    // Health 
    [SerializeField] int health;
  
-
     [Header("Shotting")]
     [SerializeField] GameObject bullets;
     [SerializeField] GameObject muzzelFlash;
@@ -31,15 +30,20 @@ public class Enemy : MonoBehaviour
     [SerializeField] int impactForce;
     [SerializeField] float timeBetweenAttack;
     [SerializeField] int damage;
+     
     private GameObject currentBullet;
     private Vector3 directionOfBullet;
     private Vector3 targetPoint;
     private bool alreadyAttack;
-   
     private Ray ray;
-   
+   [Header("Die Effect")]
+    [SerializeField] GameObject enemyDeathEffect;
+    private AudioSource audioSource;
 
-   
+   private void Start()
+   {
+     audioSource = GetComponent<AudioSource>();
+   }   
 
    private void Awake()
    {
@@ -121,7 +125,9 @@ public class Enemy : MonoBehaviour
 
     private void DestroyEnemy()
     {
-        Destroy(gameObject);
+      enemyDeathEffect.SetActive(true);
+      audioSource.Play();
+      Destroy(gameObject,0.3f);
     }
 
     private void OnDrowGizmosSelected()

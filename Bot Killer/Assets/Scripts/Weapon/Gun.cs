@@ -198,13 +198,13 @@ public class Gun : MonoBehaviour
         if(muzzelFlash != null)
         {
             GameObject currentMuzzelFlash = Instantiate(muzzelFlash,attackPoint.position,Quaternion.identity);
-            Destroy(currentMuzzelFlash,5f);
+            Destroy(currentMuzzelFlash,2f);
         }
 
         if (impactEffect != null)
         {
             GameObject currentImpactEffect = Instantiate(impactEffect, targetPoint, Quaternion.LookRotation(directionOfAttackAndHitPoint.normalized));
-            Destroy(currentImpactEffect, 5f);
+            Destroy(currentImpactEffect, 3f);
         }
     }
        
