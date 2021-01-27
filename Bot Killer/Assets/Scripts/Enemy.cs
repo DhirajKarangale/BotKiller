@@ -31,12 +31,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] float timeBetweenAttack;
     [SerializeField] int damage;
      
+    RaycastHit hit;
     private GameObject currentBullet;
     private Vector3 directionOfBullet;
     private Vector3 targetPoint;
     private bool alreadyAttack;
     private Ray ray;
-   [Header("Die Effect")]
+
+    [Header("Die Effect")]
     [SerializeField] GameObject enemyDeathEffect;
     private AudioSource audioSource;
 
@@ -103,7 +105,7 @@ public class Enemy : MonoBehaviour
      {
          // Attack Code here,
           Shoot();
-         
+     
         alreadyAttack =true;
         Invoke("ResetAttack",timeBetweenAttack);
      }
@@ -125,7 +127,11 @@ public class Enemy : MonoBehaviour
 
     private void DestroyEnemy()
     {
-      enemyDeathEffect.SetActive(true);
+      if(enemyDeathEffect != null)
+     {
+       GameObject currentEnemyDeathEffect = Instantiate(enemyDeathEffect,transform.position,Quaternion.identity);
+       Destroy(currentEnemyDeathEffect,3f);
+     }
       audioSource.Play();
       Destroy(gameObject,0.3f);
     }
@@ -140,27 +146,24 @@ public class Enemy : MonoBehaviour
 
    private void Shoot()
    { 
-      RaycastHit hit;
-     if (Physics.Raycast(attackPoint.position,-attackPoint.forward,out hit))
+     
+     if (Physics.Raycast(attackPoint.position,attackPoint.forward,out hit))
      {
         targetPoint = hit.point;
-        
      }
      else
      {
-         targetPoint =  ray.GetPoint(100);
+        targetPoint =  ray.GetPoint(100);
      }
      directionOfBullet = targetPoint - attackPoint.position;
      currentBullet = Instantiate(bullets,attackPoint.position,Quaternion.identity);
      currentBullet.transform.forward = directionOfBullet.normalized;
-
      currentBullet.GetComponent<Rigidbody>().AddForce(directionOfBullet.normalized * shootForce,ForceMode.Impulse);
-     if(hit.rigidbody != null)
+     Destroy(currentBullet,3f);
+      if(hit.rigidbody != null)
      {
        hit.rigidbody.AddForce(-hit.normal * impactForce);
      }
-  
-     Destroy(currentBullet,3f);
    }
 
 }
