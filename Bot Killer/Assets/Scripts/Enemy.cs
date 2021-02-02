@@ -162,6 +162,7 @@ public class Enemy : MonoBehaviour
      Destroy(currentBullet,3f);
       if(hit.rigidbody != null)
      {
+       Debug.Log("Impact effect sucess");
        hit.rigidbody.AddForce(-hit.normal * impactForce);
      }
    }

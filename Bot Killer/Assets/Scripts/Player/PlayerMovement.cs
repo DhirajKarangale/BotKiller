@@ -5,10 +5,10 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource audioSource;
 
     [Header("Player Attributes")]
-    [SerializeField] float walkSpeed = 25f;
+    [SerializeField] byte walkSpeed = 25;
     [SerializeField] float gravity = -25f;
     [SerializeField] float groundDistance = 0.4f;
-    [SerializeField] float thrustSpeed = 2;
+    [SerializeField] byte thrustSpeed = 2;
 
     [Header("Points")]
     [SerializeField] CharacterController controller;
