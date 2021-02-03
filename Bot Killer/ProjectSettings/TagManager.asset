@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - CanGrab
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

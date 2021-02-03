@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
     // Object in Script.
     private AudioSource audioSource;
     private GameObject currentBullet;
+    private GameObject currentBulletHole;
     private Vector3 directionOfAttackAndHitPoint;
     private Vector3 targetPoint;
     private RaycastHit hit;
@@ -24,9 +25,11 @@ public class Gun : MonoBehaviour
 
     [Header("Prefab")]
     [SerializeField] GameObject bullets;
+    [SerializeField] GameObject bulletHole;
     [SerializeField] RecoilPushBack recoil;
     [SerializeField] WeaponButton weaponButton;
     [SerializeField] Animatation animatation;
+    [SerializeField] Attack_Follow attack_Follow;
      
     [Header("Display")]
     [SerializeField] GameObject muzzelFlash;
@@ -156,6 +159,23 @@ public class Gun : MonoBehaviour
         {
             targetPoint = hit.point;
             ItemsDestroy item = hit.transform.GetComponent<ItemsDestroy>();
+
+         if(hit.collider.tag == "Enemy")
+         {
+           attack_Follow.hitEnemy = true;
+         }   
+
+         if(hit.collider.tag != "Enemy")
+         {
+            // Instantiate bullet Hole.                                                      
+             currentBulletHole = Instantiate(bulletHole,targetPoint + hit.normal * 0.001f,Quaternion.identity);
+             
+             // Rotating Bullet hole to direction of target.
+             currentBulletHole.transform.LookAt(hit.point + hit.normal);
+
+             // Destroy Bullet Hole.
+             Destroy(currentBulletHole,3f);
+         }
             if(item != null)
             {
                 item.TakeDamage(damage);
@@ -186,6 +206,8 @@ public class Gun : MonoBehaviour
         bulletsLeft--;
         bulletsShots++;
     }
+
+  
 
     // Adding Gun Effects.
     private void GunEffects()

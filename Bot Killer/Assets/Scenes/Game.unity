@@ -1498,12 +1498,12 @@ GameObject:
   - component: {fileID: 251829630}
   - component: {fileID: 251829629}
   - component: {fileID: 251829628}
-  - component: {fileID: 251829627}
   - component: {fileID: 251829632}
+  - component: {fileID: 251829627}
   - component: {fileID: 251829633}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1562,7 +1562,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c492ba9ab0a3d10488cba6a750e2a153, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1600,7 +1600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251829626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.08}
   m_LocalScale: {x: 2.5639539, y: 5.8609004, z: 2.0763001}
   m_Children:
   - {fileID: 1337202148}
@@ -1642,9 +1642,12 @@ MonoBehaviour:
   stopDistance: 17
   retriveDistance: 12
   startTimeBetweenShot: 2
+  flashTime: 0
   attackPoint: {fileID: 1604549862}
   petroling: {fileID: 251829627}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
+  meshRenderer: {fileID: 251829629}
+  hitEnemy: 0
 --- !u!1 &251858398
 GameObject:
   m_ObjectHideFlags: 0
@@ -17551,11 +17554,13 @@ MonoBehaviour:
   bulletsPerTrap: 1
   upRecoil: {x: 0, y: 0, z: 0}
   bullets: {fileID: 1012668721457418666, guid: 8b8503aeaa4ec554ba52232ae1a03afb, type: 3}
+  bulletHole: {fileID: 7172238457444277931, guid: 2b8123ecc171e3a47b14369b37968087, type: 3}
   recoil: {fileID: 678073013}
   weaponButton: {fileID: 777134184}
   animatation: {fileID: 655710815}
+  attack_Follow: {fileID: 251829633}
   muzzelFlash: {fileID: 4210367709866453527, guid: 79b2759b8387e3a4e89e1524d6ec7309, type: 3}
-  impactEffect: {fileID: 4110541473448793614, guid: 1ca276339c5f75f408c19de97718caf3, type: 3}
+  impactEffect: {fileID: 8917405269523264391, guid: 8e2b7d7de156fe84cbb8e6395ad58654, type: 3}
   ammoDisplay: {fileID: 391635696}
   fpscamera: {fileID: 963194227}
   attackPoint: {fileID: 1600221932}
@@ -17764,7 +17769,7 @@ MonoBehaviour:
   PositionDampTime: 6
   RotationDampTime: 5
   BackForce: 30
-  RotationRecoil: {x: -40, y: 0, z: 0}
+  RotationRecoil: {x: -400, y: 0, z: 0}
   PushBackRecoil: {x: 0, y: 0, z: -3}
 --- !u!1 &680790564
 GameObject:
@@ -27238,7 +27243,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 7.12
   m_Radius: 1.69
-  m_SlopeLimit: 45
+  m_SlopeLimit: 60
   m_StepOffset: 3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -38031,7 +38036,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809579125}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 30
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -40669,6 +40674,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
+      propertyPath: impactEffect
+      value: 
+      objectReference: {fileID: 8917405269523264391, guid: 8e2b7d7de156fe84cbb8e6395ad58654, type: 3}
+    - target: {fileID: 923428660095372488, guid: 0e356bd8caa773b4bba559dc912c0beb, type: 3}
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 777134184}
@@ -40903,6 +40912,10 @@ PrefabInstance:
       propertyPath: muzzelFlash
       value: 
       objectReference: {fileID: 4210367709866453527, guid: 79b2759b8387e3a4e89e1524d6ec7309, type: 3}
+    - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
+      propertyPath: impactEffect
+      value: 
+      objectReference: {fileID: 8917405269523264391, guid: 8e2b7d7de156fe84cbb8e6395ad58654, type: 3}
     - target: {fileID: 8295371381677772698, guid: 69f0e221d6044284e9c2096f134155a6, type: 3}
       propertyPath: weaponButton
       value: 
@@ -41142,5 +41155,9 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 777134184}
+    - target: {fileID: 8807806408698136527, guid: 61a3f50f4b6643c46abde67aa422f201, type: 3}
+      propertyPath: RotationRecoil.x
+      value: -400
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61a3f50f4b6643c46abde67aa422f201, type: 3}

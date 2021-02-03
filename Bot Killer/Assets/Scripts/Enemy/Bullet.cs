@@ -23,8 +23,8 @@ public class Bullet : MonoBehaviour
         Physics.Raycast(transform.position,target,out hit);
         if(hit.rigidbody != null)
         {
-            Debug.Log(hit.transform.name);
-            hit.rigidbody.AddForce(hit.normal * -impactForce);
+            hit.rigidbody.AddForce(-hit.normal * impactForce);
+            player.position =player.position - hit.normal;
         }
         if(transform.position == target)
          Destroy(gameObject);

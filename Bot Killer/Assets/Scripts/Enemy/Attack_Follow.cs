@@ -8,6 +8,7 @@ public class Attack_Follow : MonoBehaviour
   [SerializeField] byte stopDistance;
   [SerializeField] byte retriveDistance;
   [SerializeField] float startTimeBetweenShot;
+  [SerializeField] float flashTime;
   private float timeBetweenShot;
   private float distanseBetwwenEnemyAndPlayer;
 
@@ -15,20 +16,30 @@ public class Attack_Follow : MonoBehaviour
   public Transform attackPoint;
   [SerializeField] Petroling petroling;
   [SerializeField] GameObject bullets;
+  public MeshRenderer meshRenderer;
+  public bool hitEnemy;
   private GameObject currentBullet;
+  private Color originalColor;
 
   private void Start()
   {
     player = GameObject.FindGameObjectWithTag("Player").transform;
     timeBetweenShot = startTimeBetweenShot;
+    originalColor = meshRenderer.material.color;
   }   
 
   private void Update()
-  { 
+  {  
+    // Enemy Hit Effect.
+    if(hitEnemy)
+    {
+     meshRenderer.material.color = Color.red;
+     Invoke("ResetColor",flashTime);
+    }
     // Enemy look at player.
     if(petroling.isPetroling == false) 
     {
-       Vector3 lookVector = player.transform.position - transform.position;
+         Vector3 lookVector = player.transform.position - transform.position;
          lookVector.y = transform.position.y;
          Quaternion rot = Quaternion.LookRotation(-lookVector);
          transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);
@@ -65,10 +76,15 @@ public class Attack_Follow : MonoBehaviour
         }
         else
         {
-            timeBetweenShot -= Time.deltaTime;
+           timeBetweenShot -= Time.deltaTime;
         }
 
         Destroy(currentBullet,3f);
      }
+  }
+ 
+  private void ResetColor()
+  {
+    meshRenderer.material.color = originalColor;
   }
 }
