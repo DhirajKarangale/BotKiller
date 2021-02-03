@@ -156,11 +156,6 @@ public class Gun : MonoBehaviour
         {
             targetPoint = hit.point;
             ItemsDestroy item = hit.transform.GetComponent<ItemsDestroy>();
-            Enemy enemy = hit.transform.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-            }
             if(item != null)
             {
                 item.TakeDamage(damage);

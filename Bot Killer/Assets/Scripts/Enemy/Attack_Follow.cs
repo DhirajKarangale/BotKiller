@@ -7,37 +7,68 @@ public class Attack_Follow : MonoBehaviour
   [SerializeField] byte attackRange;
   [SerializeField] byte stopDistance;
   [SerializeField] byte retriveDistance;
+  [SerializeField] float startTimeBetweenShot;
+  private float timeBetweenShot;
+  private float distanseBetwwenEnemyAndPlayer;
 
-  [SerializeField] Transform player;
+  private Transform player;
+  public Transform attackPoint;
   [SerializeField] Petroling petroling;
+  [SerializeField] GameObject bullets;
+  private GameObject currentBullet;
 
   private void Start()
   {
     player = GameObject.FindGameObjectWithTag("Player").transform;
+    timeBetweenShot = startTimeBetweenShot;
   }   
 
   private void Update()
-  {
-      // Follow to player.
-    if((Vector3.Distance(transform.position,player.position)<followRange) && (Vector3.Distance(transform.position,player.position)>stopDistance))
+  { 
+    // Enemy look at player.
+    if(petroling.isPetroling == false) 
     {
-       transform.position = Vector3.MoveTowards(transform.position,player.position,(speed * Time.deltaTime));
+       Vector3 lookVector = player.transform.position - transform.position;
+         lookVector.y = transform.position.y;
+         Quaternion rot = Quaternion.LookRotation(-lookVector);
+         transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);
+    }
+
+    distanseBetwwenEnemyAndPlayer = Vector3.Distance(transform.position,player.position); // Distanse between Enemy and player.
+
+    if((distanseBetwwenEnemyAndPlayer<followRange) && (distanseBetwwenEnemyAndPlayer>stopDistance))
+    {
+       transform.position = Vector3.MoveTowards(transform.position,player.position,(speed * Time.deltaTime));  // Follow to player.
        petroling.isPetroling = false;
     }
-    else if((Vector3.Distance(transform.position,player.position)<followRange) && (Vector3.Distance(transform.position,player.position)<=stopDistance) && (Vector3.Distance(transform.position,player.position)>=retriveDistance))
+    else if((distanseBetwwenEnemyAndPlayer<followRange) && (distanseBetwwenEnemyAndPlayer<=stopDistance) && (distanseBetwwenEnemyAndPlayer>=retriveDistance))
     {
-        transform.position = this.transform.position;
+        transform.position = this.transform.position; // Stop Enemy.
         petroling.isPetroling = false;
     }
-    else if((Vector3.Distance(transform.position,player.position)<followRange) && (Vector3.Distance(transform.position,player.position)<followRange))
+    else if((distanseBetwwenEnemyAndPlayer<followRange) && (distanseBetwwenEnemyAndPlayer<followRange))
     {
-        transform.position = Vector3.MoveTowards(transform.position,player.position,(-speed * Time.deltaTime));
+        transform.position = Vector3.MoveTowards(transform.position,player.position,(-speed * Time.deltaTime)); // Reverse Back Enemy.
         petroling.isPetroling = false;
     }
-    else if(Vector3.Distance(transform.position,player.position)>followRange)
+    else if(distanseBetwwenEnemyAndPlayer>followRange)
     {
-        petroling.isPetroling = true;
+        petroling.isPetroling = true; 
     }
-   
+    if(distanseBetwwenEnemyAndPlayer<=attackRange)
+     { 
+        petroling.isPetroling = false;
+        if(timeBetweenShot<=0)
+        {
+         currentBullet = Instantiate(bullets,attackPoint.position,Quaternion.identity); // Shoot
+         timeBetweenShot = startTimeBetweenShot;
+        }
+        else
+        {
+            timeBetweenShot -= Time.deltaTime;
+        }
+
+        Destroy(currentBullet,3f);
+     }
   }
 }
