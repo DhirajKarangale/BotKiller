@@ -14,14 +14,13 @@ public class Gun : MonoBehaviour
     private Ray ray;
 
     [Header("Bullets Attributes")]
-    [SerializeField] int shootForce;
+    [SerializeField] byte shootForce;
     [SerializeField] int impactForce;
-    [SerializeField] int damage;
+    [SerializeField] byte damage;
     [SerializeField] float timeBetweenShotting, reloadTime, timeBetweenShots;
-    [SerializeField] int magazineSize, bulletsPerTrap;
-    private int bulletsLeft, bulletsShots;
-    public Vector3 upRecoil;
-    Vector3 originalPosition;
+    [SerializeField] byte magazineSize, bulletsPerTrap;
+    private byte bulletsLeft, bulletsShots;
+   
 
     [Header("Prefab")]
     [SerializeField] GameObject bullets;
@@ -29,7 +28,6 @@ public class Gun : MonoBehaviour
     [SerializeField] RecoilPushBack recoil;
     [SerializeField] WeaponButton weaponButton;
     [SerializeField] Animatation animatation;
-    [SerializeField] Attack_Follow attack_Follow;
      
     [Header("Display")]
     [SerializeField] GameObject muzzelFlash;
@@ -63,13 +61,12 @@ public class Gun : MonoBehaviour
 
     private void Start()
     { 
-        originalPosition = transform.localEulerAngles;
         audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() 
     {  
-      
+           
         if (weaponButton.shotting)
         {
             if (readyToShoot && !animatation.reloading && (bulletsLeft > 0))
@@ -81,7 +78,7 @@ public class Gun : MonoBehaviour
        // Ammo Display.
        if(ammoDisplay != null)
        {
-            ammoDisplay.SetText((bulletsLeft/bulletsPerTrap) + " / " + (magazineSize/bulletsPerTrap));
+          ammoDisplay.SetText((bulletsLeft/bulletsPerTrap) + " / " + (magazineSize/bulletsPerTrap));
        }
 
           
@@ -158,15 +155,26 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             targetPoint = hit.point;
+
+            //Declearing Item Destroy
             ItemsDestroy item = hit.transform.GetComponent<ItemsDestroy>();
+            // Destroying Item
+            if(item != null)
+            {
+                item.TakeDamage(damage);
+            }
 
-         if(hit.collider.tag == "Enemy")
-         {
-           attack_Follow.hitEnemy = true;
-         }   
+            //Declearing Enemy to Destroy.
+            Enemy enemy = hit.transform.GetComponent<Enemy>();
+            // Destroy Enemy.
+            if(enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
 
-         if(hit.collider.tag != "Enemy")
-         {
+            // Bullet Hole
+            if(hit.collider.tag != "Enemy")
+            {
             // Instantiate bullet Hole.                                                      
              currentBulletHole = Instantiate(bulletHole,targetPoint + hit.normal * 0.001f,Quaternion.identity);
              
@@ -175,11 +183,8 @@ public class Gun : MonoBehaviour
 
              // Destroy Bullet Hole.
              Destroy(currentBulletHole,3f);
-         }
-            if(item != null)
-            {
-                item.TakeDamage(damage);
             }
+           
         }
         else
         {
@@ -238,15 +243,4 @@ public class Gun : MonoBehaviour
         bulletsLeft = magazineSize;
         animatation.reloading = false;
     }
-
-      private void AddRecoil()
-      {
-        transform.localEulerAngles += upRecoil;
-      }
-
-      private void StopRecoil()
-      {
-        transform.localEulerAngles = originalPosition;
-      } 
-       
 }

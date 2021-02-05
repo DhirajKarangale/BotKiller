@@ -8,6 +8,8 @@ TagManager:
   - CanGrab
   - Enemy
   - Bullet
+  - ScreenShake
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

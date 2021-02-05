@@ -11,8 +11,8 @@ public class PickUpController : MonoBehaviour
     public WeaponButton weaponButton;
     [SerializeField] GameObject ammoTextBG;
 
-    public float pickUpRange;
-    public float dropForwardForce, dropUpwardForce;
+    public byte pickUpRange;
+    public byte dropForwardForce, dropUpwardForce;
 
     public bool equipped;
     public static bool slotFull;

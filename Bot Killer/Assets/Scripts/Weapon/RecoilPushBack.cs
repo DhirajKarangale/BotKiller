@@ -6,9 +6,9 @@ public class RecoilPushBack : MonoBehaviour
    [SerializeField] Transform PushBackRecoilPositionPoint;
    [SerializeField] Transform RotationRecoilPositionPoint;
    [Header("Recoil Setting")]
-   [SerializeField] float PositionDampTime;
-   [SerializeField] float RotationDampTime;
-   [SerializeField] float BackForce;
+   [SerializeField] byte PositionDampTime;
+   [SerializeField] byte RotationDampTime;
+   [SerializeField] byte BackForce;
    [Header("Recoil")]
    [SerializeField] Vector3 RotationRecoil;
    [SerializeField] Vector3 PushBackRecoil;
@@ -18,7 +18,7 @@ public class RecoilPushBack : MonoBehaviour
    private Vector3 RotationOutput;
 
 
-  void FixedUpdate()
+  private void FixedUpdate()
    {
       CurrentRotationRecoil = Vector3.Lerp(CurrentRotationRecoil,Vector3.zero,BackForce*Time.deltaTime);
       CurrentPushBackRecoil = Vector3.Lerp(CurrentPushBackRecoil,Vector3.zero,BackForce*Time.deltaTime);
