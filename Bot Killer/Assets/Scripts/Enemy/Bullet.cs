@@ -6,16 +6,17 @@ public class Bullet : MonoBehaviour
     [SerializeField] float impactForce;
     [SerializeField] int damage;
     [SerializeField] Vector3 impactPosition;
-    private Player players;
-    private Transform player;
+    private PlayerMovement player;
+    private Health_Dye playerDye;
     private Vector3 target;
-    RaycastHit hit;
+    private RaycastHit hit;
+
 
     private void Start()
     {
-        players = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = player.position;
+        playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        target = player.transform.position;
      }
     
     private void Update()
@@ -36,12 +37,12 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-           if(players != null)
+           if(player != null)
            { 
-               players.TakeDamage(damage);
+               playerDye.TakeDamage(damage);
            }
             Destroy(gameObject);
-            player.position =player.position - (hit.normal + impactPosition);
+            player.transform.position =player.transform.position - (hit.normal + impactPosition);
         }
     }
 }

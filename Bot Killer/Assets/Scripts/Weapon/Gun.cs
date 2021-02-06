@@ -165,7 +165,7 @@ public class Gun : MonoBehaviour
             }
 
             //Declearing Enemy to Destroy.
-            Enemy enemy = hit.transform.GetComponent<Enemy>();
+            Health_Death enemy = hit.transform.GetComponent<Health_Death>();
             // Destroy Enemy.
             if(enemy != null)
             {

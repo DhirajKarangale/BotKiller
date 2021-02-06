@@ -11,6 +11,7 @@ TagManager:
   - ScreenShake
   - EnemyBullet
   - Cam2
+  - HealthPack
   layers:
   - Default
   - TransparentFX
