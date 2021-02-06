@@ -21,20 +21,25 @@ public class Player : MonoBehaviour
     
     [Header("Health")]
     [SerializeField] float health = 500;
-    [SerializeField] float regainHealth = 50;
-    [SerializeField] Slider slider;
+    [SerializeField] float regainHealth;
+    [SerializeField] Slider healthSlider;
     [SerializeField] GameObject deathEffect;
+    [SerializeField] float healthIncreaseAfterTime;
     private GameObject currentDeathEffect;
-    public float currentHealth;
-    private bool isRegainHealth;
+    private float currentHealth;
+    private bool isRegainHealth,isPlayerHit;
     public bool isPlayerAlive;
+
+    [Header("Thrust")]
+    [SerializeField] float thrustFuel;
+    private float currentThrustFuel;
+    [SerializeField] Slider thrustSlider;
+    [SerializeField] float decreaseThrustFuel,increaseThrustFuel;
 
     [Header("Prefrences")]
     [SerializeField] GameObject fps;
     [SerializeField] GameObject UIScreen;
     [SerializeField] GameObject GunsContainer;
-    [SerializeField] GameObject cam2;
-    
 
     private Vector3 gravityDownVelocity;
     private bool isGrounded,isThrust;
@@ -46,26 +51,20 @@ public class Player : MonoBehaviour
     {
         isPlayerAlive = true;
         currentHealth = health;
+        currentThrustFuel = thrustFuel;
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
-        slider.value = CalculateHealth();
+        healthSlider.value = CalculateHealth();
+        thrustSlider.value = currentThrustFuel/thrustFuel;
     }   
     
     private void Update()
     {
-        if(isPlayerAlive)
-        {
-            cam2.SetActive(false);
-        }
-        else
-        {
-            cam2.SetActive(true);
-        }
         Movement();
         Gravity();  
         HitScreen(); 
      
-        if(isThrust)
+        if(isThrust && currentThrustFuel>0)
         {
             Thrust();
         }
@@ -74,16 +73,33 @@ public class Player : MonoBehaviour
            thrustEffect.Stop();
            audioSource.Stop();
        }
-       slider.value = CalculateHealth();
+       healthSlider.value = CalculateHealth();
+       thrustSlider.value = currentThrustFuel/thrustFuel;
+      if(currentHealth == health)
+      {
+        isRegainHealth = false;
+      }
 
-       if(currentHealth<health)
+       currentHealth = Mathf.Clamp(currentHealth,0f,health);
+       if(currentHealth <= health/2)
        {
          isRegainHealth = true;  
        }
-       if(isRegainHealth) 
+       if(isRegainHealth && !isPlayerHit) 
        {
-           Invoke("RegainHealth",5f);
+           Invoke("RegainHealth",healthIncreaseAfterTime);
        }
+        
+       currentThrustFuel = Mathf.Clamp(currentThrustFuel,0f,thrustFuel);
+       if(isThrust)
+       {
+           currentThrustFuel -= decreaseThrustFuel * Time.deltaTime;
+       }
+       if(!isThrust && currentThrustFuel<thrustFuel)
+       {
+           currentThrustFuel += increaseThrustFuel * Time.deltaTime;
+       }
+       
     }
 
     public void PointerUp()
@@ -136,8 +152,13 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "EnemyBullet")
-        {
+        { 
+            isPlayerHit = true;
             PlayerHit();
+        }
+        else
+        {
+            isPlayerHit = false;
         }
     }
 
@@ -187,7 +208,7 @@ public class Player : MonoBehaviour
 
     private void RegainHealth()
     {
-        currentHealth += regainHealth;
+        currentHealth += regainHealth * Time.deltaTime;
         isRegainHealth = false;
     }
 

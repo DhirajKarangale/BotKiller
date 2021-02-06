@@ -12,9 +12,8 @@ public class Enemy : MonoBehaviour
   [SerializeField] byte attackRange;
   [SerializeField] byte stopDistance;
   [SerializeField] byte retriveDistance;
-  private Player players;
+  private Player player;
   private float distanseBetwwenEnemyAndPlayer;
-  private Transform player;
 
   [Header("Attack")]
   [SerializeField] GameObject bullets;
@@ -49,14 +48,14 @@ public class Enemy : MonoBehaviour
   private float currentHealth;
   [SerializeField] GameObject healthBarUI;
   [SerializeField] Slider slider;
-
+  private GameObject cam2;
 
   private void Start()
   {
-    players = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-    player = GameObject.FindGameObjectWithTag("Player").transform;
+    player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    cam2 = GameObject.FindGameObjectWithTag("Cam2");
     
-    // Attack
+    
     timeBetweenShot = startTimeBetweenShot;
 
     // Petrolling
@@ -74,13 +73,15 @@ public class Enemy : MonoBehaviour
 
   private void Update()
   { 
-    if(!players.isPlayerAlive)
+    if(!player.isPlayerAlive)
      {
        Invoke("Petrolling",0.5f);
-       players.enabled = false;
+       cam2.SetActive(true);
+       player.enabled = false;
      }
      else
      {
+       cam2.SetActive(false);
       slider.value = CalculateHealth();
      if(currentHealth<health)
      {
@@ -92,7 +93,7 @@ public class Enemy : MonoBehaviour
      }
 
      // Distanse between Enemy and player.
-    distanseBetwwenEnemyAndPlayer = Vector3.Distance(transform.position,player.position);
+    distanseBetwwenEnemyAndPlayer = Vector3.Distance(transform.position,player.transform.position);
      
      if(isPetroling) Petrolling();
      else Look(); 
@@ -106,7 +107,7 @@ public class Enemy : MonoBehaviour
    {
        if((distanseBetwwenEnemyAndPlayer<followRange) && (distanseBetwwenEnemyAndPlayer>stopDistance))
     {
-       transform.position = Vector3.MoveTowards(transform.position,player.position,(followSpeed * Time.deltaTime));  // Follow to player.
+       transform.position = Vector3.MoveTowards(transform.position,player.transform.position,(followSpeed * Time.deltaTime));  // Follow to player.
       isPetroling = false;
     }
     else if((distanseBetwwenEnemyAndPlayer<followRange) && (distanseBetwwenEnemyAndPlayer<=stopDistance) && (distanseBetwwenEnemyAndPlayer>=retriveDistance))
@@ -116,7 +117,7 @@ public class Enemy : MonoBehaviour
     }
     else if((distanseBetwwenEnemyAndPlayer<followRange) && (distanseBetwwenEnemyAndPlayer<followRange))
     {
-        transform.position = Vector3.MoveTowards(transform.position,player.position,(-followSpeed * Time.deltaTime)); // Reverse Back Enemy.
+        transform.position = Vector3.MoveTowards(transform.position,player.transform.position,(-followSpeed * Time.deltaTime)); // Reverse Back Enemy.
         isPetroling = false;
     }
     else if(distanseBetwwenEnemyAndPlayer>followRange)
