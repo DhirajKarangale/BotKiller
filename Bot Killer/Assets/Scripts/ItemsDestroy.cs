@@ -1,9 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ItemsDestroy : MonoBehaviour
 {
     [SerializeField] int health = 100;
-
+    [SerializeField] GameObject crackedItem;
+    [SerializeField] List <GameObject> itemToDrop = new List<GameObject>();
+    [SerializeField] Vector3 itemDropPosition;
+   
    public void TakeDamage(int damage)
     {
         health -= damage;
@@ -15,6 +19,11 @@ public class ItemsDestroy : MonoBehaviour
 
     private void DestroyItem()
     {
-        Destroy(gameObject);
+       Instantiate(crackedItem,transform.position,transform.rotation);
+       for(int i=0;i<itemToDrop.Count;i++)
+       {
+          Instantiate(itemToDrop[i],transform.position + itemDropPosition,transform.rotation);
+       }
+       Destroy(gameObject);
     }
 }

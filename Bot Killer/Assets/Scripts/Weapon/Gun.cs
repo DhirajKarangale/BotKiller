@@ -14,7 +14,7 @@ public class Gun : MonoBehaviour
     private Ray ray;
 
     [Header("Bullets Attributes")]
-    [SerializeField] byte shootForce;
+    [SerializeField] int shootForce;
     [SerializeField] int impactForce;
     [SerializeField] byte damage;
     [SerializeField] float timeBetweenShotting, reloadTime, timeBetweenShots;

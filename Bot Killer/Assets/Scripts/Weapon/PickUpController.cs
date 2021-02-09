@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour
@@ -7,7 +5,7 @@ public class PickUpController : MonoBehaviour
     public Gun gunScript;
     public Rigidbody rb;
     public BoxCollider coll;
-    public Transform player, gunContainer, fpsCam;
+    public Transform player, gunContainer,gunDrop,fpsCam;
     public WeaponButton weaponButton;
     [SerializeField] GameObject ammoTextBG;
 
@@ -85,7 +83,7 @@ public class PickUpController : MonoBehaviour
         slotFull = false;
 
         //Set parent to null
-        transform.SetParent(null);
+        transform.SetParent(gunDrop);
 
         //Make Rigidbody not kinematic and BoxCollider normal
         rb.isKinematic = false;
