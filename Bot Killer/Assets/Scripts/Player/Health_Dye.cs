@@ -16,16 +16,19 @@ public class Health_Dye : MonoBehaviour
     [Header("Death")]
     [SerializeField] GameObject deathEffect;
     [SerializeField] GameObject hitScreen;
+    public AudioClip hurtSound;
     private GameObject currentDeathEffect;
 
     [Header("Refrences")]
     [SerializeField] GameObject fps;
+    private AudioSource audioSource;
 
     private void Start()
     {
         isPlayerAlive = true;
         currentHealth = health;
         healthSlider.value = currentHealth/health;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -54,10 +57,11 @@ public class Health_Dye : MonoBehaviour
     {
         if(collider.gameObject.tag == "EnemyBullet")
         { 
-            isHealthPackTrigger = false;
+            audioSource.PlayOneShot(hurtSound,0.5f);
             PlayerHit();
             isPlayerHit = true;
-        }
+            isHealthPackTrigger = false;
+        } 
         if(collider.gameObject.tag == "HealthPack")
         {
             isPlayerHit = false;

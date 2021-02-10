@@ -73,7 +73,7 @@ public class Health_Death : MonoBehaviour
       camShake.Shake();
       currentDeathEffect = Instantiate(deathEffect,transform.position,Quaternion.identity);
       Destroy(currentDeathEffect,3f);
-      Instantiate(itemToDrop,transform.position,Quaternion.identity);
+      if(itemToDrop != null)  Instantiate(itemToDrop,transform.position,Quaternion.identity);
       Destroy(gameObject,0.3f);
     }
 

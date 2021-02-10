@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 gravityDownVelocity;
     private bool isGrounded,isThrust;
     private Rigidbody rigidBody;
+    private Health_Dye playerDye;
     
 
     private void Start()
@@ -36,25 +37,24 @@ public class PlayerMovement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         currentThrustFuel = thrustFuel;
         thrustSlider.value = currentThrustFuel/thrustFuel;
+        audioSource.clip = thrustSound;
     }   
     
     private void Update()
     {
         Movement();
         Gravity();  
-        
      
         if(isThrust && currentThrustFuel>0)
         {
             Thrust();
         }
-       else
+       if(!isThrust)
        {
            thrustEffect.Stop();
-           audioSource.Stop();
+           audioSource.clip = null;
        }
        ThrustSlideBar();
-      
     }
 
     public void PointerUp()
@@ -100,7 +100,8 @@ public class PlayerMovement : MonoBehaviour
         currentThrustFuel -= decreaseThrustFuel * Time.deltaTime;
         gravityDownVelocity.y = Mathf.Sqrt(thrustSpeed * (-2f) * gravity);
         thrustEffect.Play();
-        audioSource.PlayOneShot(thrustSound);
+        audioSource.clip = thrustSound;
+        audioSource.Play();
     }
 
     private void ThrustSlideBar()

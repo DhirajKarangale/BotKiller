@@ -4,7 +4,6 @@ public class HealthPack : MonoBehaviour
 {
    private Health_Dye playerDye;
    [SerializeField] GameObject destroyEffect;
-   private GameObject currentDestroyEffect;
 
    private void Start()
    {
@@ -15,8 +14,7 @@ public class HealthPack : MonoBehaviour
    {
        if(playerDye.isHealthPackTrigger)
        {
-         currentDestroyEffect = Instantiate(destroyEffect,transform.position,Quaternion.identity);
-         Destroy(currentDestroyEffect);
+         Instantiate(destroyEffect,playerDye.transform.position,playerDye.transform.rotation);
          Destroy(gameObject,0.3f);
        }
    }

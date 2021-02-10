@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
             hit.rigidbody.AddForce(-hit.normal * impactForce);
         }
         if(transform.position == target)
-        Destroy(gameObject);
+        Destroy(gameObject,0.1f);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -39,10 +39,10 @@ public class Bullet : MonoBehaviour
         {
            if(player != null)
            { 
-               playerDye.TakeDamage(damage);
+             playerDye.TakeDamage(damage);
+             player.transform.position =player.transform.position - (hit.normal + impactPosition);
+             Destroy(gameObject);
            }
-            Destroy(gameObject);
-            player.transform.position =player.transform.position - (hit.normal + impactPosition);
         }
     }
 }
