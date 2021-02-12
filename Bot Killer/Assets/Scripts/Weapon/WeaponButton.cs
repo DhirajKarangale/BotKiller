@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class WeaponButton : MonoBehaviour
 { 
-    public bool shotting,isReload,isPickUp,isDrop;
+    public bool shotting,isReload,isPickUp,isDrop,isScope;
 
      
-    public void PointerUp()
+    public void AttackButtonPointerUp()
     {
       shotting = false;
     }
 
-    public void PointerDown()
+    public void AttackButtonPointerDown()
     {
       shotting = true;
     }
@@ -31,6 +31,9 @@ public class WeaponButton : MonoBehaviour
       isPickUp = true;
     }
     
-    
+   public void ScopeButton()
+   {
+     isScope = !isScope;
+   }
     
 }

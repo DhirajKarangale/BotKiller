@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3293643728555440957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12.333434, y: 12.333434, z: 12.333434}
+  m_LocalScale: {x: 2.4679263, y: 2.4679263, z: 2.4679263}
   m_Children: []
   m_Father: {fileID: 3293643728702865814}
   m_RootOrder: 0
@@ -4816,8 +4816,8 @@ GameObject:
   - component: {fileID: 3293643728702865810}
   - component: {fileID: 3293643728702865811}
   - component: {fileID: 3293643728702865808}
-  - component: {fileID: -4016257315748919338}
   - component: {fileID: 1076088059342405447}
+  - component: {fileID: -4016257315748919338}
   m_Layer: 0
   m_Name: Bullets
   m_TagString: EnemyBullet
@@ -4834,7 +4834,7 @@ Transform:
   m_GameObject: {fileID: 3293643728702865815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.7068257, y: 8.2697315, z: -41.68677}
-  m_LocalScale: {x: 2.1145716, y: 2.5496175, z: 3.9877784}
+  m_LocalScale: {x: 0.38956916, y: 0.46971804, z: 0.73467153}
   m_Children:
   - {fileID: 3293643728555440956}
   m_Father: {fileID: 0}
@@ -4902,6 +4902,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1076088059342405447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3293643728702865815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a29634705f521a42b59f84b630774cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 80
+  impactForce: 300
+  damage: 50
+  impactPosition: {x: 0, y: 0.2, z: 0}
 --- !u!54 &-4016257315748919338
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4918,19 +4934,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1076088059342405447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3293643728702865815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a29634705f521a42b59f84b630774cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 250
-  impactForce: 100000
-  damage: 10
-  impactPosition: {x: 0, y: 0, z: 0}

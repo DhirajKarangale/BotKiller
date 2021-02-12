@@ -7,14 +7,15 @@ public class HealthPack : MonoBehaviour
 
    private void Start()
    {
-       playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye>();
+      playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye>();
    }
 
    private void Update()
    {
-       if(playerDye.isHealthPackTrigger)
+       if(playerDye.isHealthPackTrigger && (playerDye.currentHealth<playerDye.health))
        {
-         Instantiate(destroyEffect,playerDye.transform.position,playerDye.transform.rotation);
+         playerDye.currentHealth = playerDye.health;
+         Instantiate(destroyEffect,transform.position,Quaternion.identity);
          Destroy(gameObject,0.3f);
        }
    }

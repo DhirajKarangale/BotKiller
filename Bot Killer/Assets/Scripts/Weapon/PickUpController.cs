@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour
@@ -5,9 +7,9 @@ public class PickUpController : MonoBehaviour
     public Gun gunScript;
     public Rigidbody rb;
     public BoxCollider coll;
-    public Transform player, gunContainer,gunDrop,fpsCam;
+    public Transform player, gunContainer, fpsCam,weaponHolder;
     public WeaponButton weaponButton;
-    [SerializeField] GameObject ammoTextBG;
+    [SerializeField] GameObject ammoTextBG,attackButton;
 
     public byte pickUpRange;
     public byte dropForwardForce, dropUpwardForce;
@@ -41,18 +43,20 @@ public class PickUpController : MonoBehaviour
       {
         gunScript.ammoDisplay.enabled = true;
         ammoTextBG.SetActive(true);
+        attackButton.SetActive(true);
       }
       if(slotFull == false)
       {
         gunScript.ammoDisplay.enabled = false;
-         ammoTextBG.SetActive(false);
+        ammoTextBG.SetActive(false);
+        attackButton.SetActive(false);
       }
      
         //Check if player is in range 
         Vector3 distanceToPlayer = player.position - transform.position;
         if(distanceToPlayer.magnitude <= pickUpRange && !slotFull && !equipped && weaponButton.isPickUp) PickUp();
         //Drop if equipped 
-        if ( slotFull && equipped && weaponButton.isPickUp) Drop();
+        if (slotFull && equipped && weaponButton.isPickUp) Drop();
 
         
     }
@@ -82,8 +86,10 @@ public class PickUpController : MonoBehaviour
         equipped = false;
         slotFull = false;
 
-        //Set parent to null
-        transform.SetParent(gunDrop);
+        //Set parent
+        transform.SetParent(weaponHolder);
+
+        transform.localScale = new Vector3(10,10,10);
 
         //Make Rigidbody not kinematic and BoxCollider normal
         rb.isKinematic = false;

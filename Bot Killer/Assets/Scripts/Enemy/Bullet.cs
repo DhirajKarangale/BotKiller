@@ -39,10 +39,10 @@ public class Bullet : MonoBehaviour
         {
            if(player != null)
            { 
-             playerDye.TakeDamage(damage);
-             player.transform.position =player.transform.position - (hit.normal + impactPosition);
-             Destroy(gameObject);
+               playerDye.TakeDamage(damage);
            }
+            Destroy(gameObject,0.1f);
+            player.transform.position =player.transform.position - (hit.normal + impactPosition);
         }
     }
 }

@@ -14,7 +14,7 @@ public class Gun : MonoBehaviour
     private Ray ray;
 
     [Header("Bullets Attributes")]
-    [SerializeField] int shootForce;
+    [SerializeField] byte shootForce;
     [SerializeField] int impactForce;
     [SerializeField] byte damage;
     [SerializeField] float timeBetweenShotting, reloadTime, timeBetweenShots;
@@ -28,6 +28,7 @@ public class Gun : MonoBehaviour
     [SerializeField] RecoilPushBack recoil;
     [SerializeField] WeaponButton weaponButton;
     [SerializeField] Animatation animatation;
+    [SerializeField] Animator animator;
      
     [Header("Display")]
     [SerializeField] GameObject muzzelFlash;
@@ -35,23 +36,17 @@ public class Gun : MonoBehaviour
     public TextMeshProUGUI ammoDisplay;
     [SerializeField] Camera fpscamera;
 
+    [Header("Scope")]
+    [SerializeField] GameObject scopeOverLay;
+    [SerializeField] GameObject weaponCamera;
+    [SerializeField] float scopeFOV;
+    private float originalFov;
+
     [Header("Points")]
     [SerializeField] Transform attackPoint;
     
     private bool readyToShoot;
     private bool allowInvoke = true;
-
- 
-    public void PointerUp()
-    {
-      weaponButton.PointerUp();
-    }
-
-    public void PointerDown()
-    {
-      weaponButton.PointerDown();
-    }
-
 
     private void Awake()
     {
@@ -62,19 +57,24 @@ public class Gun : MonoBehaviour
     private void Start()
     { 
         audioSource = GetComponent<AudioSource>();
+        originalFov = fpscamera.fieldOfView;
     }
 
     private void Update() 
     {  
-           
-        if (weaponButton.shotting)
-        {
-            if (readyToShoot && !animatation.reloading && (bulletsLeft > 0))
-            {
-                bulletsShots = 0;
-                Shoot();
-            }
+        if (weaponButton.shotting && readyToShoot && !animatation.reloading && (bulletsLeft > 0))
+        { 
+            bulletsShots = 0;
+            Shoot();
         }
+ 
+        if(weaponButton.isScope && readyToShoot && !animatation.reloading && (bulletsLeft > 0))
+        {
+          Invoke("ScopeOn",0.15f);
+        }
+        if(!weaponButton.isScope) ScopeOff();
+              
+
        // Ammo Display.
        if(ammoDisplay != null)
        {
@@ -175,16 +175,18 @@ public class Gun : MonoBehaviour
             // Bullet Hole
             if(hit.collider.tag != "Enemy")
             {
-            // Instantiate bullet Hole.                                                      
+             if(bulletHole != null)
+             {
+                  // Instantiate bullet Hole.                                                      
              currentBulletHole = Instantiate(bulletHole,targetPoint + hit.normal * 0.001f,Quaternion.identity);
              
              // Rotating Bullet hole to direction of target.
              currentBulletHole.transform.LookAt(hit.point + hit.normal);
 
-             // Destroy Bullet Hole.
+              // Destroy Bullet Hole.
              Destroy(currentBulletHole,3f);
+             }
             }
-           
         }
         else
         {
@@ -242,5 +244,19 @@ public class Gun : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         animatation.reloading = false;
+    }
+
+    private void ScopeOn()
+    {
+        scopeOverLay.SetActive(true);
+        weaponCamera.SetActive(false);
+        fpscamera.fieldOfView = scopeFOV;
+    }
+
+    private void ScopeOff()
+    {
+        scopeOverLay.SetActive(false);
+        weaponCamera.SetActive(true);
+        fpscamera.fieldOfView = originalFov;
     }
 }

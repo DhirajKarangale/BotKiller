@@ -5,10 +5,10 @@ public class Health_Dye : MonoBehaviour
 {
    [Header("Health")]
    [SerializeField] Slider healthSlider;
-   [SerializeField] float health;
+   public float health;
    [SerializeField] float regainHealth;
    [SerializeField] float healthIncreaseAfterTime;
-   private float currentHealth;
+   public float currentHealth;
    private bool isPlayerHit,allowRegainHealth;
    public bool isPlayerAlive,isHealthPackTrigger;
     
@@ -16,7 +16,7 @@ public class Health_Dye : MonoBehaviour
     [Header("Death")]
     [SerializeField] GameObject deathEffect;
     [SerializeField] GameObject hitScreen;
-    public AudioClip hurtSound;
+    [SerializeField] AudioClip hurtSound;
     private GameObject currentDeathEffect;
 
     [Header("Refrences")]
@@ -25,17 +25,16 @@ public class Health_Dye : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         isPlayerAlive = true;
         currentHealth = health;
         healthSlider.value = currentHealth/health;
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         healthSlider.value = currentHealth/health;
 
-        if(currentHealth<health && isHealthPackTrigger)  currentHealth = health; 
         HitScreen(); 
         RegainHealthController();
     }
@@ -57,11 +56,11 @@ public class Health_Dye : MonoBehaviour
     {
         if(collider.gameObject.tag == "EnemyBullet")
         { 
-            audioSource.PlayOneShot(hurtSound,0.5f);
+            audioSource.PlayOneShot(hurtSound,0.4f);
+            isHealthPackTrigger = false;
             PlayerHit();
             isPlayerHit = true;
-            isHealthPackTrigger = false;
-        } 
+        }
         if(collider.gameObject.tag == "HealthPack")
         {
             isPlayerHit = false;

@@ -28,6 +28,7 @@ public class Animatation : MonoBehaviour
          animator.SetBool("Breath",false);
          animator.SetBool("Reload",false);
          animator.SetBool("Runing",false);
+         animator.SetBool("Scoped",false);
        }
      
 
@@ -37,6 +38,7 @@ public class Animatation : MonoBehaviour
            animator.SetBool("Reload",false);
            animator.SetBool("Runing",false);
            animator.SetBool("OriginalPos",false);
+           animator.SetBool("Scoped",false);
         }
 
         if((weaponButton.shotting == false) && (reloading == false) && ((x != 0) || (z != 0)))
@@ -45,6 +47,7 @@ public class Animatation : MonoBehaviour
            animator.SetBool("Reload",false);
            animator.SetBool("Runing",true);
            animator.SetBool("OriginalPos",false);
+           animator.SetBool("Scoped",false);
         }
         
        if(reloading == true)
@@ -53,7 +56,17 @@ public class Animatation : MonoBehaviour
            animator.SetBool("Reload",true);
            animator.SetBool("Runing",false);
            animator.SetBool("OriginalPos",false);
+           animator.SetBool("Scoped",false);
         }
+      }
+
+      if(weaponButton.isScope)
+      {
+         animator.SetBool("Breath",false);
+         animator.SetBool("Reload",false);
+         animator.SetBool("Runing",false);
+         animator.SetBool("OriginalPos",false);
+         animator.SetBool("Scoped",true);
       }
         
     }
