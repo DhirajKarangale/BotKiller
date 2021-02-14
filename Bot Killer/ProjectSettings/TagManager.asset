@@ -4,14 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Shootable
   - Ground
-  - CanGrab
-  - Enemy
-  - Bullet
-  - ScreenShake
-  - EnemyBullet
   - Cam2
+  - ScreenShake
   - HealthPack
+  - EnemyBullet
+  - Bullet
+  - Enemy
+  - GranedeBox
   layers:
   - Default
   - TransparentFX
@@ -19,11 +20,11 @@ TagManager:
   - 
   - Water
   - UI
+  - 
+  - 
+  - Lighting
   - Ground
-  - Player
-  - Weapons
-  - 
-  - 
+  - Postprocessing
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

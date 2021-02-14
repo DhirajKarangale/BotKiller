@@ -7,11 +7,11 @@ public class Animatation : MonoBehaviour
     [SerializeField] WeaponButton weaponButton;
     [SerializeField] Animator animator;
     private PlayerMovement player;
-    private Health_Dye playerDye;
+    private Health_Dye_Trigger playerDye;
 
    private void Start()
    {
-      playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye>();
+      playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
       player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
    }
 

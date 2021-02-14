@@ -21,11 +21,16 @@ public class ItemsDestroy : MonoBehaviour
 
     private void DestroyItem()
     {
-       Instantiate(crackedItem,transform.position + crackedItemDropPosition,transform.rotation);
-       Instantiate(crackedEffect,transform.position + crackedItemDropPosition,crackedItem.transform.rotation);
+       if(crackedItem != null)
+       {
+          GameObject currentCrackedItem = Instantiate(crackedItem,transform.position + crackedItemDropPosition,Quaternion.identity);
+          Destroy(currentCrackedItem,20f);
+       }
+        GameObject currentCrackedEffect = Instantiate(crackedEffect,transform.position + crackedItemDropPosition,crackedItem.transform.rotation);
+        Destroy(currentCrackedEffect,2f);
        for(int i=0;i<itemToDrop.Count;i++)
        {
-          Instantiate(itemToDrop[i],transform.position + itemDropPosition,transform.rotation);
+        itemToDrop[i].SetActive(true);
        }
        Destroy(gameObject);
     }

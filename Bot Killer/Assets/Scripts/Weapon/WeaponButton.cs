@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class WeaponButton : MonoBehaviour
 { 
-    public bool shotting,isReload,isPickUp,isDrop,isScope;
+    public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide;
+      
 
-     
     public void AttackButtonPointerUp()
     {
       shotting = false;
@@ -35,5 +35,9 @@ public class WeaponButton : MonoBehaviour
    {
      isScope = !isScope;
    }
-    
+
+     public void ThrowGranide()
+     {
+      throwGranide = true;
+     }
 }

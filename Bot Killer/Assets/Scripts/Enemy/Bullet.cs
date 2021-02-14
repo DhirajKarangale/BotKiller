@@ -7,14 +7,14 @@ public class Bullet : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] Vector3 impactPosition;
     private PlayerMovement player;
-    private Health_Dye playerDye;
+    private Health_Dye_Trigger playerDye;
     private Vector3 target;
     private RaycastHit hit;
 
 
     private void Start()
     {
-        playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye>();
+        playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         target = player.transform.position;
      }

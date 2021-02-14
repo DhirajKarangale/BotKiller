@@ -14,12 +14,12 @@ public class Petrolling_Look : MonoBehaviour
   [SerializeField] float startWaitTime;
   private float waitTime;
   [SerializeField] Follow_Attack follow_Attack;  
-  private Health_Dye playerDye;
+  private Health_Dye_Trigger playerDye;
   private PlayerMovement player;
 
   private void Start()
   {
-      playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye>();
+      playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
       player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
 
      waitTime = startWaitTime;
@@ -32,7 +32,7 @@ public class Petrolling_Look : MonoBehaviour
   {
      if(!playerDye.isPlayerAlive)
       {
-       Invoke("Petrolling",3f);
+       Invoke("StartPetrolling",3f);
       }
 
      if(!follow_Attack.isPetroling) Look();
