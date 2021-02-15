@@ -33,7 +33,7 @@ public class GrenadeThrow : MonoBehaviour
        if(weaponButton.throwGranide && (currentThrowTime<=0) && (currentGranede>0))
        {
            currentGranede--;
-           currentThrowTime =throwTime;
+           currentThrowTime = throwTime;
            weaponButton.throwGranide = false;
            GameObject granede = Instantiate(granedePrefab,transform.position,transform.rotation);
            Rigidbody rigidbody = granede.GetComponent<Rigidbody>();

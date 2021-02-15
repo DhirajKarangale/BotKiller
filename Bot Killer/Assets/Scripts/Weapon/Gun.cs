@@ -173,7 +173,7 @@ public class Gun : MonoBehaviour
             }
 
             // Bullet Hole
-            if(hit.collider.tag != "Enemy")
+            if(hit.collider.tag == "Sorrounding")
             {
              if(bulletHole != null)
              {
@@ -184,7 +184,7 @@ public class Gun : MonoBehaviour
              currentBulletHole.transform.LookAt(hit.point + hit.normal);
 
               // Destroy Bullet Hole.
-             Destroy(currentBulletHole,3f);
+             Destroy(currentBulletHole,5f);
              }
             }
         }

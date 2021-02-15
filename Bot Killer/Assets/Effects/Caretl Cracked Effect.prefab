@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5630208776634044540}
   - component: {fileID: 7556666126601618403}
   m_Layer: 0
-  m_Name: Brallell Cracked Effect
+  m_Name: Caretl Cracked Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4875,7 +4875,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6512fd47fcb13343a6800bafbb0d205, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

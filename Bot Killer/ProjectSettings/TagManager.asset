@@ -13,6 +13,7 @@ TagManager:
   - Bullet
   - Enemy
   - GranedeBox
+  - Sorrounding
   layers:
   - Default
   - TransparentFX
