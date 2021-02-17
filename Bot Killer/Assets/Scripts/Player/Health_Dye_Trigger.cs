@@ -10,18 +10,13 @@ public class Health_Dye_Trigger : MonoBehaviour
    [SerializeField] float healthIncreaseAfterTime;
    public float currentHealth;
    private bool isPlayerHit,allowRegainHealth;
-   public bool isPlayerAlive,isHealthPackTrigger;
-    
+   public bool isPlayerAlive,isHealthPackTrigger,isGranedeBoxTrigger;
 
     [Header("Death")]
     [SerializeField] GameObject deathEffect;
     [SerializeField] GameObject hitScreen;
     [SerializeField] AudioClip hurtSound;
     private GameObject currentDeathEffect;
-
-    [Header("Granede")]
-    [SerializeField] GrenadeThrow grenadeThrow;
-    [SerializeField] GameObject granedeBox;
 
     [Header("Refrences")]
     [SerializeField] GameObject fps;
@@ -63,21 +58,22 @@ public class Health_Dye_Trigger : MonoBehaviour
         if(collider.gameObject.tag == "EnemyBullet")
         { 
             audioSource.PlayOneShot(hurtSound,0.4f);
-            isHealthPackTrigger = false;
-            PlayerHit();
             isPlayerHit = true;
+            isHealthPackTrigger = false;
+            isGranedeBoxTrigger =false;
+            PlayerHit();
         }
         if(collider.gameObject.tag == "HealthPack")
         {
-            isHealthPackTrigger = true;
             isPlayerHit = false;
+            isHealthPackTrigger = true;
+            isGranedeBoxTrigger = false;
         }
         if(collider.gameObject.tag == "GranedeBox")
         {
             isPlayerHit = false;
             isHealthPackTrigger = false;
-            grenadeThrow.currentGranede += 5;
-            Destroy(granedeBox,0.3f);
+            isGranedeBoxTrigger = true;
         }
     }
 

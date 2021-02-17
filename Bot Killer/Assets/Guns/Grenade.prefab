@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 5
-  effectArea: 7
+  effectArea: 8
   explosionForce: 700
   damage: 50
   granideEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,

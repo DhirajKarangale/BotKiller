@@ -16,7 +16,7 @@ public class HealthPack : MonoBehaviour
        {
          playerDye.currentHealth = playerDye.health;
          GameObject currentDestroyEffect = Instantiate(destroyEffect,transform.position,Quaternion.identity);
-         Destroy(currentDestroyEffect,2f); 
+         Destroy(currentDestroyEffect,10f); 
          Destroy(gameObject,0.3f);
        }
    }

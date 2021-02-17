@@ -6,9 +6,9 @@ public class ItemsDestroy : MonoBehaviour
     [SerializeField] int health = 100;
     [SerializeField] GameObject crackedItem;
     [SerializeField] GameObject crackedEffect;
+    [SerializeField] GameObject setGunActive;
     [SerializeField] Vector3 itemDropPosition,crackedItemDropPosition;
-    [SerializeField] GameObject itemToDrop;
-    [SerializeField] List <GameObject> itemToActive = new List<GameObject>();
+    [SerializeField] List <GameObject> itemToDrop = new List<GameObject>();
   
     
    public void TakeDamage(int damage)
@@ -27,16 +27,16 @@ public class ItemsDestroy : MonoBehaviour
           GameObject currentCrackedItem = Instantiate(crackedItem,transform.position + crackedItemDropPosition,Quaternion.identity);
           Destroy(currentCrackedItem,120f);
        }
-        GameObject currentCrackedEffect = Instantiate(crackedEffect,transform.position + crackedItemDropPosition,crackedItem.transform.rotation);
+        GameObject currentCrackedEffect = Instantiate(crackedEffect,transform.position + itemDropPosition,crackedItem.transform.rotation);
         Destroy(currentCrackedEffect,2f);
-        if(itemToDrop != null)
+        for(int i=0;i<itemToDrop.Count;i++)
         {
-            Instantiate(itemToDrop,transform.position + crackedItemDropPosition,Quaternion.identity);
+         Instantiate(itemToDrop[i],transform.position + itemDropPosition,transform.rotation);
         }
-       for(int i=0;i<itemToActive.Count;i++)
-       {
-        itemToActive[i].SetActive(true);
-       }
-       Destroy(gameObject);
+        if(setGunActive != null)
+        {
+            setGunActive.SetActive(true);
+        }
+        Destroy(gameObject);
     }
 }

@@ -5,7 +5,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] byte bulletForce;
     [SerializeField] float impactForce;
     [SerializeField] int damage;
-    [SerializeField] Vector3 impactPosition;
     private PlayerMovement player;
     private Health_Dye_Trigger playerDye;
     private Vector3 target;
@@ -38,13 +37,12 @@ public class Bullet : MonoBehaviour
            if(player != null)
            { 
                playerDye.TakeDamage(damage);
-               player.transform.position =player.transform.position - (hit.normal + impactPosition);
                Destroy(gameObject,0.1f);
            }
         }
-        else if(collision.gameObject.tag == "Sorrounding")
+        if(collision.gameObject.tag != "Enemy")
         {
-            Destroy(gameObject);
+            Destroy(gameObject,0.01f);
         }
     }
 }

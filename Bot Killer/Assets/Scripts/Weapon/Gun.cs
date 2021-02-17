@@ -173,7 +173,7 @@ public class Gun : MonoBehaviour
             }
 
             // Bullet Hole
-            if(hit.collider.tag == "Sorrounding")
+            if(hit.collider.tag == "Sorrounding" || hit.collider.tag == "Ground")
             {
              if(bulletHole != null)
              {
