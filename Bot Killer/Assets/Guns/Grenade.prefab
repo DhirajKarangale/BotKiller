@@ -126,9 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cab8aad147641749bb623fb58413503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 5
-  effectArea: 8
+  delay: 4
+  effectArea: 10
   explosionForce: 700
-  damage: 50
+  damage: 70
   granideEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}

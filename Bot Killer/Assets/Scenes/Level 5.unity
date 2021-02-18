@@ -1048,7 +1048,7 @@ MonoBehaviour:
   weaponButton: {fileID: 603719670}
   granedeDisplay: {fileID: 1735628045}
   throwForce: 30
-  throwTime: 3
+  throwTime: 2.5
   noOfGranede: 0
   currentGranede: 0
 --- !u!81 &112650868
@@ -8163,7 +8163,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 84a2b5a80e12d4340b0392ba4f7f1e01, type: 2}
+      objectReference: {fileID: 2100000, guid: e2fa279f5528abd4e9c9cab044813295, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18a33b201b7d4b41a22a039bc5602bb, type: 3}
 --- !u!4 &381271974 stripped
