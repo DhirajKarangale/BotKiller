@@ -9,7 +9,7 @@ public class PickUpController : MonoBehaviour
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam,weaponHolder;
     public WeaponButton weaponButton;
-    [SerializeField] GameObject ammoTextBG,attackButton;
+    [SerializeField] GameObject ammoTextBG,attackButton,scopeButton,reloadButton;
 
     public byte pickUpRange;
     public byte dropForwardForce, dropUpwardForce;
@@ -44,12 +44,16 @@ public class PickUpController : MonoBehaviour
         gunScript.ammoDisplay.enabled = true;
         ammoTextBG.SetActive(true);
         attackButton.SetActive(true);
+        scopeButton.SetActive(true);
+        reloadButton.SetActive(true);
       }
       if(slotFull == false)
       {
         gunScript.ammoDisplay.enabled = false;
         ammoTextBG.SetActive(false);
         attackButton.SetActive(false);
+        scopeButton.SetActive(false);
+        reloadButton.SetActive(false);
       }
      
         //Check if player is in range 

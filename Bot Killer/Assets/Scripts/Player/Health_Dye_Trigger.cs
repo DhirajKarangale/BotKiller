@@ -57,7 +57,7 @@ public class Health_Dye_Trigger : MonoBehaviour
     {
         if(collider.gameObject.tag == "EnemyBullet")
         { 
-            audioSource.PlayOneShot(hurtSound,0.4f);
+            audioSource.PlayOneShot(hurtSound,0.8f);
             isPlayerHit = true;
             isHealthPackTrigger = false;
             isGranedeBoxTrigger =false;
@@ -80,7 +80,7 @@ public class Health_Dye_Trigger : MonoBehaviour
     private void PlayerHit()
     {
         var color = hitScreen.GetComponent<Image>().color;
-        color.a = 0.6f;
+        color.a = 0.9f;
         hitScreen.GetComponent<Image>().color = color;
     }
 
@@ -91,7 +91,7 @@ public class Health_Dye_Trigger : MonoBehaviour
              if(hitScreen.GetComponent<Image>().color.a > 0)
              {
                  var color = hitScreen.GetComponent<Image>().color;
-                 color.a -= 0.05f;
+                 color.a -= 0.03f;
                  hitScreen.GetComponent<Image>().color = color;
              }
          }

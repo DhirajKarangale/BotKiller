@@ -27,7 +27,8 @@ public class Grenade : MonoBehaviour
    private void Explode()
      {
         isExplode = true;
-        Instantiate(granideEffect,transform.position,transform.rotation);
+           GameObject currentGranedeEffect = Instantiate(granideEffect,transform.position,transform.rotation);
+           Destroy(currentGranedeEffect,30f);
 
           Collider[] colliderToDestroy =  Physics.OverlapSphere(transform.position,effectArea); // Finding the object near granide to destroy them.
           foreach (Collider nearByObject in colliderToDestroy) // Go through all object

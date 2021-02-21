@@ -16,6 +16,9 @@ public class Follow_Attack : MonoBehaviour
   [SerializeField] GameObject bullets;
   [SerializeField] Transform attackPoint;
   [SerializeField] float startTimeBetweenShot;
+  [SerializeField] int bulletForce;
+  [SerializeField] float impactForce;
+  private RaycastHit hit;
   private GameObject currentBullet;
   private float timeBetweenShot;
 
@@ -67,12 +70,20 @@ public class Follow_Attack : MonoBehaviour
 
    private void Attack()
    {
+      Vector3 target = player.transform.position - transform.position;
       if(distanseBetwwenEnemyAndPlayer<=attackRange)
      { 
         isPetroling = false;
         if(timeBetweenShot<=0)
         {
          currentBullet = Instantiate(bullets,attackPoint.position,Quaternion.identity); // Shoot
+         transform.forward = target.normalized;
+         currentBullet.GetComponent<Rigidbody>().AddForce(target.normalized * bulletForce,ForceMode.Impulse);
+         Physics.Raycast(transform.position,target,out hit);
+        if(hit.rigidbody != null)
+        {
+            hit.rigidbody.AddForce(-hit.normal * impactForce);
+        }
          timeBetweenShot = startTimeBetweenShot;
         }
         else
@@ -80,7 +91,7 @@ public class Follow_Attack : MonoBehaviour
            timeBetweenShot -= Time.deltaTime;
         }
 
-        Destroy(currentBullet,3f);
+        Destroy(currentBullet,5f);
      }
    }
      

@@ -169,6 +169,7 @@ public class Gun : MonoBehaviour
             // Destroy Enemy.
             if(enemy != null)
             {
+                enemy.FlashRed();
                 enemy.TakeDamage(damage);
             }
 

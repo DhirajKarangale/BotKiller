@@ -11,6 +11,7 @@ public class Health_Death : MonoBehaviour
   [SerializeField] GameObject itemToDrop;
   // Flash
   [SerializeField] MeshRenderer meshRenderer;
+  [SerializeField] Material originalColor;
 
   [Header("Health")]
   [SerializeField] Slider slider;
@@ -20,6 +21,7 @@ public class Health_Death : MonoBehaviour
 
   private void Start()
   {
+    originalColor.color =   meshRenderer.material.color;
     currentHealth = health;
     slider.value =currentHealth/health;
      // Declearing and finding camera shake script 
@@ -44,20 +46,15 @@ public class Health_Death : MonoBehaviour
      }
   }
 
-  public void OnTriggerEnter(Collider collider)
-   {
-     if(collider.gameObject.tag == "Bullet")
-     {
-       StartCoroutine(FlashRed());
-     }
-   }
-
-   public IEnumerator FlashRed()
+   public void FlashRed()
    {
      meshRenderer.material.color = Color.red;
-     yield return new WaitForSeconds(0.1f);
-     meshRenderer.material.color = Color.white;
-   }     
+     Invoke("ReturnToOriginalColor",0.13f);
+   } 
+   private void ReturnToOriginalColor()
+   {
+     meshRenderer.material.color = originalColor.color;
+   }    
 
    public void TakeDamage(int damage)
     {
