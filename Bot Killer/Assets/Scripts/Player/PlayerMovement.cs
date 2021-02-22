@@ -47,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
         if(isThrust && currentThrustFuel>0)
         {
             Thrust();
+             audioSource.clip = thrustSound;
+             audioSource.Play();
         }
        else
        {
@@ -100,8 +102,7 @@ public class PlayerMovement : MonoBehaviour
         currentThrustFuel -= decreaseThrustFuel * Time.deltaTime;
         gravityDownVelocity.y = Mathf.Sqrt(thrustSpeed * (-2f) * gravity);
         thrustEffect.Play();
-        audioSource.clip = thrustSound;
-        audioSource.Play();
+       
     }
 
     private void ThrustSlideBar()

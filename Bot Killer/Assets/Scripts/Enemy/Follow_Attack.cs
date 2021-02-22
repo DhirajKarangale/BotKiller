@@ -91,7 +91,7 @@ public class Follow_Attack : MonoBehaviour
            timeBetweenShot -= Time.deltaTime;
         }
 
-        Destroy(currentBullet,5f);
+        Destroy(currentBullet,3f);
      }
    }
      

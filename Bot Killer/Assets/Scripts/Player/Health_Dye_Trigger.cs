@@ -105,12 +105,18 @@ public class Health_Dye_Trigger : MonoBehaviour
 
     private void DestroyPlayer()
     {
+      Time.timeScale = 0.45f;  
       isPlayerAlive = false;
       Destroy(firstCamRef);
       cam2.SetActive(true);
+      Invoke("PlayerDeathEffect",0.309f);
+      Destroy(fps,0.3f);
+    }
+    
+    private void PlayerDeathEffect()
+    {
       currentDeathEffect = Instantiate(deathEffect,transform.position,Quaternion.identity);
       Destroy(currentDeathEffect,3f);
-      Destroy(fps,0.3f);
     }
     
     private void RegainHealth()
