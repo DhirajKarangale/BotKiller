@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
     private AudioSource audioSource;
     private GameObject currentBullet;
     private GameObject currentBulletHole;
-    private Vector3 directionOfAttackAndHitPoint;
+    private Vector3 directionWithSpread;
     private Vector3 targetPoint;
     private RaycastHit hit;
     private Ray ray;
@@ -19,6 +19,7 @@ public class Gun : MonoBehaviour
     [SerializeField] byte damage;
     [SerializeField] float timeBetweenShotting, reloadTime, timeBetweenShots;
     [SerializeField] byte magazineSize, bulletsPerTrap;
+    [SerializeField] float spread = 0;
     private byte bulletsLeft, bulletsShots;
    
 
@@ -104,7 +105,13 @@ public class Gun : MonoBehaviour
         AttackPosition();
 
         // Calculatating direction between target point and attack point.
-        directionOfAttackAndHitPoint = targetPoint - attackPoint.position;
+        Vector3 directionWithoutSpread = targetPoint - attackPoint.position;
+
+        // Calculate Spread.
+        float x = Random.Range(-spread,spread);
+        float y = Random.Range(-spread,spread);
+
+         directionWithSpread = directionWithoutSpread + new Vector3(x,y,0);
 
         AddingBullets();
         GunEffects();
@@ -158,7 +165,7 @@ public class Gun : MonoBehaviour
 
             //Declearing Item Destroy
             ItemsDestroy item = hit.transform.GetComponent<ItemsDestroy>();
-            // Destroying Item
+            // Damage Item
             if(item != null)
             {
                 item.TakeDamage(damage);
@@ -166,7 +173,7 @@ public class Gun : MonoBehaviour
 
             //Declearing Enemy to Destroy.
             Health_Death enemy = hit.transform.GetComponent<Health_Death>();
-            // Destroy Enemy.
+            // Damage Enemy.
             if(enemy != null)
             {
                 enemy.FlashRed();
@@ -202,10 +209,10 @@ public class Gun : MonoBehaviour
         currentBullet = Instantiate(bullets, attackPoint.position, Quaternion.identity);
 
         // Rotate Bullets to Shoot Direction.
-        currentBullet.transform.forward = directionOfAttackAndHitPoint.normalized;
+        currentBullet.transform.forward = directionWithSpread.normalized;
 
         // Add force to bullet.
-        currentBullet.GetComponent<Rigidbody>().AddForce(directionOfAttackAndHitPoint.normalized * shootForce, ForceMode.Impulse);
+        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
 
         // Destroy Bullets Automatically. 
         Destroy(currentBullet, 3f);
@@ -228,7 +235,7 @@ public class Gun : MonoBehaviour
 
         if (impactEffect != null)
         {
-            GameObject currentImpactEffect = Instantiate(impactEffect, targetPoint, Quaternion.LookRotation(directionOfAttackAndHitPoint.normalized));
+            GameObject currentImpactEffect = Instantiate(impactEffect, targetPoint, Quaternion.LookRotation(directionWithSpread.normalized));
             Destroy(currentImpactEffect, 3f);
         }
     }

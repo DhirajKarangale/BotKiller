@@ -8952,7 +8952,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 381271976}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: bc3d169a8ef803d4abf078bc075e99e4, type: 2}
   slider: {fileID: 240680770}
   healthBarUI: {fileID: 1824514522}
   health: 30
@@ -15307,7 +15307,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   meshRenderer: {fileID: 558660034}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 74f161b937e8f3e46ada026fa002840c, type: 2}
   slider: {fileID: 423796502}
   healthBarUI: {fileID: 841409954}
   health: 80
@@ -15638,7 +15638,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 569482695}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: bc3d169a8ef803d4abf078bc075e99e4, type: 2}
   slider: {fileID: 1734388481}
   healthBarUI: {fileID: 1379083680}
   health: 60
@@ -21474,7 +21474,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 691735495}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: e2fa279f5528abd4e9c9cab044813295, type: 2}
   slider: {fileID: 1356901354}
   healthBarUI: {fileID: 1263953441}
   health: 60
@@ -22099,7 +22099,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 737935690}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 763721910}
   healthBarUI: {fileID: 290879792}
   health: 40
@@ -23464,7 +23464,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 846342040}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 312926165}
   healthBarUI: {fileID: 546314476}
   health: 80
@@ -25048,7 +25048,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   meshRenderer: {fileID: 968316584}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 1591436134}
   healthBarUI: {fileID: 1733775141}
   health: 60
@@ -25607,7 +25607,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 1006358103}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: e2fa279f5528abd4e9c9cab044813295, type: 2}
   slider: {fileID: 1652565844}
   healthBarUI: {fileID: 1976740252}
   health: 80
@@ -26094,7 +26094,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 1023486940}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 1a28d63c1672b9847915a31e7e342324, type: 2}
   slider: {fileID: 1458981423}
   healthBarUI: {fileID: 1755343725}
   health: 60
@@ -29522,7 +29522,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   meshRenderer: {fileID: 1305091514}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 74f161b937e8f3e46ada026fa002840c, type: 2}
   slider: {fileID: 1198327323}
   healthBarUI: {fileID: 1698552243}
   health: 100
@@ -30402,7 +30402,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 1392448487}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 84a2b5a80e12d4340b0392ba4f7f1e01, type: 2}
   slider: {fileID: 1235962341}
   healthBarUI: {fileID: 232831555}
   health: 40
@@ -33828,7 +33828,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 1722252015}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 84a2b5a80e12d4340b0392ba4f7f1e01, type: 2}
   slider: {fileID: 882124412}
   healthBarUI: {fileID: 1099032673}
   health: 30

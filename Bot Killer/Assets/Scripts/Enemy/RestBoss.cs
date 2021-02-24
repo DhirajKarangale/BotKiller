@@ -8,9 +8,13 @@ public class RestBoss : MonoBehaviour
   [SerializeField] GameObject bullets;
   [SerializeField] Transform attackPoint;
   [SerializeField] float startTimeBetweenShot;
+  [SerializeField] int bulletForce;
+  [SerializeField] float impactForce;
    [SerializeField] byte attackRange;
+  private RaycastHit hit;
   private GameObject currentBullet;
   private float timeBetweenShot;
+
 
    private float distanseBetwwenEnemyAndPlayer;
    private PlayerMovement player;
@@ -41,11 +45,19 @@ public class RestBoss : MonoBehaviour
 
     private void Attack()
    {
+      Vector3 target = player.transform.position - transform.position;
       if(distanseBetwwenEnemyAndPlayer<=attackRange)
      { 
         if(timeBetweenShot<=0)
         {
          currentBullet = Instantiate(bullets,attackPoint.position,Quaternion.identity); // Shoot
+         transform.forward = target.normalized;
+         currentBullet.GetComponent<Rigidbody>().AddForce(target.normalized * bulletForce,ForceMode.Impulse);
+         Physics.Raycast(transform.position,target,out hit);
+        if(hit.rigidbody != null)
+        {
+            hit.rigidbody.AddForce(-hit.normal * impactForce);
+        }
          timeBetweenShot = startTimeBetweenShot;
         }
         else
@@ -55,5 +67,5 @@ public class RestBoss : MonoBehaviour
 
         Destroy(currentBullet,3f);
      }
-   }
+}
 }

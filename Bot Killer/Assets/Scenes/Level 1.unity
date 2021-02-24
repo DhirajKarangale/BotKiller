@@ -19268,7 +19268,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 968316584}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 1591436134}
   healthBarUI: {fileID: 1733775141}
   health: 60
@@ -23390,7 +23390,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   meshRenderer: {fileID: 1722252015}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 84a2b5a80e12d4340b0392ba4f7f1e01, type: 2}
   slider: {fileID: 882124412}
   healthBarUI: {fileID: 1099032673}
   health: 45

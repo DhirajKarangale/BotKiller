@@ -16,8 +16,8 @@ public class Follow_Attack : MonoBehaviour
   [SerializeField] GameObject bullets;
   [SerializeField] Transform attackPoint;
   [SerializeField] float startTimeBetweenShot;
-  [SerializeField] int bulletForce;
-  [SerializeField] float impactForce;
+  [SerializeField] int bulletForce = 800;
+  [SerializeField] float impactForce = 500f;
   private RaycastHit hit;
   private GameObject currentBullet;
   private float timeBetweenShot;

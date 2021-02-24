@@ -1050,6 +1050,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7604624106118373115, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906050858946553498, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
+        type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 121811459}
+    - target: {fileID: 8906050858946553498, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
+        type: 3}
+      propertyPath: originalColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 96b7e938c0c800245b67621dd2d48da8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1310908f07bd0d24aa8aaddbb080dbb4, type: 3}
 --- !u!4 &121811458 stripped
@@ -1058,244 +1073,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 121811457}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &121811459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1321759661024940, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
+--- !u!23 &121811459 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23156673370727448, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
     type: 3}
   m_PrefabInstance: {fileID: 121811457}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &121811460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121811459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ea36bcb2cab644c93c8e786bb6461d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathEffect: {fileID: 9166407052539241762, guid: 9314cdd84302135439a980c6859017b2,
-    type: 3}
-  itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
-    type: 3}
-  meshRenderer: {fileID: 121811464}
-  originalColor: {fileID: 0}
-  slider: {fileID: 352663098}
-  healthBarUI: {fileID: 2043686285}
-  health: 100
---- !u!114 &121811461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121811459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbadd0791ace3014d901f7e2282f3757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movePoint: {fileID: 790875518}
-  minX: -17
-  maxX: 28
-  minY: -4
-  maxY: 14
-  minZ: 275
-  maxZ: 325
-  petrollingSpeed: 18
-  startWaitTime: 1
-  follow_Attack: {fileID: 121811462}
---- !u!114 &121811462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121811459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  followSpeed: 18
-  followRange: 50
-  attackRange: 40
-  stopDistance: 17
-  retriveDistance: 12
-  bullets: {fileID: 3293643728702865815, guid: 0478b3b7b35882a409521cfe2e47480e, type: 3}
-  attackPoint: {fileID: 1948695825}
-  startTimeBetweenShot: 1.2
-  bulletForce: 0
-  impactForce: 0
-  isPetroling: 0
---- !u!82 &121811463
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121811459}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0d0a11a48c589b2418ece2907a5c7bcd, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!23 &121811464
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121811459}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &121811465
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121811459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.5345116, y: 3.2005844, z: 2.106936}
-  m_Center: {x: -0.36858943, y: 1.1002922, z: -0.50686884}
---- !u!54 &121811466
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121811459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &124279966
 GameObject:
   m_ObjectHideFlags: 0
@@ -14201,7 +13984,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 457594288}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 2f33c33d23a2dae4fa8c0f5a56d4f03b, type: 2}
   slider: {fileID: 751702161}
   healthBarUI: {fileID: 1050133545}
   health: 30
@@ -14714,7 +14497,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 497301199}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 505d626f44c207345ad0ffa64d4cd0c8, type: 2}
   slider: {fileID: 1264957370}
   healthBarUI: {fileID: 1374421554}
   health: 35
@@ -22830,7 +22613,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   meshRenderer: {fileID: 966973257}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 505d626f44c207345ad0ffa64d4cd0c8, type: 2}
   slider: {fileID: 1893402260}
   healthBarUI: {fileID: 1990245560}
   health: 150
@@ -23162,7 +22945,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   meshRenderer: {fileID: 968316584}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 1591436134}
   healthBarUI: {fileID: 1733775141}
   health: 60
@@ -26572,7 +26355,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   meshRenderer: {fileID: 1342667046}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: e6c1410f3dcb18f4fbf8632a7990f246, type: 2}
   slider: {fileID: 289627020}
   healthBarUI: {fileID: 1924710273}
   health: 150
@@ -29852,7 +29635,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   meshRenderer: {fileID: 1722252015}
-  originalColor: {fileID: 0}
+  originalColor: {fileID: 2100000, guid: 84a2b5a80e12d4340b0392ba4f7f1e01, type: 2}
   slider: {fileID: 882124412}
   healthBarUI: {fileID: 1099032673}
   health: 30
