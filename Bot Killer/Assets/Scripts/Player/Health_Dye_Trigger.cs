@@ -91,7 +91,7 @@ public class Health_Dye_Trigger : MonoBehaviour
              if(hitScreen.GetComponent<Image>().color.a > 0)
              {
                  var color = hitScreen.GetComponent<Image>().color;
-                 color.a -= 0.03f;
+                 color.a -= 0.08f;
                  hitScreen.GetComponent<Image>().color = color;
              }
          }

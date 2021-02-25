@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
-  m_Softness: {x: 50, y: 50}
+  m_Softness: {x: 10, y: 20}
 --- !u!1 &31402894
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +406,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 67567344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: Level 4
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &67567344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &176752246
 MonoBehaviour:
@@ -519,19 +531,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 4
 --- !u!222 &176752247
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -591,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &221077807
 MonoBehaviour:
@@ -614,19 +626,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 3
 --- !u!222 &221077808
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -686,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &231886894
 MonoBehaviour:
@@ -709,19 +721,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 115
+    m_MinSize: 7
+    m_MaxSize: 180
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 2
 --- !u!222 &231886895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -848,7 +860,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247548168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: Level 3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &247548168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,7 +962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &336919711
 MonoBehaviour:
@@ -961,19 +985,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 7
 --- !u!222 &336919712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1245,7 +1269,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 741779800}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: Level 2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &741779800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 857020218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: Level 8
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &857020218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,7 +1778,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009878869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: Level 7
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1009878869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,7 +1947,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1060312582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: Level 5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1060312582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1985,12 +2057,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2019,7 +2091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!1 &1147358858
 GameObject:
@@ -2104,7 +2176,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1983607533}
   m_Direction: 2
   m_Value: 1.0000001
-  m_Size: 0.62489635
+  m_Size: 0.66094804
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2250,7 +2322,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 150}
+  m_CellSize: {x: 140, y: 140}
   m_Spacing: {x: 40, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -2280,6 +2352,7 @@ GameObject:
   - component: {fileID: 1275158991}
   - component: {fileID: 1275158990}
   - component: {fileID: 1275158989}
+  - component: {fileID: 1275158993}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2321,7 +2394,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2339,7 +2412,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -2368,6 +2441,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1275158993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275158988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3373af6bfc18e494ba4764c7dc2f6365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1363162110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,7 +2571,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1363162115}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: Level 9
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1363162115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,7 +2673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &1464414885
 MonoBehaviour:
@@ -2599,19 +2696,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 5
 --- !u!222 &1464414886
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2635,7 +2732,7 @@ GameObject:
   - component: {fileID: 1468583646}
   - component: {fileID: 1468583645}
   m_Layer: 5
-  m_Name: LevelButton  10
+  m_Name: LevelButton 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2738,7 +2835,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1468583648}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: Level 10
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1468583648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2828,7 +2937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &1485184702
 MonoBehaviour:
@@ -2851,19 +2960,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 6
 --- !u!222 &1485184703
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2923,7 +3032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &1561483551
 MonoBehaviour:
@@ -2946,19 +3055,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 8
 --- !u!222 &1561483552
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3094,7 +3203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &1810661584
 MonoBehaviour:
@@ -3117,19 +3226,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 9
 --- !u!222 &1810661585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3138,6 +3247,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810661581}
   m_CullTransparentMesh: 1
+--- !u!1001 &1967479159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234797, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967579861063234799, guid: 819016585617a5e478ed62a3b24263a3,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneFader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 819016585617a5e478ed62a3b24263a3, type: 3}
 --- !u!1 &1983607532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,7 +3475,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1984023292}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: Level 1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1984023292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3488,7 +3678,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2066339689}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275158993}
+        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+        m_MethodName: LevelButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: Level 6
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2066339689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3578,7 +3780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 15, y: -15}
+  m_EffectDistance: {x: 5, y: -8}
   m_UseGraphicAlpha: 1
 --- !u!114 &2122675570
 MonoBehaviour:
@@ -3601,19 +3803,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e9506e68850c5c4ab98edee5aa6a534, type: 3}
-    m_FontSize: 115
+    m_Font: {fileID: 12800000, guid: f9494a1681af54d449846c8ade0bc802, type: 3}
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 115
+    m_MaxSize: 172
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 10
 --- !u!222 &2122675571
 CanvasRenderer:
   m_ObjectHideFlags: 0

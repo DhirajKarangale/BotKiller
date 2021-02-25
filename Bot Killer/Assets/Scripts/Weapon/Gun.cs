@@ -41,6 +41,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject scopeOverLay;
     [SerializeField] GameObject weaponCamera;
     [SerializeField] float scopeFOV;
+    public bool isScopeOn;
     private float originalFov;
 
     [Header("Points")]
@@ -256,6 +257,7 @@ public class Gun : MonoBehaviour
 
     private void ScopeOn()
     {
+        isScopeOn = true;
         scopeOverLay.SetActive(true);
         weaponCamera.SetActive(false);
         fpscamera.fieldOfView = scopeFOV;
@@ -263,6 +265,7 @@ public class Gun : MonoBehaviour
 
     private void ScopeOff()
     {
+        isScopeOn = false;
         scopeOverLay.SetActive(false);
         weaponCamera.SetActive(true);
         fpscamera.fieldOfView = originalFov;
