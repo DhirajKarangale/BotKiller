@@ -24474,8 +24474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785aa5cb7f912a74da1803ce89dcbbfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSensitivity: 160
   playerBody: {fileID: 800303127}
+  optionMenu: {fileID: 272467251198874959, guid: 3c5d7088b49b21e49b1f53ac02c27d18,
+    type: 3}
 --- !u!1001 &1718800234
 PrefabInstance:
   m_ObjectHideFlags: 0
