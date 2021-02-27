@@ -20,7 +20,7 @@ public class OptionMenu : MonoBehaviour
        QualitySettings.SetQualityLevel(qualityIndex);
    }
 
-   public void BackButton(string sceneToLoad)
+   public void Button(string sceneToLoad)
    {
        FindObjectOfType<SceneFader>().FadeTo(sceneToLoad);
    }

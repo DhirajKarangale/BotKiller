@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 2811447508514621136}
   - component: {fileID: 2811447508514621137}
   - component: {fileID: 2811447508514621138}
+  - component: {fileID: 1502645977}
+  - component: {fileID: 1502645980}
   m_Layer: 5
   m_Name: Joystick Movement
   m_TagString: Untagged
@@ -139,6 +141,32 @@ MonoBehaviour:
   isDynamicJoystick: 0
   dynamicJoystickMovementArea: {fileID: 0}
   canFollowPointer: 0
+--- !u!225 &1502645977
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447508514621148}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1502645980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447508514621148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 175, y: 175}
+  deafultPosition: {x: 109, y: 141}
 --- !u!1 &2811447508640513857
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2811447508642014794}
   - component: {fileID: 2811447508642014795}
+  - component: {fileID: 1139947960}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -300,6 +329,24 @@ MonoBehaviour:
   isDrop: 0
   isScope: 0
   throwGranide: 0
+  isThrust: 0
+--- !u!114 &1139947960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447508642014772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd02df88fda84144bca87ebc69b1438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizeSlider: {fileID: 0}
+  opcitySlider: {fileID: 0}
+  sizeCountText: {fileID: 0}
+  opicityCountText: {fileID: 0}
+  selectButton: {fileID: 0}
 --- !u!1 &2811447508868158735
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +584,8 @@ GameObject:
   - component: {fileID: 2811447509068851536}
   - component: {fileID: 2811447509068851537}
   - component: {fileID: 2811447509068851538}
+  - component: {fileID: 1571780254}
+  - component: {fileID: 1571780257}
   m_Layer: 5
   m_Name: Joystick Look
   m_TagString: Untagged
@@ -628,6 +677,32 @@ MonoBehaviour:
   isDynamicJoystick: 0
   dynamicJoystickMovementArea: {fileID: 0}
   canFollowPointer: 1
+--- !u!225 &1571780254
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509068851548}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1571780257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509068851548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 250, y: 250}
+  deafultPosition: {x: 1145, y: 360}
 --- !u!1 &2811447509180881307
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +849,8 @@ GameObject:
   - component: {fileID: 2811447509198735135}
   - component: {fileID: 2811447509198735128}
   - component: {fileID: 2811447509198735129}
+  - component: {fileID: 996544323}
+  - component: {fileID: 996544326}
   m_Layer: 5
   m_Name: GranideThrow Button
   m_TagString: Untagged
@@ -798,7 +875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.2148, y: -299.62}
+  m_AnchoredPosition: {x: -295.2148, y: -302}
   m_SizeDelta: {x: 134.9981, y: 81.323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2811447509198735135
@@ -895,6 +972,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &996544323
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509198735131}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &996544326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509198735131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 134.9981, y: 81.323}
+  deafultPosition: {x: -295.2148, y: -302}
 --- !u!1 &2811447509208643341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1158,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2811447509333928173}
   - component: {fileID: 2811447509333928172}
+  - component: {fileID: 193419082}
+  - component: {fileID: 193419083}
   m_Layer: 5
   m_Name: Player Health-Slider
   m_TagString: Untagged
@@ -1096,7 +1201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1134,6 +1239,32 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &193419082
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509333928174}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &193419083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509333928174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 160, y: 20}
+  deafultPosition: {x: 0, y: 33.7998}
 --- !u!1 &2811447509346592275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1278,8 @@ GameObject:
   - component: {fileID: 2811447509346592279}
   - component: {fileID: 2811447509346592272}
   - component: {fileID: 2811447509346592273}
+  - component: {fileID: 2040859649}
+  - component: {fileID: 2040859653}
   m_Layer: 5
   m_Name: Pick Drop Button
   m_TagString: Untagged
@@ -1300,6 +1433,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!225 &2040859649
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509346592275}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2040859653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509346592275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 200, y: 68.0747}
+  deafultPosition: {x: -57.5, y: -292.9941}
 --- !u!1 &2811447509423391949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,6 +1470,8 @@ GameObject:
   - component: {fileID: 2811447509423391948}
   - component: {fileID: 2811447509423391938}
   - component: {fileID: 2811447509423391939}
+  - component: {fileID: 914350258}
+  - component: {fileID: 914350260}
   m_Layer: 5
   m_Name: Ammo Display Txt
   m_TagString: Untagged
@@ -1435,6 +1596,32 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!225 &914350258
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509423391949}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &914350260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509423391949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 113.3, y: 50}
+  deafultPosition: {x: 79.99998, y: 69.2002}
 --- !u!1 &2811447509472757924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1709,8 @@ GameObject:
   - component: {fileID: 2811447509480977469}
   - component: {fileID: 2811447509480977470}
   - component: {fileID: 2811447509480977471}
+  - component: {fileID: 1746914465}
+  - component: {fileID: 1746914468}
   m_Layer: 5
   m_Name: Reload Button
   m_TagString: Untagged
@@ -1642,6 +1831,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &1746914465
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509480977465}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1746914468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509480977465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 83.2678, y: 80.555}
+  deafultPosition: {x: -370, y: 47.27734}
 --- !u!1 &2811447509596863758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1981,8 @@ GameObject:
   - component: {fileID: 2811447509813843564}
   - component: {fileID: 2811447509813843565}
   - component: {fileID: 2811447509813843566}
+  - component: {fileID: 631847712}
+  - component: {fileID: 631847716}
   m_Layer: 5
   m_Name: Thrust Button
   m_TagString: Untagged
@@ -1891,9 +2108,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: PointerUp
+        - m_Target: {fileID: 2811447508642014795}
+          m_TargetAssemblyTypeName: WeaponButton, Assembly-CSharp
+          m_MethodName: ThrustPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1907,9 +2124,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: PointerDown
+        - m_Target: {fileID: 2811447508642014795}
+          m_TargetAssemblyTypeName: WeaponButton, Assembly-CSharp
+          m_MethodName: ThrustPointerDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1919,6 +2136,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!225 &631847712
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509813843560}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &631847716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447509813843560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 121.3724, y: 87.2}
+  deafultPosition: {x: 192, y: 115}
 --- !u!1 &2811447510131201337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2249,8 @@ GameObject:
   - component: {fileID: 2811447510250785534}
   - component: {fileID: 2811447510250785535}
   - component: {fileID: 2811447510250785528}
+  - component: {fileID: 880554602}
+  - component: {fileID: 880554605}
   m_Layer: 5
   m_Name: Scope Button
   m_TagString: Untagged
@@ -2126,6 +2371,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &880554602
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447510250785530}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &880554605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447510250785530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 93, y: 67}
+  deafultPosition: {x: -570, y: -19}
 --- !u!1 &2811447510307347620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2407,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2811447510307347643}
   - component: {fileID: 2811447510307347642}
+  - component: {fileID: 1453071906}
+  - component: {fileID: 1453071907}
   m_Layer: 5
   m_Name: 'Thrust-Slider '
   m_TagString: Untagged
@@ -2177,7 +2450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2215,6 +2488,32 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &1453071906
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447510307347620}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1453071907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447510307347620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 160, y: 20}
+  deafultPosition: {x: 0, y: 16.2002}
 --- !u!1 &2811447510378057341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2527,8 @@ GameObject:
   - component: {fileID: 2811447510378057329}
   - component: {fileID: 2811447510378057330}
   - component: {fileID: 2811447510378057331}
+  - component: {fileID: 953756046}
+  - component: {fileID: 953756050}
   m_Layer: 5
   m_Name: Attack Button
   m_TagString: Untagged
@@ -2251,8 +2552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -553, y: 549}
-  m_SizeDelta: {x: 170.08, y: 127.0732}
+  m_AnchoredPosition: {x: -538.38324, y: 549}
+  m_SizeDelta: {x: 146.1939, y: 127.0732}
   m_Pivot: {x: 0.48527205, y: 0.49999973}
 --- !u!222 &2811447510378057328
 CanvasRenderer:
@@ -2282,7 +2583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c41ca1bf557f6a34b8a6fcc39530bcea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d41d32c6761af06429b0b593e6aeb677, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2381,3 +2682,29 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!225 &953756046
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447510378057341}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &953756050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811447510378057341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ea1ac2ee8dc2418217258b1f37526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deafultSize: {x: 146.1939, y: 127.0732}
+  deafultPosition: {x: -538.3832, y: 549}

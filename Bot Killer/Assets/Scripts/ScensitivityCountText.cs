@@ -10,7 +10,7 @@ public class ScensitivityCountText : MonoBehaviour
    {
        if(sensitivityCountText != null)
        {
-          sensitivityCountText.SetText(optionMenu.sensitivityPercentage + "%");
+          sensitivityCountText.SetText((int)(optionMenu.sensitivityPercentage) + "%");
        }
    }
 }

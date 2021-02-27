@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] Animator animator;
     [SerializeField] LayerMask groundMask;
+    [SerializeField] WeaponButton weaponButton;
 
     [Header("Thrust")]
     [SerializeField] ParticleSystem thrustEffect;
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         Gravity();  
         
      
-        if(isThrust && currentThrustFuel>0)
+        if(weaponButton.isThrust && currentThrustFuel>0)
         {
             Thrust();
              audioSource.clip = thrustSound;
@@ -59,16 +60,7 @@ public class PlayerMovement : MonoBehaviour
       
     }
 
-    public void PointerUp()
-    {
-        isThrust = false;
-    }
-
-    public void PointerDown()
-    {
-        isThrust = true;
-    }
-
+   
     private void Movement()  // Adding left, right, forward, backword movement; 
     {
         float x = SimpleInput.GetAxis("Horizontal");

@@ -19381,21 +19381,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 800303122}
+      objectReference: {fileID: 776831959}
     - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 800303122}
+      objectReference: {fileID: 776831959}
     - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerUp
+      value: ThrustPointerUp
       objectReference: {fileID: 0}
     - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerDown
+      value: ThrustPointerDown
       objectReference: {fileID: 0}
     - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
@@ -19606,6 +19606,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+  weaponButton: {fileID: 776831959}
   thrustEffect: {fileID: 663984378}
   thrustSound: {fileID: 8300000, guid: b004cca93290f4f43b176786a93db101, type: 3}
   thrustSlider: {fileID: 776831953}

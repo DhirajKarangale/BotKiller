@@ -22716,6 +22716,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+  weaponButton: {fileID: 850702327}
   thrustEffect: {fileID: 663984378}
   thrustSound: {fileID: 8300000, guid: b004cca93290f4f43b176786a93db101, type: 3}
   thrustSlider: {fileID: 850702321}
@@ -22881,7 +22882,7 @@ Transform:
   - {fileID: 1398190622}
   - {fileID: 1612454007}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811420667
 GameObject:
@@ -23470,26 +23471,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 800303122}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 800303122}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerDown
       objectReference: {fileID: 0}
     - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
@@ -25690,9 +25671,9 @@ MonoBehaviour:
   gunScript: {fileID: 1047503343}
   rb: {fileID: 1047503346}
   coll: {fileID: 1047503345}
-  player: {fileID: 800303127}
-  gunContainer: {fileID: 1731175945}
-  fpsCam: {fileID: 811420668}
+  player: {fileID: 0}
+  gunContainer: {fileID: 0}
+  fpsCam: {fileID: 0}
   weaponHolder: {fileID: 1137529194}
   weaponButton: {fileID: 850702327}
   ammoTextBG: {fileID: 850702325}
@@ -25715,8 +25696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369581e06722b744bae5e31b211ab4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PushBackRecoilPositionPoint: {fileID: 2099434079}
-  RotationRecoilPositionPoint: {fileID: 1655795893}
+  PushBackRecoilPositionPoint: {fileID: 0}
+  RotationRecoilPositionPoint: {fileID: 0}
   PositionDampTime: 1
   RotationDampTime: 1
   BackForce: 25
@@ -25748,16 +25729,16 @@ MonoBehaviour:
     type: 3}
   recoil: {fileID: 1047503342}
   weaponButton: {fileID: 850702327}
-  animatation: {fileID: 1731175947}
-  animator: {fileID: 1731175946}
+  animatation: {fileID: 0}
+  animator: {fileID: 0}
   muzzelFlash: {fileID: 4210367709866453527, guid: 79b2759b8387e3a4e89e1524d6ec7309,
     type: 3}
   impactEffect: {fileID: 8917405269523264391, guid: 8e2b7d7de156fe84cbb8e6395ad58654,
     type: 3}
   ammoDisplay: {fileID: 850702326}
-  fpscamera: {fileID: 811420670}
+  fpscamera: {fileID: 0}
   scopeOverLay: {fileID: 1959883938}
-  weaponCamera: {fileID: 1464572519}
+  weaponCamera: {fileID: 0}
   scopeFOV: 35
   isScopeOn: 0
   attackPoint: {fileID: 1892101365}
@@ -26964,7 +26945,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1160412492
 PrefabInstance:
@@ -37523,7 +37504,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 1731175946}
+      objectReference: {fileID: 0}
     - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: scopeFOV
@@ -37533,7 +37514,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fpscamera
       value: 
-      objectReference: {fileID: 811420670}
+      objectReference: {fileID: 0}
     - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: ammoDisplay
@@ -37543,7 +37524,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animatation
       value: 
-      objectReference: {fileID: 1731175947}
+      objectReference: {fileID: 0}
     - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: scopeOverLay
@@ -37558,17 +37539,17 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponCamera
       value: 
-      objectReference: {fileID: 1464572519}
+      objectReference: {fileID: 0}
     - target: {fileID: 8026226530479992053, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: fpsCam
       value: 
-      objectReference: {fileID: 811420668}
+      objectReference: {fileID: 0}
     - target: {fileID: 8026226530479992053, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 800303127}
+      objectReference: {fileID: 0}
     - target: {fileID: 8026226530479992053, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: ammoTextBG
@@ -37588,7 +37569,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gunContainer
       value: 
-      objectReference: {fileID: 1731175945}
+      objectReference: {fileID: 0}
     - target: {fileID: 8026226530479992053, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: reloadButton
@@ -37668,11 +37649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PushBackRecoilPositionPoint
       value: 
-      objectReference: {fileID: 2099434079}
+      objectReference: {fileID: 0}
     - target: {fileID: 8834359556805356096, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: RotationRecoilPositionPoint
       value: 
-      objectReference: {fileID: 1655795893}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366345484748f8949b093c761c1960e7, type: 3}

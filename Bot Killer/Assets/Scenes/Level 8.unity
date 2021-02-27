@@ -20389,6 +20389,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+  weaponButton: {fileID: 947272977}
   thrustEffect: {fileID: 663984378}
   thrustSound: {fileID: 8300000, guid: b004cca93290f4f43b176786a93db101, type: 3}
   thrustSlider: {fileID: 947272971}
@@ -22300,46 +22301,6 @@ PrefabInstance:
     - target: {fileID: 2811447508642014794, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 800303122}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 800303122}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447509813843566, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerDown
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

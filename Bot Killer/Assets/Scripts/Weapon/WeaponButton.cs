@@ -3,8 +3,17 @@ using UnityEngine;
 
 public class WeaponButton : MonoBehaviour
 { 
-    public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide;
-      
+    public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust;
+
+     public void ThrustPointerUp()
+    {
+        isThrust = false;
+    }
+
+    public void ThrustPointerDown()
+    {
+        isThrust = true;
+    }
 
     public void AttackButtonPointerUp()
     {

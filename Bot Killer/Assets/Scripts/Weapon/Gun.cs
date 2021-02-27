@@ -244,6 +244,7 @@ public class Gun : MonoBehaviour
     // Reload Start.
     private void Reload()
     {
+        weaponButton.isScope = false;
         animatation.reloading = true;
         Invoke("ReloadingFinish", reloadTime);
     }
