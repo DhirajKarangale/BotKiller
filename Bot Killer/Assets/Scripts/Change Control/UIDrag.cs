@@ -17,12 +17,12 @@ public class UIDrag : MonoBehaviour,IDragHandler,IPointerDownHandler
         rectTransform = GetComponent<RectTransform>();
         buttonCustomizer = GetComponentInParent<ButtonCustomizer>();
         SetSizeAndOpicity(PlayerPrefs.GetFloat(transform.name + "size"),PlayerPrefs.GetFloat(transform.name + "opcity"));
-        rectTransform.anchoredPosition = new Vector2( PlayerPrefs.GetFloat(transform.name + "x"), PlayerPrefs.GetFloat(transform.name + "y"));
+        rectTransform.anchoredPosition = new Vector2(PlayerPrefs.GetFloat(transform.name + "x"), PlayerPrefs.GetFloat(transform.name + "y"));
     }
 
     private void Update()
     {
-         currentScene = SceneManager.GetActiveScene().buildIndex;
+        currentScene = SceneManager.GetActiveScene().buildIndex;
         if(currentScene == 3)
         {
         currPosition = RectTransformUtility.WorldToScreenPoint(new Camera(),transform.position);

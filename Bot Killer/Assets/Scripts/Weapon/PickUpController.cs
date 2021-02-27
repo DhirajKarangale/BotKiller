@@ -58,9 +58,9 @@ public class PickUpController : MonoBehaviour
      
         //Check if player is in range 
         Vector3 distanceToPlayer = player.position - transform.position;
-        if(distanceToPlayer.magnitude <= pickUpRange && !slotFull && !equipped && weaponButton.isPickUp && !gunScript.isScopeOn) PickUp();
+        if(distanceToPlayer.magnitude <= pickUpRange && !slotFull && !equipped && weaponButton.isPickUp) PickUp();
         //Drop if equipped 
-        if (slotFull && equipped && weaponButton.isPickUp && !gunScript.isScopeOn) Drop();
+        if (slotFull && equipped && weaponButton.isPickUp && !gunScript.isScopeOn && !gunScript.animatation.reloading) Drop();
 
         
     }

@@ -28,7 +28,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject bulletHole;
     [SerializeField] RecoilPushBack recoil;
     [SerializeField] WeaponButton weaponButton;
-    [SerializeField] Animatation animatation;
+    public Animatation animatation;
     [SerializeField] Animator animator;
      
     [Header("Display")]
