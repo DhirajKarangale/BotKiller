@@ -902,21 +902,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1782205730}
-    - target: {fileID: 8342757210286074686, guid: 7d151d2236125b540b8fb2a80fa60947,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartButton
-      objectReference: {fileID: 0}
     - target: {fileID: 8342757211051692434, guid: 7d151d2236125b540b8fb2a80fa60947,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1782205730}
-    - target: {fileID: 8342757211051692434, guid: 7d151d2236125b540b8fb2a80fa60947,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenuButton
-      objectReference: {fileID: 0}
     - target: {fileID: 8342757211872632643, guid: 7d151d2236125b540b8fb2a80fa60947,
         type: 3}
       propertyPath: m_RootOrder
@@ -21512,7 +21502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398190621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.2789998, z: -3.8}
+  m_LocalPosition: {x: 0.03000021, y: -1.48, z: -3.7999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 800303127}
@@ -23799,6 +23789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f896ebeed54894396c253e6a947ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponButton: {fileID: 174912483}
   gameOverScreen: {fileID: 152036006}
   UIScreen: {fileID: 174912486}
   GunContainer: {fileID: 1137529193}

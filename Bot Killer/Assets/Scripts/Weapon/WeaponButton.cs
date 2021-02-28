@@ -4,8 +4,7 @@ using UnityEngine;
 public class WeaponButton : MonoBehaviour
 { 
     [SerializeField] GameObject pauseScreen;
-    public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust;
-    private bool isPaussed;
+    public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust,isPaussed;
 
     private void Start()
     {

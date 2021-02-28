@@ -1124,8 +1124,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 2009366191}
   startTimeBetweenShot: 2
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 150
+  impactForce: 300
   isPetroling: 0
 --- !u!114 &91831124
 MonoBehaviour:
@@ -21862,8 +21862,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1018927494}
   startTimeBetweenShot: 2
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 200
+  impactForce: 300
   isPetroling: 0
 --- !u!114 &737935692
 MonoBehaviour:
@@ -24517,8 +24517,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 2028553234}
   startTimeBetweenShot: 2
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 150
+  impactForce: 300
   isPetroling: 0
 --- !u!82 &904257863
 AudioSource:
@@ -27737,8 +27737,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1605346121}
   startTimeBetweenShot: 2
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 150
+  impactForce: 300
   isPetroling: 0
 --- !u!114 &1190393562
 MonoBehaviour:
@@ -28127,8 +28127,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: 257de458526906d43a1955d890685164, type: 3}
   attackPoint: {fileID: 1801615029}
   startTimeBetweenShot: 3
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 150
+  impactForce: 600
   attackRange: 150
 --- !u!23 &1226367940
 MeshRenderer:
@@ -29764,7 +29764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398190621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.2789998, z: -3.8}
+  m_LocalPosition: {x: 0.03000021, y: -1.48, z: -3.7999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 800303127}
@@ -32856,8 +32856,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 733484399}
   startTimeBetweenShot: 2
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 200
+  impactForce: 300
   isPetroling: 0
 --- !u!82 &1722252012
 AudioSource:
@@ -33658,6 +33658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f896ebeed54894396c253e6a947ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponButton: {fileID: 850702327}
   gameOverScreen: {fileID: 714924347}
   UIScreen: {fileID: 850702328}
   GunContainer: {fileID: 1137529193}
@@ -35376,8 +35377,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1775606883}
   startTimeBetweenShot: 2
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 150
+  impactForce: 300
   isPetroling: 0
 --- !u!114 &1955962948
 MonoBehaviour:
@@ -36442,8 +36443,8 @@ MonoBehaviour:
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1724972140}
   startTimeBetweenShot: 2
-  bulletForce: 0
-  impactForce: 0
+  bulletForce: 150
+  impactForce: 350
   isPetroling: 0
 --- !u!82 &2035821301
 AudioSource:

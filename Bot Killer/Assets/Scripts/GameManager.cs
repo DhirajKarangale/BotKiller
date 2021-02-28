@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
    private Health_Dye_Trigger playerDye;
+   [SerializeField] WeaponButton weaponButton;
    [SerializeField] GameObject gameOverScreen;
    [SerializeField] GameObject UIScreen;
    [SerializeField] GameObject GunContainer;
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
      if(!playerDye.isPlayerAlive)
      {
          Time.timeScale = 0.45f;  
-         Invoke("SetGameOverScreenActive",0.8f);
+         Invoke("SetGameOverScreenActive",0.5f);
          UIScreen.SetActive(false);
          GunContainer.SetActive(false);
          itemToIntroduce.SetActive(false);
@@ -38,10 +39,10 @@ public class GameManager : MonoBehaviour
          player.enabled = false;
          playerDye.enabled = false;
      }
-     else
+     else if(playerDye.isPlayerAlive && !weaponButton.isPaussed)
      {
        Time.timeScale = 1f; 
-         gameOverScreen.SetActive(false);
+       gameOverScreen.SetActive(false);
      }
    }
 
