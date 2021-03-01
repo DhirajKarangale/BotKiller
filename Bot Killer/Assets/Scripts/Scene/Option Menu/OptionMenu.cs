@@ -6,7 +6,7 @@ public class OptionMenu : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] TMPro.TMP_Dropdown dropdown;
     [SerializeField] Text sensitivityCountText;
-    public float lookSensitivity;
+    public static float lookSensitivity = 170f;
     private float currentlookSensitivity;
     private int qualityIndex,currentQualityIndex;
 
@@ -18,10 +18,10 @@ public class OptionMenu : MonoBehaviour
         slider.maxValue = 1000f;
         slider.wholeNumbers = true;
 
-        currentlookSensitivity = PlayerPrefs.GetFloat("LookSensitivity",140f); // Taking Previously saved slider Valve or Deafult 140.
+        currentlookSensitivity = PlayerPrefs.GetFloat("LookSensitivity",150f); // Taking Previously saved slider Valve or Deafult 140.
         lookSensitivity = currentlookSensitivity;
         slider.value = lookSensitivity; // Setting Saved Slider valve.
-        sensitivityCountText.text = (int)((lookSensitivity/1000) *100) + "%"; // Setting Saved Text of Sensitivity count.
+        sensitivityCountText.text = (int)((lookSensitivity / 1000) *100) + "%"; // Setting Saved Text of Sensitivity count.
 
         
         // Dropdown
