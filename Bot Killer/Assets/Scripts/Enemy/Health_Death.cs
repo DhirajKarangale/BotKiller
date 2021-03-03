@@ -9,6 +9,7 @@ public class Health_Death : MonoBehaviour
   private GameObject currentDeathEffect;
   private CamShake camShake;
   [SerializeField] GameObject itemToDrop;
+    [SerializeField] GameManager gameManager;
   // Flash
   [SerializeField] MeshRenderer meshRenderer;
   [SerializeField] Material originalColor;
@@ -65,16 +66,22 @@ public class Health_Death : MonoBehaviour
         }
     }
 
-    private void DestroyEnemy()
+    public void DestroyEnemy()
     {
+        gameManager.enemyDestroyed++;
       camShake.Shake();
       currentDeathEffect = Instantiate(deathEffect,transform.position,Quaternion.identity);
       Destroy(currentDeathEffect,3f);
-      if(itemToDrop != null)
-      {
-        Instantiate(itemToDrop,transform.position,Quaternion.identity);
-      }
+       Invoke("DropItem", 0.1f);
       Destroy(gameObject,0.3f);
+    }
+
+    private void DropItem()
+    {
+        if (itemToDrop != null)
+        {
+            Instantiate(itemToDrop, transform.position, Quaternion.identity);
+        }
     }
 
 }

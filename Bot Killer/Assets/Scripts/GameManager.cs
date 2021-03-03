@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
    private Health_Dye_Trigger playerDye;
+
+    [Header("ToDesaible")]
    [SerializeField] WeaponButton weaponButton;
    [SerializeField] GameObject gameOverScreen;
    [SerializeField] GameObject UIScreen;
@@ -12,14 +15,26 @@ public class GameManager : MonoBehaviour
    [SerializeField] GameObject firstCamRef;
    [SerializeField] GameObject cam2;
    [SerializeField] GameObject fps;
-   private PlayerMovement player;
+
+    [Header("LevelObjective")]
+    public byte enemyDestroyed = 0;
+    [SerializeField] GameObject objective;
+    [SerializeField] Text ObjectiveText;
+    [SerializeField] int enemyiesToKill;
+    [SerializeField] Health_Death[] enemydye;
+
+
+    private PlayerMovement player;
    private int currentScene;
 
    private void Start()
    {
-       player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        Time.timeScale = 1f;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
        playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
-   }
+
+        objective.SetActive(true);
+    }
 
    private void Update()
    {
@@ -39,14 +54,35 @@ public class GameManager : MonoBehaviour
          player.enabled = false;
          playerDye.enabled = false;
      }
-     else if(playerDye.isPlayerAlive && !weaponButton.isPaussed)
+     else if(playerDye.isPlayerAlive && !weaponButton.isPaussed && !playerDye.isPlayerHitToFinish)
      {
        Time.timeScale = 1f; 
        gameOverScreen.SetActive(false);
      }
-   }
 
-   private void SetGameOverScreenActive()
+       if((enemyiesToKill == enemyDestroyed) && playerDye.isPlayerHitToFinish)
+       {
+            Debug.Log("Level Complete !");
+            Time.timeScale = 0.5f;
+            for(int i=0;i<enemydye.Length;i++)
+            {
+                if(enemydye[i] != null)
+                {
+                    enemydye[i].DestroyEnemy();
+                }
+            }
+
+       }
+        ObjectiveText.text = "Kill atleast " + enemyiesToKill + " and reach finish point !";
+        Invoke("SetObjectiveToFalse", 20f);
+    }
+
+    private void SetObjectiveToFalse()
+    {
+        objective.SetActive(false);
+    }
+
+    private void SetGameOverScreenActive()
    {
      gameOverScreen.SetActive(true);
    }

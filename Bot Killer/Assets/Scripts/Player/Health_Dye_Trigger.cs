@@ -10,7 +10,7 @@ public class Health_Dye_Trigger : MonoBehaviour
    [SerializeField] float healthIncreaseAfterTime;
    public float currentHealth;
    private bool isPlayerHit,allowRegainHealth;
-   public bool isPlayerAlive,isHealthPackTrigger,isGranedeBoxTrigger;
+   public bool isPlayerAlive,isHealthPackTrigger,isGranedeBoxTrigger,isPlayerHitToFinish;
 
     [Header("Death")]
     [SerializeField] GameObject deathEffect;
@@ -61,6 +61,7 @@ public class Health_Dye_Trigger : MonoBehaviour
             isPlayerHit = true;
             isHealthPackTrigger = false;
             isGranedeBoxTrigger =false;
+            isPlayerHitToFinish = false;
             PlayerHit();
         }
         if(collider.gameObject.tag == "HealthPack")
@@ -68,13 +69,27 @@ public class Health_Dye_Trigger : MonoBehaviour
             isPlayerHit = false;
             isHealthPackTrigger = true;
             isGranedeBoxTrigger = false;
+            isPlayerHitToFinish = false;
         }
         if(collider.gameObject.tag == "GranedeBox")
         {
             isPlayerHit = false;
             isHealthPackTrigger = false;
             isGranedeBoxTrigger = true;
+            isPlayerHitToFinish = false;
         }
+        if(collider.gameObject.tag == "FinishPoint")
+        {
+            isPlayerHit = false;
+            isHealthPackTrigger = false;
+            isGranedeBoxTrigger = false;
+            Invoke("SetHitToFinishActive", 0.5f);
+        }
+    }
+
+    private void SetHitToFinishActive()
+    {
+        isPlayerHitToFinish = true;
     }
 
     private void PlayerHit()

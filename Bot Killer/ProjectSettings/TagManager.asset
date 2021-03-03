@@ -15,6 +15,7 @@ TagManager:
   - GranedeBox
   - Sorrounding
   - OptionUI
+  - FinishPoint
   layers:
   - Default
   - TransparentFX
