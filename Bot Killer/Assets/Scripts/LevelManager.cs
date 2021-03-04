@@ -13,9 +13,11 @@ public class LevelManager : MonoBehaviour
     public int enemyiesToKill;
     private Health_Dye_Trigger playerDye;
     public byte enemyDestroyed = 0;
+    private bool finishAllowed;
 
     private void Start()
     {
+        finishAllowed = true;
         Time.timeScale = 1f;
         levelCompleteScreen.SetActive(false);
         objective.SetActive(true);
@@ -28,8 +30,9 @@ public class LevelManager : MonoBehaviour
         Invoke("SetObjectiveToFalse", 20f);
 
 
-        if ((enemyiesToKill == enemyDestroyed) && playerDye.isPlayerHitToFinish)
+        if ((enemyDestroyed >= enemyiesToKill) && playerDye.isPlayerHitToFinish && finishAllowed)
         {
+            finishAllowed = false;
             objective.SetActive(false);
             GameObject winParticle = Instantiate(winParicleEffect, playerDye.transform.position, Quaternion.identity);
             Destroy(winParticle, 15f);
@@ -42,7 +45,6 @@ public class LevelManager : MonoBehaviour
                 }
             }
             Time.timeScale = 0.5f;
-            
         }
     }
 
