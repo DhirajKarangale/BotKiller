@@ -2,7 +2,8 @@ using UnityEngine;
 
 
 public class WeaponButton : MonoBehaviour
-{ 
+{
+    [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject pauseScreen;
     public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust,isPaussed;
 
@@ -26,11 +27,13 @@ public class WeaponButton : MonoBehaviour
      public void ThrustPointerUp()
     {
         isThrust = false;
+        audioSource.Stop();
     }
 
     public void ThrustPointerDown()
     {
         isThrust = true;
+        audioSource.Play();
     }
 
     public void AttackButtonPointerUp()

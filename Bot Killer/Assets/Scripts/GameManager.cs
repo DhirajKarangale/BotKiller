@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -16,14 +15,6 @@ public class GameManager : MonoBehaviour
    [SerializeField] GameObject cam2;
    [SerializeField] GameObject fps;
 
-    [Header("LevelObjective")]
-    public byte enemyDestroyed = 0;
-    [SerializeField] GameObject objective;
-    [SerializeField] Text ObjectiveText;
-    [SerializeField] int enemyiesToKill;
-    [SerializeField] Health_Death[] enemydye;
-
-
     private PlayerMovement player;
    private int currentScene;
 
@@ -31,10 +22,9 @@ public class GameManager : MonoBehaviour
    {
         Time.timeScale = 1f;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-       playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
-
-        objective.SetActive(true);
-    }
+        playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
+        gameOverScreen.SetActive(false);
+   }
 
    private void Update()
    {
@@ -43,8 +33,8 @@ public class GameManager : MonoBehaviour
 
      if(!playerDye.isPlayerAlive)
      {
-         Time.timeScale = 0.45f;  
-         Invoke("SetGameOverScreenActive",0.5f);
+         Time.timeScale = 0.8f;  
+         Invoke("SetGameOverScreenActive",1f);
          UIScreen.SetActive(false);
          GunContainer.SetActive(false);
          itemToIntroduce.SetActive(false);
@@ -59,29 +49,9 @@ public class GameManager : MonoBehaviour
        Time.timeScale = 1f; 
        gameOverScreen.SetActive(false);
      }
-
-       if((enemyiesToKill == enemyDestroyed) && playerDye.isPlayerHitToFinish)
-       {
-            Debug.Log("Level Complete !");
-            Time.timeScale = 0.5f;
-            for(int i=0;i<enemydye.Length;i++)
-            {
-                if(enemydye[i] != null)
-                {
-                    enemydye[i].DestroyEnemy();
-                }
-            }
-
-       }
-        ObjectiveText.text = "Kill atleast " + enemyiesToKill + " and reach finish point !";
-        Invoke("SetObjectiveToFalse", 20f);
+      
     }
-
-    private void SetObjectiveToFalse()
-    {
-        objective.SetActive(false);
-    }
-
+        
     private void SetGameOverScreenActive()
    {
      gameOverScreen.SetActive(true);
@@ -96,4 +66,5 @@ public class GameManager : MonoBehaviour
    {
       SceneManager.LoadScene(currentScene);
    }
+       
 }

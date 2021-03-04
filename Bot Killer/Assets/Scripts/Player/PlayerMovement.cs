@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private AudioSource audioSource;
 
     [Header("Player Attributes")]
     [SerializeField] byte walkSpeed = 25;
@@ -20,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Thrust")]
     [SerializeField] ParticleSystem thrustEffect;
-    [SerializeField] AudioClip thrustSound;
     [SerializeField] Slider thrustSlider;
     [SerializeField] float thrustFuel;
     private float currentThrustFuel;
@@ -34,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
         currentThrustFuel = thrustFuel;
         thrustSlider.value = currentThrustFuel/thrustFuel;
     }   
@@ -48,13 +45,10 @@ public class PlayerMovement : MonoBehaviour
         if(weaponButton.isThrust && currentThrustFuel>0)
         {
             Thrust();
-             audioSource.clip = thrustSound;
-             audioSource.Play();
         }
        else
        {
            thrustEffect.Stop();
-           audioSource.clip = null;
        }
        ThrustSlideBar();
       
