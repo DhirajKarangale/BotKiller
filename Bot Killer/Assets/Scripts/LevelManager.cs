@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     private Health_Dye_Trigger playerDye;
     public byte enemyDestroyed = 0;
     private bool finishAllowed;
+    private int nextLevel;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class LevelManager : MonoBehaviour
         levelCompleteScreen.SetActive(false);
         objective.SetActive(true);
         playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
+        nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     private void Update()
@@ -32,6 +34,14 @@ public class LevelManager : MonoBehaviour
 
         if ((enemyDestroyed >= enemyiesToKill) && playerDye.isPlayerHitToFinish && finishAllowed)
         {
+            if(SceneManager.GetActiveScene().buildIndex != 13)
+            {
+                if (nextLevel > PlayerPrefs.GetInt("levelAt"))
+                {
+                    PlayerPrefs.SetInt("levelAt", nextLevel);
+                }
+            }
+           
             finishAllowed = false;
             objective.SetActive(false);
             GameObject winParticle = Instantiate(winParicleEffect, playerDye.transform.position, Quaternion.identity);
