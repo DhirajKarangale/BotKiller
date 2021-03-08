@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     public GameObject objective;
     [SerializeField] Text ObjectiveText;
     public int enemyiesToKill;
+    [SerializeField] GameObject crossHair;
     private Health_Dye_Trigger playerDye;
     public byte enemyDestroyed = 0;
     private bool finishAllowed;
@@ -61,6 +62,7 @@ public class LevelManager : MonoBehaviour
     private void LevelCompleteScreenSetActive()
     {
         levelCompleteScreen.SetActive(true);
+        crossHair.SetActive(false);
     }
 
     private void SetObjectiveToFalse()

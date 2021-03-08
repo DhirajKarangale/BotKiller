@@ -16,8 +16,8 @@ public class UIDrag : MonoBehaviour,IDragHandler,IPointerDownHandler
     {
         rectTransform = GetComponent<RectTransform>();
         buttonCustomizer = GetComponentInParent<ButtonCustomizer>();
-        SetSizeAndOpicity(PlayerPrefs.GetFloat(transform.name + "size"),PlayerPrefs.GetFloat(transform.name + "opcity"));
-        rectTransform.anchoredPosition = new Vector2(PlayerPrefs.GetFloat(transform.name + "x"), PlayerPrefs.GetFloat(transform.name + "y"));
+        SetSizeAndOpicity(PlayerPrefs.GetFloat(transform.name + "size", rectTransform.sizeDelta.x / deafultSize.x),PlayerPrefs.GetFloat(transform.name + "opcity",1f));
+        rectTransform.anchoredPosition = new Vector2(PlayerPrefs.GetFloat(transform.name + "x",deafultPosition.x), PlayerPrefs.GetFloat(transform.name + "y",deafultPosition.y));
     }
 
     private void Update()

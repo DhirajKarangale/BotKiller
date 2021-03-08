@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
        Time.timeScale = 1f; 
        gameOverScreen.SetActive(false);
      }
-      
     }
         
     private void SetGameOverScreenActive()

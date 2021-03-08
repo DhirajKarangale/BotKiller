@@ -36,6 +36,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject impactEffect;
     public TextMeshProUGUI ammoDisplay;
     [SerializeField] Camera fpscamera;
+    [SerializeField] GameObject crossHair;
 
     [Header("Scope")]
     [SerializeField] GameObject scopeOverLay;
@@ -262,6 +263,7 @@ public class Gun : MonoBehaviour
         scopeOverLay.SetActive(true);
         weaponCamera.SetActive(false);
         fpscamera.fieldOfView = scopeFOV;
+        crossHair.SetActive(false);
     }
 
     private void ScopeOff()
@@ -270,5 +272,6 @@ public class Gun : MonoBehaviour
         scopeOverLay.SetActive(false);
         weaponCamera.SetActive(true);
         fpscamera.fieldOfView = originalFov;
+        crossHair.SetActive(true);
     }
 }

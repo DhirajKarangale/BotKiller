@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class WeaponButton : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject pauseScreen;
+    [SerializeField] GameObject crossHair;
     public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust,isPaussed;
 
     private void Start()
     {
       isPaussed = false;
+        crossHair.SetActive(true);
     }
 
     private void Update()
@@ -27,13 +30,19 @@ public class WeaponButton : MonoBehaviour
      public void ThrustPointerUp()
     {
         isThrust = false;
-        audioSource.Stop();
+        if (SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            audioSource.Stop();
+        }
     }
 
     public void ThrustPointerDown()
     {
         isThrust = true;
-        audioSource.Play();
+        if(SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            audioSource.Play();
+        }
     }
 
     public void AttackButtonPointerUp()
@@ -73,15 +82,20 @@ public class WeaponButton : MonoBehaviour
 
    public void PauseButton()
    {
-     isPaussed = true;
-     Time.timeScale = 0f;
+     if (SceneManager.GetActiveScene().buildIndex != 3)
+     {
+            isPaussed = true;
+            Time.timeScale = 0f;
+            crossHair.SetActive(false);
+     }
    }
 
    public void ResumeButtom()
    {
      isPaussed = false;
      Time.timeScale = 1f;
-   }
+        crossHair.SetActive(true);
+    }
 
    public void SceneButton(string scene)
   {
