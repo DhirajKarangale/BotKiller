@@ -19,9 +19,6 @@ public class Health_Dye_Trigger : MonoBehaviour
     private GameObject currentDeathEffect;
 
     [Header("Refrences")]
-    [SerializeField] GameObject fps;
-    [SerializeField] GameObject firstCamRef;
-    [SerializeField] GameObject cam2;
     private AudioSource audioSource;
 
     private void Start()

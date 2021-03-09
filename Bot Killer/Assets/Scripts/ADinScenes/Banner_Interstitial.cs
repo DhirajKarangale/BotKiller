@@ -1,8 +1,6 @@
 using UnityEngine;
 using System;
 using GoogleMobileAds.Api;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Banner_Interstitial : MonoBehaviour
 {
@@ -11,28 +9,25 @@ public class Banner_Interstitial : MonoBehaviour
     private const string bannerId = "ca-app-pub-3940256099942544/6300978111";
     private const string interstatialId = "ca-app-pub-3940256099942544/1033173712";
 
-    private BannerView bannerView;
+    public BannerView bannerView;
     private InterstitialAd interstitial;
 
-    //public Text adStatus;
 
     private void Start()
     {
         MobileAds.Initialize(appId);
         RequestInterstitial();
-        if ((SceneManager.GetActiveScene().buildIndex == 0) || (SceneManager.GetActiveScene().buildIndex == 1) || (SceneManager.GetActiveScene().buildIndex == 2))
-        {
-            RequestBanner();
-            ShowBannerAd();
-        }
-        else
-        {
-            if(this.bannerView != null)
-            {
-                bannerView.Destroy();
-            }
-        }
+        RequestBanner();
+        ShowBannerAd();
         Invoke("ShowInterstatialAd", 5f);
+    }
+
+    private void OnDestroy()
+    {
+        if(bannerView != null)
+        {
+            bannerView.Destroy();
+        }
     }
 
 
@@ -92,8 +87,6 @@ public class Banner_Interstitial : MonoBehaviour
             this.interstitial.Show();
         }
     }
-
-
 
     //Events
     private void HandleOnAdLoaded(object sender, EventArgs args)

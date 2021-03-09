@@ -51,3 +51,8 @@ MonoBehaviour:
   firstCamRef: {fileID: 0}
   cam2: {fileID: 0}
   fps: {fileID: 0}
+  respWanEffect: {fileID: 5671457199165281390, guid: 4c15f34e28498d84199276cb2f75097a,
+    type: 3}
+  effectArea: 20
+  damage: 10
+  explosionForce: 200

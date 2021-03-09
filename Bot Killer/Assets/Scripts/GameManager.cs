@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
    [SerializeField] GameObject cam2;
    [SerializeField] GameObject fps;
 
+    [Header("ReSpwan Player")]
+    [SerializeField] GameObject respWanEffect;
+    [SerializeField] float effectArea;
+    [SerializeField] int damage;
+    [SerializeField] float explosionForce;
+
     private PlayerMovement player;
    private int currentScene;
 
@@ -33,22 +39,75 @@ public class GameManager : MonoBehaviour
 
      if(!playerDye.isPlayerAlive)
      {
-         Time.timeScale = 0.8f;  
-         Invoke("SetGameOverScreenActive",1f);
-         UIScreen.SetActive(false);
-         GunContainer.SetActive(false);
-         itemToIntroduce.SetActive(false);
-         firstCamRef.SetActive(false);
-         cam2.SetActive(true);
-         fps.SetActive(false);
-         player.enabled = false;
-         playerDye.enabled = false;
+            PlayerDye();
      }
      else if(playerDye.isPlayerAlive && !weaponButton.isPaussed && !playerDye.isPlayerHitToFinish)
      {
        Time.timeScale = 1f; 
        gameOverScreen.SetActive(false);
      }
+    }
+
+    private void PlayerDye()
+    {
+        Time.timeScale = 0.8f;
+        Invoke("SetGameOverScreenActive", 1f);
+        UIScreen.SetActive(false);
+        GunContainer.SetActive(false);
+        itemToIntroduce.SetActive(false);
+        firstCamRef.SetActive(false);
+        cam2.SetActive(true);
+        fps.SetActive(false);
+        player.enabled = false;
+        playerDye.enabled = false;
+    }
+
+    public void PlayerReSpwan()
+    {
+        playerDye.isPlayerAlive = true;
+        Time.timeScale = 1f;
+        Invoke("SetGameOverScreenActive", 1f);
+        UIScreen.SetActive(true);
+        GunContainer.SetActive(true);
+        itemToIntroduce.SetActive(true);
+        firstCamRef.SetActive(true);
+        cam2.SetActive(false);
+        fps.SetActive(true);
+        player.enabled = true;
+        playerDye.enabled = true;
+        playerDye.currentHealth = playerDye.health;
+        GameObject currentRespwanEffect = Instantiate(respWanEffect, player.transform.position, player.transform.rotation);
+        Destroy(currentRespwanEffect, 10f);
+        ThrowAndDamegeItem();
+    }
+
+    private void ThrowAndDamegeItem()
+    {
+        Collider[] colliderToMove = Physics.OverlapSphere(transform.position, effectArea); // Finding the object near granide to move them.
+        foreach (Collider nearByObject in colliderToMove)
+        {
+            Rigidbody rb = nearByObject.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.AddExplosionForce(explosionForce, transform.position, effectArea); // Adding force to object
+            }
+        }
+
+        Collider[] colliderToDestroy = Physics.OverlapSphere(transform.position, effectArea); // Finding the object near granide to destroy them.
+        foreach (Collider nearByObject in colliderToDestroy) // Go through all object
+        {
+            ItemsDestroy item = nearByObject.GetComponent<ItemsDestroy>(); // Finding item to destroy 
+            if (item != null)
+            {
+                item.TakeDamage(damage); // Damage Item
+            }
+
+            Health_Death enemyDye = nearByObject.GetComponent<Health_Death>(); // Finding enemy to destroy.
+            if (enemyDye != null)
+            {
+                enemyDye.TakeDamage(damage); // Damage Enemy.
+            }
+        }
     }
         
     private void SetGameOverScreenActive()
