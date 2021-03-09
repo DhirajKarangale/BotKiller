@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Banner_Interstitial : MonoBehaviour
 {
-    private const string appId = "ca-app-pub-7847283319435524~9234040731";
+    private const string appId = "ca-app-pub-8003338007949621~1667607563";
 
     private const string bannerId = "ca-app-pub-3940256099942544/6300978111";
     private const string interstatialId = "ca-app-pub-3940256099942544/1033173712";
@@ -20,13 +20,18 @@ public class Banner_Interstitial : MonoBehaviour
     {
         MobileAds.Initialize(appId);
         RequestInterstitial();
-        if(SceneManager.GetActiveScene().buildIndex != 3)
+        if ((SceneManager.GetActiveScene().buildIndex == 0) || (SceneManager.GetActiveScene().buildIndex == 1) || (SceneManager.GetActiveScene().buildIndex == 2))
         {
             RequestBanner();
             ShowBannerAd();
         }
+        else
+        {
+            bannerView.Destroy();
+        }
         Invoke("ShowInterstatialAd", 5f);
     }
+
 
     private void RequestBanner()
     {
