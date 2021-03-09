@@ -27,7 +27,10 @@ public class Banner_Interstitial : MonoBehaviour
         }
         else
         {
-            bannerView.Destroy();
+            if(this.bannerView != null)
+            {
+                bannerView.Destroy();
+            }
         }
         Invoke("ShowInterstatialAd", 5f);
     }
@@ -36,7 +39,7 @@ public class Banner_Interstitial : MonoBehaviour
     private void RequestBanner()
     {
         // Create a 320x50 banner at the top of the screen.
-        this.bannerView = new BannerView(bannerId, AdSize.SmartBanner, AdPosition.Bottom);
+        this.bannerView = new BannerView(bannerId, AdSize.Banner, AdPosition.Bottom);
 
         // Called when an ad request has successfully loaded.
         this.bannerView.OnAdLoaded += this.HandleOnAdLoaded;

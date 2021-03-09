@@ -2528,6 +2528,11 @@ PrefabInstance:
       propertyPath: opicityCountText
       value: 
       objectReference: {fileID: 1114211143}
+    - target: {fileID: 2811447508640513861, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 2811447508642014772, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Name
