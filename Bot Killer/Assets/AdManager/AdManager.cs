@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class AdManager : MonoBehaviour
 {
-    string appId = "ca-app-pub-7847283319435524~9234040731";
+    string appId = "ca-app-pub-5695466976308828~7688222448";
 
     string bannerId = "ca-app-pub-3940256099942544/6300978111";
     string interstatialId = "ca-app-pub-3940256099942544/1033173712";

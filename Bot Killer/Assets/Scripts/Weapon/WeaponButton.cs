@@ -30,7 +30,7 @@ public class WeaponButton : MonoBehaviour
      public void ThrustPointerUp()
     {
         isThrust = false;
-        if (SceneManager.GetActiveScene().buildIndex != 3)
+        if ((SceneManager.GetActiveScene().buildIndex != 3))
         {
             audioSource.Stop();
         }
@@ -38,9 +38,9 @@ public class WeaponButton : MonoBehaviour
 
     public void ThrustPointerDown()
     {
-        isThrust = true;
-        if(SceneManager.GetActiveScene().buildIndex != 3)
+        if((SceneManager.GetActiveScene().buildIndex != 3) && !Gun.isScopeOn)
         {
+            isThrust = true;
             audioSource.Play();
         }
     }

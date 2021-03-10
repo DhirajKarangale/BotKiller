@@ -85,10 +85,11 @@ public class Player : MonoBehaviour
             Move();
         }
 
-
+        // Giving Gravity
         Gravity();
 
 
+        // Giving Thrust
         if (weaponButton.isThrust && currentThrustFuel > 0)
         {
             Thrust();
@@ -98,6 +99,18 @@ public class Player : MonoBehaviour
             thrustEffect.Stop();
         }
         ThrustSlideBar();
+
+
+        // Decrease Speed Whwn scope is On.
+        if(Gun.isScopeOn)
+        {
+            OptionMenu.moveSpeed = OptionMenu.moveSpeed / 3;
+        }
+        else
+        {
+            OptionMenu.moveSpeed = OptionMenu.moveSpeed;
+        }
+                
     }
 
     void GetTouchInput()

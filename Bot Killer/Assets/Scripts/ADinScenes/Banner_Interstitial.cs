@@ -4,7 +4,7 @@ using GoogleMobileAds.Api;
 
 public class Banner_Interstitial : MonoBehaviour
 {
-    private const string appId = "ca-app-pub-8003338007949621~1667607563";
+    private const string appId = "ca-app-pub-5695466976308828~7688222448";
 
     private const string bannerId = "ca-app-pub-3940256099942544/6300978111";
     private const string interstatialId = "ca-app-pub-3940256099942544/1033173712";

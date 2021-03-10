@@ -17342,6 +17342,165 @@ Transform:
   m_Father: {fileID: 916456486}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50.285, y: -50.882, z: -31.54}
+--- !u!1001 &708782160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 932926552616983864, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 174912483}
+    - target: {fileID: 932926553180508480, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 174912483}
+    - target: {fileID: 932926553180508480, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: granedeButton
+      value: 
+      objectReference: {fileID: 174912484}
+    - target: {fileID: 932926553180508480, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: granedeDisplay
+      value: 
+      objectReference: {fileID: 174912476}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: crossHair
+      value: 
+      objectReference: {fileID: 174912490}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 174912482}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: scopeOverLay
+      value: 
+      objectReference: {fileID: 1590488133}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 174912483}
+    - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: ammoTextBG
+      value: 
+      objectReference: {fileID: 174912481}
+    - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: scopeButton
+      value: 
+      objectReference: {fileID: 174912478}
+    - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: attackButton
+      value: 
+      objectReference: {fileID: 174912479}
+    - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadButton
+      value: 
+      objectReference: {fileID: 174912480}
+    - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 174912483}
+    - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponHolder
+      value: 
+      objectReference: {fileID: 1137529194}
+    - target: {fileID: 932926553566728994, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: hitScreen
+      value: 
+      objectReference: {fileID: 174912491}
+    - target: {fileID: 932926553566728994, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 174912485}
+    - target: {fileID: 932926553566728995, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Player   '
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566728996, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: thrustSlider
+      value: 
+      objectReference: {fileID: 174912477}
+    - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 174912483}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d9dc9fd9ad35eb4086172c45d4153e8, type: 3}
 --- !u!1 &718684066
 GameObject:
   m_ObjectHideFlags: 0
@@ -17614,7 +17773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &800303121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18353,7 +18512,6 @@ MonoBehaviour:
   scopeOverLay: {fileID: 1590488133}
   weaponCamera: {fileID: 896144240}
   scopeFOV: 50
-  isScopeOn: 0
   attackPoint: {fileID: 490799010}
 --- !u!95 &895974683
 Animator:

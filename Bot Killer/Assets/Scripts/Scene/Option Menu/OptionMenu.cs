@@ -13,7 +13,6 @@ public class OptionMenu : MonoBehaviour
     public static float lookSensitivity;
     private float currentlookSensitivity;
     private int qualityIndex,currentQualityIndex;
-    public float x;
 
     private void Start()
     {
@@ -37,7 +36,7 @@ public class OptionMenu : MonoBehaviour
         currentMoveSpeed = PlayerPrefs.GetFloat("MoveSpeed", 20f); // Taking Previously saved slider Valve or Deafult 140.
         moveSpeed = currentMoveSpeed;
         speedSlider.value = moveSpeed; // Setting Saved Slider valve.
-        speedCountText.text = (int)((moveSpeed / 200) * 100) + "%"; // Setting Saved Text of Sensitivity count.
+       speedCountText.text = (int)((moveSpeed / 200) * 100) + "%"; // Setting Saved Text of Sensitivity count.
 
 
 
@@ -46,6 +45,8 @@ public class OptionMenu : MonoBehaviour
         qualityIndex = currentQualityIndex;
         QualitySettings.SetQualityLevel(qualityIndex);
         dropdown.value = qualityIndex;
+
+        moveSpeed = 20f;
     }
 
     private void Update()
@@ -53,8 +54,7 @@ public class OptionMenu : MonoBehaviour
         slider.value = lookSensitivity; // Updating Slider valve.
         sensitivityCountText.text = (int)((lookSensitivity/100) *100) + "%"; // Updating Text of Sensitivity count.
 
-        x = moveSpeed;
-       // speedSlider.value = moveSpeed;
+        speedSlider.value = moveSpeed;
         speedCountText.text = (int)((moveSpeed / 200) * 100) + "%";
     }
     

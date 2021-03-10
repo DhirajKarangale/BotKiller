@@ -42,7 +42,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject scopeOverLay;
     [SerializeField] GameObject weaponCamera;
     [SerializeField] float scopeFOV;
-    public bool isScopeOn;
+    public static bool isScopeOn;
     private float originalFov;
 
     [Header("Points")]
