@@ -8,9 +8,9 @@ public class OptionMenu : MonoBehaviour
     [SerializeField] TMPro.TMP_Dropdown dropdown;
     [SerializeField] Text sensitivityCountText;
     [SerializeField] Text speedCountText;
-    public static float moveSpeed;
+    public static float moveSpeed = 20f;
     private float currentMoveSpeed;
-    public static float lookSensitivity;
+    public static float lookSensitivity = 5f;
     private float currentlookSensitivity;
     private int qualityIndex,currentQualityIndex;
 
@@ -33,7 +33,7 @@ public class OptionMenu : MonoBehaviour
         speedSlider.maxValue = 200f;
         speedSlider.wholeNumbers = true;
 
-        currentMoveSpeed = PlayerPrefs.GetFloat("MoveSpeed", 20f); // Taking Previously saved slider Valve or Deafult 140.
+        currentMoveSpeed = PlayerPrefs.GetFloat("MoveSpeed",20f); // Taking Previously saved slider Valve or Deafult 140.
         moveSpeed = currentMoveSpeed;
         speedSlider.value = moveSpeed; // Setting Saved Slider valve.
        speedCountText.text = (int)((moveSpeed / 200) * 100) + "%"; // Setting Saved Text of Sensitivity count.

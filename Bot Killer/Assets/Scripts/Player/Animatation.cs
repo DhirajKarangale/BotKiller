@@ -6,21 +6,21 @@ public class Animatation : MonoBehaviour
     public bool reloading;
     [SerializeField] WeaponButton weaponButton;
     [SerializeField] Animator animator;
-    private PlayerMovement player;
+    private Player player;
     private Health_Dye_Trigger playerDye;
 
    private void Start()
    {
       playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
-      player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+      player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
    }
 
     private void Update()
     {
       if(playerDye.isPlayerAlive)
       {
-        float x = SimpleInput.GetAxis("Horizontal");
-        float z = SimpleInput.GetAxis("Vertical");
+        float x = player.movementDirection.x;
+        float z = player.movementDirection.y;
 
         if(weaponButton.shotting && ((x != 0) || (z != 0)))
        {

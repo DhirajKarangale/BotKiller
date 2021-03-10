@@ -21,13 +21,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] float explosionForce;
 
-    private PlayerMovement player;
+    private Player player;
    private int currentScene;
 
    private void Start()
    {
         Time.timeScale = 1f;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
         gameOverScreen.SetActive(false);
    }

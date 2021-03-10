@@ -1332,6 +1332,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 819016585617a5e478ed62a3b24263a3, type: 3}
+--- !u!114 &836518842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 932926552616983864, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 932926553206848307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edb1456c4b921f469fc38296b4f68b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &860508726 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 860508726, guid: 697c02991ea88fb4a9abb645962bebd3,
@@ -3050,6 +3062,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1101142229}
+    - target: {fileID: 718625315, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1495282077, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3114,6 +3130,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811447508642014795, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: gunAnimation_Container
+      value: 
+      objectReference: {fileID: 836518842}
     - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3124,6 +3145,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811447509198735129, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3132,6 +3158,11 @@ PrefabInstance:
     - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811447510250785528, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

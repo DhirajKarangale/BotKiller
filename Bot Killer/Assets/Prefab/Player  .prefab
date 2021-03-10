@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 932926552616983865}
   - component: {fileID: 932926552616983864}
   m_Layer: 8
-  m_Name: Recoil_Rotation
+  m_Name: Gun Animation_Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12386,9 +12386,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b004f892fc0e744905fd9637865a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 932926553180508481}
+  cameraTransform: {fileID: 932926552633366138}
   characterController: {fileID: 932926553566728997}
   moveInputDeadZone: 10
+  movementDirection: {x: 0, y: 0}
   gravity: -25
   groundDistance: 0.4
   thrustSpeed: 2

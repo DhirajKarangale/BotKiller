@@ -7,7 +7,7 @@ public class RewardedVideoAd : MonoBehaviour
 {
     private const string appId = "ca-app-pub-5695466976308828~7688222448";
 
-    string rewardedId = "ca-app-pub-3940256099942544/5224354917";
+    string rewardedId = "ca-app-pub-5695466976308828/6903245071";
 
     [SerializeField] Text adStatus;
     [SerializeField] GameObject adTextObject;

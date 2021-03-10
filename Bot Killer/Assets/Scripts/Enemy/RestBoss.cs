@@ -17,12 +17,12 @@ public class RestBoss : MonoBehaviour
 
 
    private float distanseBetwwenEnemyAndPlayer;
-   private PlayerMovement player;
+   private Player player;
 
 
    private void Start()
    {
-       player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+       player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
        timeBetweenShot = startTimeBetweenShot;
    }
 

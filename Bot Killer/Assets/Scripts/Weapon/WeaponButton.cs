@@ -7,6 +7,7 @@ public class WeaponButton : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject pauseScreen;
     [SerializeField] GameObject crossHair;
+    [SerializeField] Animatation gunAnimation_Container;
     public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust,isPaussed;
 
     private void Start()
@@ -38,7 +39,7 @@ public class WeaponButton : MonoBehaviour
 
     public void ThrustPointerDown()
     {
-        if((SceneManager.GetActiveScene().buildIndex != 3) && !Gun.isScopeOn)
+        if((SceneManager.GetActiveScene().buildIndex != 3) && !Gun.isScopeOn && !gunAnimation_Container.reloading)
         {
             isThrust = true;
             audioSource.Play();

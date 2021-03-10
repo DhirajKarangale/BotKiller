@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     // Player movement
     private Vector2 moveTouchStartPosition;
     private Vector2 moveInput;
+    public Vector2 movementDirection;
 
 
     [Header("Player Attributes")]
@@ -177,7 +178,7 @@ public class Player : MonoBehaviour
                     // Set the look input to zero if the finger is still
                     if (t.fingerId == rightFingerId)
                     {
-                        lookInput = Vector2.zero;
+                      //  lookInput = Vector2.zero;
                     }
                     break;
             }
@@ -202,7 +203,7 @@ public class Player : MonoBehaviour
         if (moveInput.sqrMagnitude <= moveInputDeadZone) return;
 
         // Multiply the normalized direction by the speed
-        Vector2 movementDirection = moveInput.normalized * OptionMenu.moveSpeed * Time.deltaTime;
+        movementDirection = moveInput.normalized * OptionMenu.moveSpeed * Time.deltaTime;
         // Move relatively to the local transform's direction
         characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
     }

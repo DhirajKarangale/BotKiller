@@ -4,14 +4,14 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] Vector3 impactPosition;
-    private PlayerMovement player;
+    private Player player;
     private Health_Dye_Trigger playerDye;
 
 
     private void Start()
     {
         playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
   
     private void OnTriggerEnter(Collider collision)
