@@ -8,7 +8,7 @@ public class Follow_Attack : MonoBehaviour
   [SerializeField] byte attackRange;
   [SerializeField] byte stopDistance;
   [SerializeField] byte retriveDistance;
-  private PlayerMovement player;
+  private Player player;
   private float distanseBetwwenEnemyAndPlayer;
   private Health_Dye_Trigger playerDye;
 
@@ -28,7 +28,7 @@ public class Follow_Attack : MonoBehaviour
   private void Start()
   {
     playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();
-    player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     
     timeBetweenShot = startTimeBetweenShot;
   }   

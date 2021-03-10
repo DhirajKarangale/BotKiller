@@ -16532,8 +16532,8 @@ GameObject:
   - component: {fileID: 800303125}
   - component: {fileID: 800303124}
   - component: {fileID: 800303123}
-  - component: {fileID: 800303122}
   - component: {fileID: 800303121}
+  - component: {fileID: 800303128}
   m_Layer: 7
   m_Name: 'Player  '
   m_TagString: Player
@@ -16566,35 +16566,6 @@ MonoBehaviour:
     type: 3}
   hitScreen: {fileID: 1954045564}
   hurtSound: {fileID: 8300000, guid: cb0016bcccd248f40ab3a28a2d333e6f, type: 3}
---- !u!114 &800303122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800303120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffcddba4744ffac489e19a25dadebe1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 25
-  gravity: -28
-  groundDistance: 0.4
-  thrustSpeed: 2
-  controller: {fileID: 800303126}
-  groundCheck: {fileID: 665110291}
-  animator: {fileID: 1552482949}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 512
-  weaponButton: {fileID: 1347188391}
-  thrustEffect: {fileID: 663984378}
-  thrustSlider: {fileID: 1347188386}
-  thrustFuel: 200
-  decreaseThrustFuel: 30
-  increaseThrustFuel: 8
-  increaseThrustFuelAfterTime: 12
 --- !u!82 &800303123
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16755,6 +16726,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800303128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800303120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b004f892fc0e744905fd9637865a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 112650866}
+  characterController: {fileID: 800303126}
+  cameraSensitivity: 7
+  moveSpeed: 20
+  moveInputDeadZone: 10
+  gravity: -25
+  groundDistance: 0.4
+  thrustSpeed: 2
+  groundCheck: {fileID: 665110291}
+  animator: {fileID: 1552482949}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 512
+  weaponButton: {fileID: 1347188391}
+  thrustEffect: {fileID: 663984378}
+  thrustSlider: {fileID: 1347188386}
+  thrustFuel: 200
+  decreaseThrustFuel: 30
+  increaseThrustFuel: 18
+  increaseThrustFuelAfterTime: 12
 --- !u!1001 &804894015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21062,6 +21065,7 @@ GameObject:
   - component: {fileID: 1716628812}
   - component: {fileID: 1716628811}
   - component: {fileID: 1716628810}
+  - component: {fileID: 1716628813}
   m_Layer: 7
   m_Name: Look
   m_TagString: ScreenShake
@@ -21124,12 +21128,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716628808}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 785aa5cb7f912a74da1803ce89dcbbfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 800303127}
+--- !u!114 &1716628813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716628808}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93c87339a3420c4289983832032e62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 112650866}
+  cameraSensitivity: 10
 --- !u!1001 &1718800234
 PrefabInstance:
   m_ObjectHideFlags: 0
