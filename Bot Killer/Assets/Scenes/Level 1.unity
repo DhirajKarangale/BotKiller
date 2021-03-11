@@ -5680,6 +5680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
       propertyPath: thrustSlider
       value: 
       objectReference: {fileID: 1347188386}
@@ -5688,6 +5693,11 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 1347188391}
+    - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: moveInputDeadZone
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9dc9fd9ad35eb4086172c45d4153e8, type: 3}
 --- !u!1001 &5284797763657154881

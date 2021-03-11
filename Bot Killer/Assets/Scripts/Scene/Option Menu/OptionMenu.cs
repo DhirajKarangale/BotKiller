@@ -8,7 +8,6 @@ public class OptionMenu : MonoBehaviour
     [SerializeField] TMPro.TMP_Dropdown dropdown;
     [SerializeField] Text sensitivityCountText;
     [SerializeField] Text speedCountText;
-    public static float moveSpeed = 20f;
     private float currentMoveSpeed;
     public static float lookSensitivity = 5f;
     private float currentlookSensitivity;
@@ -34,9 +33,9 @@ public class OptionMenu : MonoBehaviour
         speedSlider.wholeNumbers = true;
 
         currentMoveSpeed = PlayerPrefs.GetFloat("MoveSpeed",20f); // Taking Previously saved slider Valve or Deafult 140.
-        moveSpeed = currentMoveSpeed;
-        speedSlider.value = moveSpeed; // Setting Saved Slider valve.
-       speedCountText.text = (int)((moveSpeed / 200) * 100) + "%"; // Setting Saved Text of Sensitivity count.
+        Player.moveSpeed = currentMoveSpeed;
+        speedSlider.value = Player.moveSpeed; // Setting Saved Slider valve.
+       speedCountText.text = (int)((Player.moveSpeed / 200) * 100) + "%"; // Setting Saved Text of Sensitivity count.
 
 
 
@@ -46,7 +45,6 @@ public class OptionMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(qualityIndex);
         dropdown.value = qualityIndex;
 
-        moveSpeed = 20f;
     }
 
     private void Update()
@@ -54,8 +52,8 @@ public class OptionMenu : MonoBehaviour
         slider.value = lookSensitivity; // Updating Slider valve.
         sensitivityCountText.text = (int)((lookSensitivity/100) *100) + "%"; // Updating Text of Sensitivity count.
 
-        speedSlider.value = moveSpeed;
-        speedCountText.text = (int)((moveSpeed / 200) * 100) + "%";
+        speedSlider.value = Player.moveSpeed;
+        speedCountText.text = (int)((Player.moveSpeed / 200) * 100) + "%";
     }
     
     // Buttons.
@@ -72,7 +70,7 @@ public class OptionMenu : MonoBehaviour
 
     public void SpeedSlider(float value)
     {
-        moveSpeed = value; // Changing Sensitivity Value with slider.
+        Player.moveSpeed = value; // Changing Sensitivity Value with slider.
     }
 
     // Graphics Dropdown
@@ -87,6 +85,6 @@ public class OptionMenu : MonoBehaviour
     {
         PlayerPrefs.SetFloat("LookSensitivity",lookSensitivity); // Saving Sensitivity Value.
         PlayerPrefs.SetInt("QualitySetting",qualityIndex); // Saving quality Value.
-        PlayerPrefs.SetFloat("MoveSpeed", moveSpeed); // Saving Speed Value.
+        PlayerPrefs.SetFloat("MoveSpeed", Player.moveSpeed); // Saving Speed Value.
     }
 }

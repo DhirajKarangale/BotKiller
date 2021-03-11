@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     // Player movement
     private Vector2 moveTouchStartPosition;
     private Vector2 moveInput;
+    public static float moveSpeed = 21f;
+    private float currentMoveSpeed = moveSpeed;
     public Vector2 movementDirection;
 
 
@@ -63,11 +65,15 @@ public class Player : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         currentThrustFuel = thrustFuel;
         thrustSlider.value = currentThrustFuel / thrustFuel;
+
+        currentMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentMoveSpeed = moveSpeed;
+
         // Handles input
         GetTouchInput();
 
@@ -75,14 +81,14 @@ public class Player : MonoBehaviour
         if (rightFingerId != -1)
         {
             // Ony look around if the right finger is being tracked
-            Debug.Log("Rotating");
+          //  Debug.Log("Rotating");
             LookAround();
         }
 
         if (leftFingerId != -1)
         {
             // Ony move if the left finger is being tracked
-            Debug.Log("Moving");
+          //  Debug.Log("Moving");
             Move();
         }
 
@@ -105,11 +111,11 @@ public class Player : MonoBehaviour
         // Decrease Speed Whwn scope is On.
         if(Gun.isScopeOn)
         {
-            OptionMenu.moveSpeed = OptionMenu.moveSpeed / 3;
+            currentMoveSpeed = currentMoveSpeed / 3;
         }
         else
         {
-            OptionMenu.moveSpeed = OptionMenu.moveSpeed;
+            currentMoveSpeed = currentMoveSpeed;
         }
                 
     }
@@ -149,13 +155,13 @@ public class Player : MonoBehaviour
                     {
                         // Stop tracking the left finger
                         leftFingerId = -1;
-                        Debug.Log("Stopped tracking left finger");
+                     //   Debug.Log("Stopped tracking left finger");
                     }
                     else if (t.fingerId == rightFingerId)
                     {
                         // Stop tracking the right finger
                         rightFingerId = -1;
-                        Debug.Log("Stopped tracking right finger");
+                       // Debug.Log("Stopped tracking right finger");
                     }
 
                     break;
@@ -178,7 +184,7 @@ public class Player : MonoBehaviour
                     // Set the look input to zero if the finger is still
                     if (t.fingerId == rightFingerId)
                     {
-                      //  lookInput = Vector2.zero;
+                        lookInput = Vector2.zero;
                     }
                     break;
             }
@@ -203,7 +209,7 @@ public class Player : MonoBehaviour
         if (moveInput.sqrMagnitude <= moveInputDeadZone) return;
 
         // Multiply the normalized direction by the speed
-        movementDirection = moveInput.normalized * OptionMenu.moveSpeed * Time.deltaTime;
+        movementDirection = moveInput.normalized * currentMoveSpeed * Time.deltaTime;
         // Move relatively to the local transform's direction
         characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
     }
