@@ -3979,6 +3979,16 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 1638753627}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 1638753633}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 1638753622}
     - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
       propertyPath: ammoTextBG
@@ -8250,6 +8260,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 1638753626}
   fpscamera: {fileID: 682119109}
   crossHair: {fileID: 1638753632}
+  reloadTimeCountText: {fileID: 0}
+  reloadTimeCountGameObject: {fileID: 0}
   scopeOverLay: {fileID: 1845505056}
   weaponCamera: {fileID: 682119105}
   scopeFOV: 35
@@ -13055,6 +13067,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811447508642014795, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: gunContainer_Animation
+      value: 
+      objectReference: {fileID: 682119111}
     - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -13124,6 +13141,12 @@ GameObject:
 --- !u!1 &1638753621 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2811447509423391949, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1638753617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1638753622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1135402659, guid: 697c02991ea88fb4a9abb645962bebd3,
     type: 3}
   m_PrefabInstance: {fileID: 1638753617}
   m_PrefabAsset: {fileID: 0}
@@ -13205,6 +13228,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1638753617}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1638753633 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1135402661, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1638753617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638753622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1666689611
 GameObject:
   m_ObjectHideFlags: 0

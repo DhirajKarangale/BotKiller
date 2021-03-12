@@ -4091,6 +4091,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811447508642014795, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: gunContainer_Animation
+      value: 
+      objectReference: {fileID: 2129824688}
     - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -6255,6 +6260,24 @@ Transform:
   m_Father: {fileID: 916456486}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -55.895, y: -189.546, z: 118.457}
+--- !u!1 &1135402659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1135402659, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 776831949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1135402661 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1135402661, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 776831949}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135402659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1137529193
 GameObject:
   m_ObjectHideFlags: 0
@@ -11522,6 +11545,16 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 776831959}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 1135402661}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 1135402659}
     - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
       propertyPath: ammoTextBG

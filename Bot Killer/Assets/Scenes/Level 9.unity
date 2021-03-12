@@ -6667,6 +6667,16 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 850702327}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 850702335}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 850702334}
     - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
       propertyPath: ammoTextBG
@@ -8329,6 +8339,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811447508642014795, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: gunContainer_Animation
+      value: 
+      objectReference: {fileID: 728908289}
     - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -8459,6 +8474,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 850702319}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &850702334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1135402659, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 850702319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &850702335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1135402661, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 850702319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850702334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851786126
 GameObject:
   m_ObjectHideFlags: 0
@@ -10183,6 +10216,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 850702326}
   fpscamera: {fileID: 728908287}
   crossHair: {fileID: 850702332}
+  reloadTimeCountText: {fileID: 0}
+  reloadTimeCountGameObject: {fileID: 0}
   scopeOverLay: {fileID: 0}
   weaponCamera: {fileID: 728908283}
   scopeFOV: 35

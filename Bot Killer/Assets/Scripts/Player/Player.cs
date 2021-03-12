@@ -33,7 +33,6 @@ public class Player : MonoBehaviour
 
     [Header("Points")]
     [SerializeField] Transform groundCheck;
-    [SerializeField] Animator animator;
     [SerializeField] LayerMask groundMask;
     [SerializeField] WeaponButton weaponButton;
 
@@ -44,13 +43,27 @@ public class Player : MonoBehaviour
     private float currentThrustFuel;
     [SerializeField] float decreaseThrustFuel, increaseThrustFuel, increaseThrustFuelAfterTime;
 
+    [Header("Animation")]
+    private float velocityX;
+    private float velocityZ;
+    [SerializeField] Animator legsAnimation;
+    [SerializeField] float acceleration = 2f;
+    private Vector3 currPlayerPos;
+
+
     private Vector3 gravityDownVelocity;
     private bool isGrounded, isThrust;
-    private Rigidbody rigidBody;
+
+
+
+
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        currPlayerPos = transform.position;
+
+        currPlayerPos = movementDirection;
         // id = -1 means the finger is not being tracked
         leftFingerId = -1;
         rightFingerId = -1;
@@ -62,7 +75,6 @@ public class Player : MonoBehaviour
         moveInputDeadZone = Mathf.Pow(Screen.height / moveInputDeadZone, 2);
 
 
-        rigidBody = GetComponent<Rigidbody>();
         currentThrustFuel = thrustFuel;
         thrustSlider.value = currentThrustFuel / thrustFuel;
 
@@ -81,14 +93,14 @@ public class Player : MonoBehaviour
         if (rightFingerId != -1)
         {
             // Ony look around if the right finger is being tracked
-          //  Debug.Log("Rotating");
+            //  Debug.Log("Rotating");
             LookAround();
         }
 
         if (leftFingerId != -1)
         {
             // Ony move if the left finger is being tracked
-          //  Debug.Log("Moving");
+            //  Debug.Log("Moving");
             Move();
         }
 
@@ -109,7 +121,7 @@ public class Player : MonoBehaviour
 
 
         // Decrease Speed Whwn scope is On.
-        if(Gun.isScopeOn)
+        if (Gun.isScopeOn)
         {
             currentMoveSpeed = currentMoveSpeed / 3;
         }
@@ -117,7 +129,19 @@ public class Player : MonoBehaviour
         {
             currentMoveSpeed = currentMoveSpeed;
         }
-                
+
+        // Legs Animation.
+        if (currPlayerPos == transform.position)
+        {
+            legsAnimation.SetFloat("VelocityX", 0);
+            legsAnimation.SetFloat("VelocityZ", 0);
+        }
+        else
+        {
+            legsAnimation.SetFloat("VelocityX", movementDirection.x * acceleration);
+            legsAnimation.SetFloat("VelocityZ", movementDirection.y * acceleration);
+        }
+        currPlayerPos = transform.position;
     }
 
     void GetTouchInput()
@@ -155,13 +179,13 @@ public class Player : MonoBehaviour
                     {
                         // Stop tracking the left finger
                         leftFingerId = -1;
-                     //   Debug.Log("Stopped tracking left finger");
+                        //   Debug.Log("Stopped tracking left finger");
                     }
                     else if (t.fingerId == rightFingerId)
                     {
                         // Stop tracking the right finger
                         rightFingerId = -1;
-                       // Debug.Log("Stopped tracking right finger");
+                        // Debug.Log("Stopped tracking right finger");
                     }
 
                     break;
@@ -212,6 +236,9 @@ public class Player : MonoBehaviour
         movementDirection = moveInput.normalized * currentMoveSpeed * Time.deltaTime;
         // Move relatively to the local transform's direction
         characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
+
+
+
     }
 
     private void Gravity()   // Adding Gravity.
@@ -249,5 +276,4 @@ public class Player : MonoBehaviour
     {
         currentThrustFuel += increaseThrustFuel * Time.deltaTime;
     }
-
 }

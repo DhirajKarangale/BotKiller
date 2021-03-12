@@ -6867,6 +6867,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811447508642014795, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: gunContainer_Animation
+      value: 
+      objectReference: {fileID: 1511703266}
     - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -7027,6 +7032,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 947272967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &947272985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1135402659, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 947272967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &947272986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1135402661, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 947272967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947272985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &953037098
 GameObject:
   m_ObjectHideFlags: 0
@@ -9315,6 +9338,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 947272973}
   fpscamera: {fileID: 1511703264}
   crossHair: {fileID: 947272982}
+  reloadTimeCountText: {fileID: 0}
+  reloadTimeCountGameObject: {fileID: 0}
   scopeOverLay: {fileID: 1357971360}
   weaponCamera: {fileID: 1511703260}
   scopeFOV: 35
@@ -13433,6 +13458,16 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 947272977}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 947272986}
+    - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 947272985}
     - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
       propertyPath: ammoTextBG

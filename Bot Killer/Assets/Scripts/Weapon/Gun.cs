@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -37,6 +38,9 @@ public class Gun : MonoBehaviour
     public TextMeshProUGUI ammoDisplay;
     [SerializeField] Camera fpscamera;
     [SerializeField] GameObject crossHair;
+    [SerializeField] Text reloadTimeCountText;
+    [SerializeField] GameObject reloadTimeCountGameObject;
+    private float currentReloadTime;
 
     [Header("Scope")]
     [SerializeField] GameObject scopeOverLay;
@@ -58,7 +62,9 @@ public class Gun : MonoBehaviour
     }
 
     private void Start()
-    { 
+    {
+        currentReloadTime = reloadTime;
+        reloadTimeCountGameObject.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         originalFov = fpscamera.fieldOfView;
     }
@@ -84,7 +90,12 @@ public class Gun : MonoBehaviour
           ammoDisplay.SetText((bulletsLeft/bulletsPerTrap) + " / " + (magazineSize/bulletsPerTrap));
        }
 
-          
+       if(animatation.reloading)
+        {
+            currentReloadTime -= Time.deltaTime;
+            reloadTimeCountText.text = currentReloadTime.ToString();
+        }
+
         // Automatically Reload.
         if (!animatation.reloading && (bulletsLeft <= 0))
         {
@@ -97,6 +108,8 @@ public class Gun : MonoBehaviour
              Reload();
         }
         weaponButton.isReload =false;
+
+       
     }
     
     public void Shoot()
@@ -245,6 +258,8 @@ public class Gun : MonoBehaviour
     // Reload Start.
     private void Reload()
     {
+        reloadTimeCountGameObject.SetActive(true);
+       
         weaponButton.isScope = false;
         animatation.reloading = true;
         Invoke("ReloadingFinish", reloadTime);
@@ -255,7 +270,10 @@ public class Gun : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         animatation.reloading = false;
+        reloadTimeCountGameObject.SetActive(false);
+        currentReloadTime = reloadTime;
     }
+    
 
     private void ScopeOn()
     {

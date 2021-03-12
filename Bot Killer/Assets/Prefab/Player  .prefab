@@ -12097,7 +12097,7 @@ MonoBehaviour:
   impactForce: 400
   damage: 7
   timeBetweenShotting: 1
-  reloadTime: 3
+  reloadTime: 2
   timeBetweenShots: 0
   magazineSize: 15
   bulletsPerTrap: 1
@@ -12116,6 +12116,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 0}
   fpscamera: {fileID: 932926553180508486}
   crossHair: {fileID: 0}
+  reloadTimeCountText: {fileID: 0}
+  reloadTimeCountGameObject: {fileID: 0}
   scopeOverLay: {fileID: 0}
   weaponCamera: {fileID: 932926553384708163}
   scopeFOV: 50
@@ -12394,7 +12396,6 @@ MonoBehaviour:
   groundDistance: 0.4
   thrustSpeed: 2
   groundCheck: {fileID: 932926553699433504}
-  animator: {fileID: 932926551671273910}
   groundMask:
     serializedVersion: 2
     m_Bits: 512
@@ -12405,6 +12406,8 @@ MonoBehaviour:
   decreaseThrustFuel: 30
   increaseThrustFuel: 18
   increaseThrustFuelAfterTime: 12
+  legsAnimation: {fileID: 932926551671273910}
+  acceleration: 2
 --- !u!1 &932926553685656378
 GameObject:
   m_ObjectHideFlags: 0
