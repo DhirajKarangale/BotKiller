@@ -4469,6 +4469,7 @@ MonoBehaviour:
   - {fileID: 91831125}
   winParicleEffect: {fileID: 9191795488564055606, guid: 3d6ef7f0b93090844a938136b425c17b,
     type: 3}
+  player: {fileID: 728908292}
   objective: {fileID: 850702330}
   ObjectiveText: {fileID: 850702329}
   enemyiesToKill: 7
@@ -6880,6 +6881,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 728908279}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &728908292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 728908279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b004f892fc0e744905fd9637865a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &733484398
 GameObject:
   m_ObjectHideFlags: 0

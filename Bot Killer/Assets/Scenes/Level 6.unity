@@ -2941,6 +2941,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7edb1456c4b921f469fc38296b4f68b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &365254596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 365254583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b004f892fc0e744905fd9637865a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &381271973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13997,6 +14009,7 @@ MonoBehaviour:
   - {fileID: 558660035}
   winParicleEffect: {fileID: 9191795488564055606, guid: 3d6ef7f0b93090844a938136b425c17b,
     type: 3}
+  player: {fileID: 365254596}
   objective: {fileID: 1828463525}
   ObjectiveText: {fileID: 1828463524}
   enemyiesToKill: 4

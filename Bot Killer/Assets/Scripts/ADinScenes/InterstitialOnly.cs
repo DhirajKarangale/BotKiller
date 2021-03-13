@@ -4,9 +4,9 @@ using GoogleMobileAds.Api;
 
 public class InterstitialOnly : MonoBehaviour
 {
-    private const string appId = "ca-app-pub-5695466976308828~7688222448";
+    private const string appId = "ca-app-pub-7847283319435524~9234040731";
 
-    private const string interstatialId = "ca-app-pub-5695466976308828/8352058113";
+    private const string interstatialId = "ca-app-pub-7847283319435524/9780835649";
 
     private InterstitialAd interstitial;
 

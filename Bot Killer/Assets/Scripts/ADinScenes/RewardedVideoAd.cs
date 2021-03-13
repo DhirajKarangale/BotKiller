@@ -5,9 +5,9 @@ using GoogleMobileAds.Api;
 
 public class RewardedVideoAd : MonoBehaviour
 {
-    private const string appId = "ca-app-pub-5695466976308828~7688222448";
+    private const string appId = "ca-app-pub-7847283319435524~9234040731";
 
-    string rewardedId = "ca-app-pub-5695466976308828/6903245071";
+    string rewardedId = "ca-app-pub-7847283319435524/3215427291";
 
     [SerializeField] Text adStatus;
     [SerializeField] GameObject adTextObject;
