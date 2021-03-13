@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] Health_Death[] enemydye;
     [SerializeField] GameObject winParicleEffect;
     [SerializeField] Player player;
+    [SerializeField] GameObject UIButtons;
     public GameObject objective;
     [SerializeField] Text ObjectiveText;
     public int enemyiesToKill;
@@ -21,6 +22,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         player.enabled = true;
+        UIButtons.SetActive(true);
         finishAllowed = true;
         Time.timeScale = 1f;
         levelCompleteScreen.SetActive(false);
@@ -63,6 +65,7 @@ public class LevelManager : MonoBehaviour
 
     private void LevelCompleteScreenSetActive()
     {
+        UIButtons.SetActive(false);
         levelCompleteScreen.SetActive(true);
         crossHair.SetActive(false);
         player.enabled = false;

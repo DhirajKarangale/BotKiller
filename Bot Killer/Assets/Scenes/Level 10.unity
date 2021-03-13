@@ -1058,15 +1058,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
-  followRange: 30
-  attackRange: 22
+  followSpeed: 20
+  followRange: 50
+  attackRange: 45
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 91831125}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 2009366191}
   startTimeBetweenShot: 2
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 350
   isPetroling: 0
 --- !u!114 &91831124
@@ -1107,6 +1108,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   levelManager: {fileID: 1180525280}
+  isEnemyHit: 0
   meshRenderer: {fileID: 91831122}
   originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 404228128}
@@ -2245,6 +2247,18 @@ PrefabInstance:
       objectReference: {fileID: 315537883}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb163d728a5648a41aa9adc85dacbec0, type: 3}
+--- !u!114 &283381379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6958352889882412635, guid: fb163d728a5648a41aa9adc85dacbec0,
+    type: 3}
+  m_PrefabInstance: {fileID: 283381378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1402944945d23c8449dde958ab6ec6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &290879792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2466,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 964560225}
+    - target: {fileID: 8342757210537375488, guid: 7d151d2236125b540b8fb2a80fa60947,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 283381379}
+    - target: {fileID: 8342757210537375488, guid: 7d151d2236125b540b8fb2a80fa60947,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowRewardVideoAd
+      objectReference: {fileID: 0}
     - target: {fileID: 8342757211051692434, guid: 7d151d2236125b540b8fb2a80fa60947,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2906,9 +2930,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
-      propertyPath: bulletForce
-      value: 100
+      propertyPath: attackRange
+      value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: bulletForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: followRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: followSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: enemyHealthCurrentObj
+      value: 
+      objectReference: {fileID: 342949565}
     - target: {fileID: 8345996892802449655, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: m_Name
@@ -3287,6 +3331,141 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &367858563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1222714706539591816, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1180525280}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877566, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_Name
+      value: UIScreen Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707649244422, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1180525280}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cbb686786072e0448be0606768621ec, type: 3}
+--- !u!1 &367858564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1222714707843334085, guid: 0cbb686786072e0448be0606768621ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 367858563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &367973373
 GameObject:
   m_ObjectHideFlags: 0
@@ -6947,15 +7126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
-  followRange: 30
-  attackRange: 22
+  followSpeed: 20
+  followRange: 50
+  attackRange: 45
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 737935693}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1018927494}
   startTimeBetweenShot: 2
-  bulletForce: 800
+  bulletForce: 50
   impactForce: 500
   isPetroling: 0
 --- !u!114 &737935692
@@ -6997,6 +7177,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   levelManager: {fileID: 1180525280}
+  isEnemyHit: 0
   meshRenderer: {fileID: 737935690}
   originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 763721910}
@@ -11454,7 +11635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4065cfba67a2247b0cb9c15d0e3a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCompleteScreen: {fileID: 2811447510322061582}
+  levelCompleteScreen: {fileID: 367858564}
   enemydye:
   - {fileID: 1722252009}
   - {fileID: 737935693}
@@ -11469,6 +11650,7 @@ MonoBehaviour:
   winParicleEffect: {fileID: 9191795488564055606, guid: 3d6ef7f0b93090844a938136b425c17b,
     type: 3}
   player: {fileID: 839073271}
+  UIButtons: {fileID: 1680115519}
   objective: {fileID: 2811447510322061581}
   ObjectiveText: {fileID: 2811447510322061580}
   enemyiesToKill: 9
@@ -11750,15 +11932,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
-  followRange: 30
-  attackRange: 22
+  followSpeed: 20
+  followRange: 50
+  attackRange: 45
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 1190393563}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1605346121}
   startTimeBetweenShot: 2
-  bulletForce: 800
+  bulletForce: 50
   impactForce: 500
   isPetroling: 0
 --- !u!114 &1190393562
@@ -11800,6 +11983,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   levelManager: {fileID: 1180525280}
+  isEnemyHit: 0
   meshRenderer: {fileID: 1190393560}
   originalColor: {fileID: 2100000, guid: b749c442a9005754cbbba3bc548a5012, type: 2}
   slider: {fileID: 728087990}
@@ -15599,9 +15783,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
-      propertyPath: bulletForce
-      value: 100
+      propertyPath: attackRange
+      value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: bulletForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: followRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: followSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: enemyHealthCurrentObj
+      value: 
+      objectReference: {fileID: 1593705801}
     - target: {fileID: 8345996892802449655, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: m_Name
@@ -15782,9 +15986,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
-      propertyPath: bulletForce
-      value: 150
+      propertyPath: attackRange
+      value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: bulletForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: followRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: followSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: enemyHealthCurrentObj
+      value: 
+      objectReference: {fileID: 1616608681}
     - target: {fileID: 8345996892802449655, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: m_Name
@@ -16755,6 +16979,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   levelManager: {fileID: 1180525280}
+  isEnemyHit: 0
   meshRenderer: {fileID: 1722252015}
   originalColor: {fileID: 2100000, guid: 84a2b5a80e12d4340b0392ba4f7f1e01, type: 2}
   slider: {fileID: 882124412}
@@ -16794,15 +17019,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
-  followRange: 30
-  attackRange: 22
+  followSpeed: 20
+  followRange: 50
+  attackRange: 45
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 1722252009}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 733484399}
   startTimeBetweenShot: 2
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 500
   isPetroling: 0
 --- !u!82 &1722252012
@@ -19264,15 +19490,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
-  followRange: 30
-  attackRange: 22
+  followSpeed: 20
+  followRange: 50
+  attackRange: 45
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 1955962949}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1775606883}
   startTimeBetweenShot: 2
-  bulletForce: 800
+  bulletForce: 50
   impactForce: 300
   isPetroling: 0
 --- !u!114 &1955962948
@@ -19313,6 +19540,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   levelManager: {fileID: 1180525280}
+  isEnemyHit: 0
   meshRenderer: {fileID: 1955962946}
   originalColor: {fileID: 2100000, guid: b749c442a9005754cbbba3bc548a5012, type: 2}
   slider: {fileID: 1710993180}
@@ -20259,6 +20487,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   levelManager: {fileID: 1180525280}
+  isEnemyHit: 0
   meshRenderer: {fileID: 2035821297}
   originalColor: {fileID: 2100000, guid: bc3d169a8ef803d4abf078bc075e99e4, type: 2}
   slider: {fileID: 49157989}
@@ -20298,15 +20527,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
-  followRange: 30
-  attackRange: 22
+  followSpeed: 20
+  followRange: 50
+  attackRange: 45
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 2035821298}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1724972140}
   startTimeBetweenShot: 2
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 500
   isPetroling: 0
 --- !u!82 &2035821301
@@ -21279,6 +21509,11 @@ PrefabInstance:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 1180525280}
+    - target: {fileID: 1895774418933355284, guid: 803c9dfec7065f34e80bb3a7a14c8226,
+        type: 3}
+      propertyPath: bulletForce
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 1895774418933355285, guid: 803c9dfec7065f34e80bb3a7a14c8226,
         type: 3}
       propertyPath: m_RootOrder
@@ -21360,6 +21595,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 342275781, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1180525280}
+    - target: {fileID: 342275781, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495282077, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1180525280}
+    - target: {fileID: 1495282077, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
+      objectReference: {fileID: 0}
     - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -21470,12 +21721,6 @@ MonoBehaviour:
 --- !u!1 &2811447510322061581 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1115244675, guid: 697c02991ea88fb4a9abb645962bebd3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2811447510322061579}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2811447510322061582 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1245578277, guid: 697c02991ea88fb4a9abb645962bebd3,
     type: 3}
   m_PrefabInstance: {fileID: 2811447510322061579}
   m_PrefabAsset: {fileID: 0}

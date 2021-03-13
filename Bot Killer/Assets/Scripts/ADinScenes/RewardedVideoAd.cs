@@ -5,20 +5,18 @@ using GoogleMobileAds.Api;
 
 public class RewardedVideoAd : MonoBehaviour
 {
-    private const string appId = "ca-app-pub-7847283319435524~9234040731";
+    private const string appId = "ca-app-pub-5695466976308828~7688222448";
 
-    string rewardedId = "ca-app-pub-7847283319435524/3215427291";
+    string rewardedId = "ca-app-pub-5695466976308828/6903245071";
 
     [SerializeField] Text adStatus;
     [SerializeField] GameObject adTextObject;
     [SerializeField] GameManager gameManager;
 
-    private BannerView bannerView;
     private RewardBasedVideoAd rewardBasedVideo;
 
     private void Start()
     {
-        if (bannerView != null) bannerView.Destroy();
         MobileAds.Initialize(appId);
         RequestRewardVideoAd();
         adTextObject.SetActive(false);

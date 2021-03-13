@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
 
    private void Start()
    {
-        player.enabled = true;
         Time.timeScale = 1f;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerDye = GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Dye_Trigger>();

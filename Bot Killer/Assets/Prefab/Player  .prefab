@@ -12392,9 +12392,9 @@ MonoBehaviour:
   characterController: {fileID: 932926553566728997}
   moveInputDeadZone: 10
   movementDirection: {x: 0, y: 0}
-  gravity: -9.8
+  gravity: -25
   groundDistance: 0.4
-  thrustSpeed: 2
+  thrustSpeed: 15
   groundCheck: {fileID: 932926553699433504}
   groundMask:
     serializedVersion: 2

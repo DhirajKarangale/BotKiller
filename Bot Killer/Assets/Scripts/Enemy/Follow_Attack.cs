@@ -8,6 +8,7 @@ public class Follow_Attack : MonoBehaviour
   [SerializeField] byte attackRange;
   [SerializeField] byte stopDistance;
   [SerializeField] byte retriveDistance;
+  [SerializeField] Health_Death enemyHealthCurrentObj;
   private Player player;
   private float distanseBetwwenEnemyAndPlayer;
   private Health_Dye_Trigger playerDye;
@@ -47,7 +48,7 @@ public class Follow_Attack : MonoBehaviour
 
    private void Follow()
    {
-       if((distanseBetwwenEnemyAndPlayer<followRange) && (distanseBetwwenEnemyAndPlayer>stopDistance))
+    if(((distanseBetwwenEnemyAndPlayer<followRange) || enemyHealthCurrentObj.isEnemyHit) && (distanseBetwwenEnemyAndPlayer>stopDistance))
     {
       transform.position = Vector3.MoveTowards(transform.position,player.transform.position,(followSpeed * Time.deltaTime));  // Follow to player.
       isPetroling = false;

@@ -634,13 +634,18 @@ PrefabInstance:
     - target: {fileID: 1232013221687881584, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
         type: 3}
       propertyPath: bulletForce
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1232013221687881584, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
         type: 3}
       propertyPath: impactForce
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 1232013221687881584, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
+        type: 3}
+      propertyPath: enemyHealthCurrentObj
+      value: 
+      objectReference: {fileID: 535475616}
     - target: {fileID: 1776250238778986785, guid: 1310908f07bd0d24aa8aaddbb080dbb4,
         type: 3}
       propertyPath: m_Constraints
@@ -3153,10 +3158,11 @@ MonoBehaviour:
   attackRange: 40
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 457594291}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1183144229}
   startTimeBetweenShot: 2
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 300
   isPetroling: 0
 --- !u!114 &457594290
@@ -3197,6 +3203,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   levelManager: {fileID: 847351211}
+  isEnemyHit: 0
   meshRenderer: {fileID: 457594288}
   originalColor: {fileID: 2100000, guid: 2f33c33d23a2dae4fa8c0f5a56d4f03b, type: 2}
   slider: {fileID: 751702161}
@@ -3534,10 +3541,11 @@ MonoBehaviour:
   attackRange: 40
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 497301202}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1919750866}
   startTimeBetweenShot: 2
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 300
   isPetroling: 0
 --- !u!114 &497301201
@@ -3578,6 +3586,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   levelManager: {fileID: 847351211}
+  isEnemyHit: 0
   meshRenderer: {fileID: 497301199}
   originalColor: {fileID: 2100000, guid: 505d626f44c207345ad0ffa64d4cd0c8, type: 2}
   slider: {fileID: 1264957370}
@@ -3708,12 +3717,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!1 &532729436 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1245578277, guid: 697c02991ea88fb4a9abb645962bebd3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1483664034}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &533511623
 GameObject:
   m_ObjectHideFlags: 0
@@ -5430,7 +5433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4065cfba67a2247b0cb9c15d0e3a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCompleteScreen: {fileID: 532729436}
+  levelCompleteScreen: {fileID: 2124255447}
   enemydye:
   - {fileID: 1722252009}
   - {fileID: 497301202}
@@ -5442,6 +5445,7 @@ MonoBehaviour:
   winParicleEffect: {fileID: 9191795488564055606, guid: 3d6ef7f0b93090844a938136b425c17b,
     type: 3}
   player: {fileID: 741008564}
+  UIButtons: {fileID: 1483664045}
   objective: {fileID: 1002958155}
   ObjectiveText: {fileID: 1107405002}
   enemyiesToKill: 3
@@ -6231,6 +6235,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   levelManager: {fileID: 847351211}
+  isEnemyHit: 0
   meshRenderer: {fileID: 966973257}
   originalColor: {fileID: 2100000, guid: 505d626f44c207345ad0ffa64d4cd0c8, type: 2}
   slider: {fileID: 1893402260}
@@ -6275,10 +6280,11 @@ MonoBehaviour:
   attackRange: 40
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 966973258}
   bullets: {fileID: 3293643728702865815, guid: 0478b3b7b35882a409521cfe2e47480e, type: 3}
   attackPoint: {fileID: 2060546953}
   startTimeBetweenShot: 1.5
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 300
   isPetroling: 0
 --- !u!82 &966973261
@@ -6519,10 +6525,11 @@ MonoBehaviour:
   attackRange: 40
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 968316587}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 581793923}
   startTimeBetweenShot: 1.8
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 300
   isPetroling: 0
 --- !u!114 &968316586
@@ -6564,6 +6571,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   levelManager: {fileID: 847351211}
+  isEnemyHit: 0
   meshRenderer: {fileID: 968316584}
   originalColor: {fileID: 2100000, guid: 780b55d2458349f4b91fca04c2846ba5, type: 2}
   slider: {fileID: 1591436134}
@@ -8991,6 +8999,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 985398439209195677, guid: 774ac3d547d8a554ba677a5a06df1fd7,
     type: 3}
   levelManager: {fileID: 847351211}
+  isEnemyHit: 0
   meshRenderer: {fileID: 1342667046}
   originalColor: {fileID: 2100000, guid: e6c1410f3dcb18f4fbf8632a7990f246, type: 2}
   slider: {fileID: 289627020}
@@ -9035,10 +9044,11 @@ MonoBehaviour:
   attackRange: 35
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 1342667047}
   bullets: {fileID: 3293643728702865815, guid: 0478b3b7b35882a409521cfe2e47480e, type: 3}
   attackPoint: {fileID: 1862051774}
   startTimeBetweenShot: 1.5
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 300
   isPetroling: 0
 --- !u!82 &1342667050
@@ -9789,6 +9799,16 @@ PrefabInstance:
       propertyPath: m_Navigation.m_Mode
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8342757210537375488, guid: 7d151d2236125b540b8fb2a80fa60947,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1828871965}
+    - target: {fileID: 8342757210537375488, guid: 7d151d2236125b540b8fb2a80fa60947,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowRewardVideoAd
+      objectReference: {fileID: 0}
     - target: {fileID: 8342757211051692434, guid: 7d151d2236125b540b8fb2a80fa60947,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10066,10 +10086,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1735036699}
-    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartButton
-      objectReference: {fileID: 0}
     - target: {fileID: 2811447508642014772, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Name
@@ -11883,6 +11899,7 @@ MonoBehaviour:
     type: 3}
   itemToDrop: {fileID: 0}
   levelManager: {fileID: 847351211}
+  isEnemyHit: 0
   meshRenderer: {fileID: 1722252015}
   originalColor: {fileID: 2100000, guid: 84a2b5a80e12d4340b0392ba4f7f1e01, type: 2}
   slider: {fileID: 882124412}
@@ -11927,10 +11944,11 @@ MonoBehaviour:
   attackRange: 40
   stopDistance: 17
   retriveDistance: 12
+  enemyHealthCurrentObj: {fileID: 1722252009}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 733484399}
   startTimeBetweenShot: 2
-  bulletForce: 200
+  bulletForce: 50
   impactForce: 300
   isPetroling: 0
 --- !u!82 &1722252012
@@ -13012,6 +13030,18 @@ PrefabInstance:
       objectReference: {fileID: 1455159178}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb163d728a5648a41aa9adc85dacbec0, type: 3}
+--- !u!114 &1828871965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6958352889882412635, guid: fb163d728a5648a41aa9adc85dacbec0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1828871964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1402944945d23c8449dde958ab6ec6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1862051773
 GameObject:
   m_ObjectHideFlags: 0
@@ -14215,6 +14245,151 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111464928}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2124255446
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1222714706539591816, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 847351211}
+    - target: {fileID: 1222714706539591816, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877442, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707594877566, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_Name
+      value: UIScreen Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222714707649244422, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 847351211}
+    - target: {fileID: 1222714707649244422, guid: 0cbb686786072e0448be0606768621ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cbb686786072e0448be0606768621ec, type: 3}
+--- !u!1 &2124255447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1222714707843334085, guid: 0cbb686786072e0448be0606768621ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2124255446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5284797763657154881
 PrefabInstance:
   m_ObjectHideFlags: 0

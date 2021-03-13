@@ -9,10 +9,13 @@ public class Health_Death : MonoBehaviour
   private GameObject currentDeathEffect;
   private CamShake camShake;
   [SerializeField] GameObject itemToDrop;
-    [SerializeField] LevelManager levelManager;
-  // Flash
+  [SerializeField] LevelManager levelManager;
+  public bool isEnemyHit;
+ 
+    // Flash
   [SerializeField] MeshRenderer meshRenderer;
   [SerializeField] Material originalColor;
+
 
   [Header("Health")]
   [SerializeField] Slider slider;
@@ -27,12 +30,21 @@ public class Health_Death : MonoBehaviour
     slider.value =currentHealth/health;
      // Declearing and finding camera shake script 
      camShake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CamShake>();
-  }
+    }
 
   private void Update()
   {
     HealthBarController();
+        if(isEnemyHit)
+        {
+            Invoke("SetEnemyHitToFalse", 60f);
+        }
   }
+
+   private void SetEnemyHitToFalse()
+    {
+        isEnemyHit = false;
+    }
 
   private void HealthBarController()
   {
@@ -58,21 +70,22 @@ public class Health_Death : MonoBehaviour
    }    
 
    public void TakeDamage(int damage)
-    {
+   {
+        isEnemyHit = true;
         currentHealth -= damage;
         if(currentHealth<=0)
         {
          DestroyEnemy();         
         }
-    }
+   }
 
     public void DestroyEnemy()
     {
-        levelManager.enemyDestroyed++;
+      levelManager.enemyDestroyed++;
       camShake.Shake();
       currentDeathEffect = Instantiate(deathEffect,transform.position,Quaternion.identity);
       Destroy(currentDeathEffect,3f);
-       Invoke("DropItem", 0.1f);
+      Invoke("DropItem", 0.1f);
       Destroy(gameObject,0.3f);
     }
 
