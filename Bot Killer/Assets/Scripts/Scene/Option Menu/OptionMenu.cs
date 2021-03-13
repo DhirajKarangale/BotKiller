@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OptionMenu : MonoBehaviour
 {
@@ -54,6 +55,11 @@ public class OptionMenu : MonoBehaviour
 
         speedSlider.value = Player.moveSpeed;
         speedCountText.text = (int)((Player.moveSpeed / 200) * 100) + "%";
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
     }
     
     // Buttons.

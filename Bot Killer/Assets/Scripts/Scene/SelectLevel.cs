@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SelectLevel : MonoBehaviour
 {
@@ -15,6 +16,14 @@ public class SelectLevel : MonoBehaviour
             {
                 levelButtons[i].interactable = false;
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
         }
     }
 

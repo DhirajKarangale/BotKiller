@@ -1104,6 +1104,16 @@ PrefabInstance:
       propertyPath: weaponCamera
       value: 
       objectReference: {fileID: 2129824680}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 1135402661}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 1135402659}
     - target: {fileID: 8026226530479992053, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: fpsCam
@@ -4031,6 +4041,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1239391845}
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 654763781}
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2811447508642014772, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Name

@@ -153,6 +153,12 @@ Transform:
   m_Father: {fileID: 251858399}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &26688261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954045564, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 850702319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &32150085
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +912,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &85144454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2811447509333928172, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 850702319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &91831119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6702,6 +6720,16 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 850702327}
+    - target: {fileID: 932926553566728994, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: hitScreen
+      value: 
+      objectReference: {fileID: 26688261}
+    - target: {fileID: 932926553566728994, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 85144454}
     - target: {fileID: 932926553566728995, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
       propertyPath: m_Name
@@ -6762,6 +6790,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: thrustSlider
+      value: 
+      objectReference: {fileID: 1677409289}
+    - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 850702327}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9dc9fd9ad35eb4086172c45d4153e8, type: 3}
 --- !u!1 &728908280 stripped
@@ -8279,6 +8317,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1822333741}
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2811447508642014772, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Name
@@ -10216,8 +10262,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 850702326}
   fpscamera: {fileID: 728908287}
   crossHair: {fileID: 850702332}
-  reloadTimeCountText: {fileID: 0}
-  reloadTimeCountGameObject: {fileID: 0}
+  reloadTimeCountText: {fileID: 850702335}
+  reloadTimeCountGameObject: {fileID: 850702334}
   scopeOverLay: {fileID: 0}
   weaponCamera: {fileID: 728908283}
   scopeFOV: 35
@@ -16007,6 +16053,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1677409289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2811447510307347642, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 850702319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1694734749
 GameObject:
   m_ObjectHideFlags: 0
@@ -20762,6 +20820,16 @@ PrefabInstance:
       propertyPath: weaponCamera
       value: 
       objectReference: {fileID: 728908283}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 850702335}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 850702334}
     - target: {fileID: 8026226530479992053, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: fpsCam

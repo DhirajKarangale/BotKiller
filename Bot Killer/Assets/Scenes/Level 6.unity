@@ -1864,9 +1864,19 @@ PrefabInstance:
       objectReference: {fileID: 365254589}
     - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 1828463529}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
       propertyPath: timeBetweenShotting
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 1828463528}
     - target: {fileID: 4778595543017433202, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: m_Name
@@ -2696,6 +2706,21 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 1828463522}
+    - target: {fileID: 932926553180508480, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 1828463522}
+    - target: {fileID: 932926553180508480, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: granedeButton
+      value: 
+      objectReference: {fileID: 1543080280}
+    - target: {fileID: 932926553180508480, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: granedeDisplay
+      value: 
+      objectReference: {fileID: 1967140476}
     - target: {fileID: 932926553385010729, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
       propertyPath: crossHair
@@ -2751,6 +2776,11 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 1828463522}
+    - target: {fileID: 932926553385010731, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponHolder
+      value: 
+      objectReference: {fileID: 1137529194}
     - target: {fileID: 932926553566728994, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
         type: 3}
       propertyPath: hitScreen
@@ -2826,6 +2856,11 @@ PrefabInstance:
       propertyPath: thrustSlider
       value: 
       objectReference: {fileID: 1828463514}
+    - target: {fileID: 932926553566729003, guid: 7d9dc9fd9ad35eb4086172c45d4153e8,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 1828463522}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9dc9fd9ad35eb4086172c45d4153e8, type: 3}
 --- !u!1 &365254584 stripped
@@ -14075,6 +14110,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc0a6a27b83a7834cae6c398c7f542d5, type: 3}
+--- !u!1 &1543080280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2811447509198735131, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1828463512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1556289610
 GameObject:
   m_ObjectHideFlags: 0
@@ -16841,6 +16882,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1565911941}
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2811447508642014772, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Name
@@ -18020,6 +18069,18 @@ Transform:
   m_Father: {fileID: 1694734750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967140476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2811447509180881305, guid: 697c02991ea88fb4a9abb645962bebd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1828463512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976740252
 GameObject:
   m_ObjectHideFlags: 0

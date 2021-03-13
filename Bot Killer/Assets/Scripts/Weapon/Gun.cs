@@ -259,7 +259,6 @@ public class Gun : MonoBehaviour
     private void Reload()
     {
         reloadTimeCountGameObject.SetActive(true);
-       
         weaponButton.isScope = false;
         animatation.reloading = true;
         Invoke("ReloadingFinish", reloadTime);

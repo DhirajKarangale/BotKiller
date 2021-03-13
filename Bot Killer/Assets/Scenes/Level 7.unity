@@ -1864,9 +1864,19 @@ PrefabInstance:
       objectReference: {fileID: 682119105}
     - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 1638753633}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
       propertyPath: timeBetweenShotting
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 1638753622}
     - target: {fileID: 4778595543017433202, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: m_Name
@@ -8260,8 +8270,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 1638753626}
   fpscamera: {fileID: 682119109}
   crossHair: {fileID: 1638753632}
-  reloadTimeCountText: {fileID: 0}
-  reloadTimeCountGameObject: {fileID: 0}
+  reloadTimeCountText: {fileID: 1638753633}
+  reloadTimeCountGameObject: {fileID: 1638753622}
   scopeOverLay: {fileID: 1845505056}
   weaponCamera: {fileID: 682119105}
   scopeFOV: 35
@@ -13007,6 +13017,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 237743283}
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2811447508642014772, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Name

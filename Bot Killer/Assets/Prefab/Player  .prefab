@@ -11526,7 +11526,7 @@ MonoBehaviour:
   weaponButton: {fileID: 0}
   granedeDisplay: {fileID: 0}
   throwForce: 30
-  throwTime: 3
+  throwTime: 2
   noOfGranede: 0
   currentGranede: 0
 --- !u!1 &932926553219961729
@@ -12392,7 +12392,7 @@ MonoBehaviour:
   characterController: {fileID: 932926553566728997}
   moveInputDeadZone: 10
   movementDirection: {x: 0, y: 0}
-  gravity: -25
+  gravity: -9.8
   groundDistance: 0.4
   thrustSpeed: 2
   groundCheck: {fileID: 932926553699433504}

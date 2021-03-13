@@ -10054,8 +10054,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 1521591752}
   fpscamera: {fileID: 839073266}
   crossHair: {fileID: 2811447510322061583}
-  reloadTimeCountText: {fileID: 0}
-  reloadTimeCountGameObject: {fileID: 0}
+  reloadTimeCountText: {fileID: 2811447510322061590}
+  reloadTimeCountGameObject: {fileID: 2811447510322061589}
   scopeOverLay: {fileID: 1043176685}
   weaponCamera: {fileID: 839073262}
   scopeFOV: 35
@@ -21347,6 +21347,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964560225}
+    - target: {fileID: 1900485517, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2811447508642014772, guid: 697c02991ea88fb4a9abb645962bebd3,
         type: 3}
       propertyPath: m_Name
@@ -21412,6 +21420,26 @@ PrefabInstance:
       propertyPath: gunContainer_Animation
       value: 
       objectReference: {fileID: 839073268}
+    - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811447508911927718, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811447510131201336, guid: 697c02991ea88fb4a9abb645962bebd3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 697c02991ea88fb4a9abb645962bebd3, type: 3}
 --- !u!114 &2811447510322061580 stripped
@@ -21807,6 +21835,16 @@ PrefabInstance:
       propertyPath: weaponCamera
       value: 
       objectReference: {fileID: 839073262}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountText
+      value: 
+      objectReference: {fileID: 2811447510322061590}
+    - target: {fileID: 1836177843707496731, guid: 366345484748f8949b093c761c1960e7,
+        type: 3}
+      propertyPath: reloadTimeCountGameObject
+      value: 
+      objectReference: {fileID: 2811447510322061589}
     - target: {fileID: 8026226530479992053, guid: 366345484748f8949b093c761c1960e7,
         type: 3}
       propertyPath: fpsCam

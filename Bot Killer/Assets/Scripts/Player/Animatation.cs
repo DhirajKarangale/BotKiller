@@ -50,13 +50,13 @@ public class Animatation : MonoBehaviour
 
             if (reloading == true)
             {
+                animator.SetBool("Scoped", false);
                 animator.SetBool("Breath", false);
                 animator.SetBool("Reload", true);
                 animator.SetBool("Runing", false);
                 animator.SetBool("OriginalPos", false);
-                animator.SetBool("Scoped", false);
             }
-            if (weaponButton.isScope)
+           else if (weaponButton.isScope)
             {
                 animator.SetBool("Breath", false);
                 animator.SetBool("Reload", false);

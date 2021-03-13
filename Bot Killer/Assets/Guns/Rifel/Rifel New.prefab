@@ -847,8 +847,10 @@ MonoBehaviour:
     type: 3}
   ammoDisplay: {fileID: 0}
   fpscamera: {fileID: 0}
+  crossHair: {fileID: 0}
+  reloadTimeCountText: {fileID: 0}
+  reloadTimeCountGameObject: {fileID: 0}
   scopeOverLay: {fileID: 0}
   weaponCamera: {fileID: 0}
   scopeFOV: 35
-  isScopeOn: 0
   attackPoint: {fileID: 3737422372908987890}

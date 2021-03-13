@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour
        Time.timeScale = 1f; 
        gameOverScreen.SetActive(false);
      }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            weaponButton.PauseButton();
+        }
     }
 
     private void PlayerDye()
