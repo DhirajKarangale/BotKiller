@@ -44,8 +44,6 @@ public class Player : MonoBehaviour
     [SerializeField] float decreaseThrustFuel, increaseThrustFuel, increaseThrustFuelAfterTime;
 
     [Header("Animation")]
-    private float velocityX;
-    private float velocityZ;
     [SerializeField] Animator legsAnimation;
     [SerializeField] float acceleration = 2f;
     private Vector3 currPlayerPos;
@@ -53,6 +51,7 @@ public class Player : MonoBehaviour
 
     private Vector3 gravityDownVelocity;
     private bool isGrounded, isThrust;
+    public bool isMoving, isRotating;
 
 
 
@@ -94,6 +93,8 @@ public class Player : MonoBehaviour
         {
             // Ony look around if the right finger is being tracked
             //  Debug.Log("Rotating");
+            isRotating = true;
+            isMoving = false;
             LookAround();
         }
 
@@ -101,6 +102,8 @@ public class Player : MonoBehaviour
         {
             // Ony move if the left finger is being tracked
             //  Debug.Log("Moving");
+            isRotating = false;
+            isMoving = true;
             Move();
         }
 
