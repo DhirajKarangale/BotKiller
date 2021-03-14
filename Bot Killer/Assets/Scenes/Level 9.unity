@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 91831125}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 2009366191}
-  startTimeBetweenShot: 2
+  startTimeBetweenShot: 1
   bulletForce: 50
   impactForce: 300
   isPetroling: 0
@@ -7056,7 +7056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -9167,7 +9167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -9175,7 +9175,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 904257860}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 2028553234}
-  startTimeBetweenShot: 2
+  startTimeBetweenShot: 1
   bulletForce: 50
   impactForce: 300
   isPetroling: 0
@@ -12005,7 +12005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -12013,7 +12013,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 1190393563}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1605346121}
-  startTimeBetweenShot: 2
+  startTimeBetweenShot: 1
   bulletForce: 50
   impactForce: 300
   isPetroling: 0
@@ -16387,7 +16387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -18795,7 +18795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -18803,7 +18803,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 1955962949}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1775606883}
-  startTimeBetweenShot: 2
+  startTimeBetweenShot: 1
   bulletForce: 50
   impactForce: 300
   isPetroling: 0
@@ -19779,7 +19779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17

@@ -3139,7 +3139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -4316,7 +4316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -5396,7 +5396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -6546,7 +6546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -6866,7 +6866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -7200,7 +7200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -7489,7 +7489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -8188,7 +8188,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ad861f1807ef7e149a6174617af1bfbf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 210.88
+      value: 207.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad861f1807ef7e149a6174617af1bfbf,
         type: 3}
@@ -8430,8 +8430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootForce: 255
   impactForce: 500
-  damage: 35
-  timeBetweenShotting: 2.5
+  damage: 42
+  timeBetweenShotting: 1.5
   reloadTime: 4
   timeBetweenShots: 0.09
   magazineSize: 21
@@ -9560,7 +9560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 40
   followRange: 60
   attackRange: 40
   stopDistance: 23
@@ -9568,7 +9568,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 1137952820}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1553690681}
-  startTimeBetweenShot: 1.5
+  startTimeBetweenShot: 1
   bulletForce: 50
   impactForce: 400
   isPetroling: 0
@@ -14109,7 +14109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -15499,7 +15499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892101364}
   m_LocalRotation: {x: 0, y: -0, z: -5.529728e-10, w: 1}
-  m_LocalPosition: {x: -0.00018119808, y: 0.036062837, z: 1.8841168}
+  m_LocalPosition: {x: -0.00018119808, y: 0.036062837, z: 0.4935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047503339}
@@ -15613,7 +15613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 18
+  followSpeed: 30
   followRange: 30
   attackRange: 22
   stopDistance: 17
@@ -17313,8 +17313,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
+      propertyPath: followSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
       propertyPath: impactForce
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: startTimeBetweenShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}

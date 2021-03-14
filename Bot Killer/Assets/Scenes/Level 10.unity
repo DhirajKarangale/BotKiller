@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 20
+  followSpeed: 30
   followRange: 50
   attackRange: 45
   stopDistance: 17
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 91831125}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 2009366191}
-  startTimeBetweenShot: 2
+  startTimeBetweenShot: 1.3
   bulletForce: 50
   impactForce: 350
   isPetroling: 0
@@ -2946,7 +2946,12 @@ PrefabInstance:
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: followSpeed
-      value: 20
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: startTimeBetweenShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
@@ -7126,7 +7131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 20
+  followSpeed: 30
   followRange: 50
   attackRange: 45
   stopDistance: 17
@@ -11932,7 +11937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 20
+  followSpeed: 30
   followRange: 50
   attackRange: 45
   stopDistance: 17
@@ -11940,7 +11945,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 1190393563}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1605346121}
-  startTimeBetweenShot: 2
+  startTimeBetweenShot: 1.2
   bulletForce: 50
   impactForce: 500
   isPetroling: 0
@@ -15799,7 +15804,12 @@ PrefabInstance:
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: followSpeed
-      value: 20
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: startTimeBetweenShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
@@ -16002,7 +16012,12 @@ PrefabInstance:
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: followSpeed
-      value: 20
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: startTimeBetweenShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449653, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
@@ -17019,7 +17034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 20
+  followSpeed: 30
   followRange: 50
   attackRange: 45
   stopDistance: 17
@@ -19490,7 +19505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 20
+  followSpeed: 30
   followRange: 50
   attackRange: 45
   stopDistance: 17
@@ -19498,7 +19513,7 @@ MonoBehaviour:
   enemyHealthCurrentObj: {fileID: 1955962949}
   bullets: {fileID: 3293643728702865815, guid: d7eec23349b3bdc428317f8389d13ef5, type: 3}
   attackPoint: {fileID: 1775606883}
-  startTimeBetweenShot: 2
+  startTimeBetweenShot: 1.3
   bulletForce: 50
   impactForce: 300
   isPetroling: 0
@@ -20527,7 +20542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3969499df6d7d48abc1abaca1e6878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 20
+  followSpeed: 30
   followRange: 50
   attackRange: 45
   stopDistance: 17
