@@ -34,7 +34,10 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         ObjectiveText.text = "Kill atleast " + enemyiesToKill + " and reach finish point !";
-        Invoke("SetObjectiveToFalse", 20f);
+        if(SceneManager.GetActiveScene().buildIndex != 4)
+        {
+            Invoke("SetObjectiveToFalse", 20f);
+        }
 
 
         if ((enemyDestroyed >= enemyiesToKill) && playerDye.isPlayerHitToFinish && finishAllowed)

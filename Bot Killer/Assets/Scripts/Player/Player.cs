@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     [SerializeField] float thrustFuel;
     private float currentThrustFuel;
     [SerializeField] float decreaseThrustFuel, increaseThrustFuel, increaseThrustFuelAfterTime;
+    public bool isPlayerFly;
 
     [Header("Animation")]
     [SerializeField] Animator legsAnimation;
@@ -262,10 +263,10 @@ public class Player : MonoBehaviour
 
     private void Thrust()
     {
+        isPlayerFly = true;      
         currentThrustFuel -= decreaseThrustFuel * Time.deltaTime;
         gravityDownVelocity.y = Mathf.Sqrt(thrustSpeed * (-2f) * gravity);
         thrustEffect.Play();
-
     }
 
     private void ThrustSlideBar()

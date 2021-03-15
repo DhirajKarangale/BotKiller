@@ -10,10 +10,23 @@ public class TutorialManager : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] Player player;
     [SerializeField] WeaponButton weaponButton;
+    [SerializeField] GameObject enemyHoleObject;
+    [SerializeField] Gun gun;
+    [SerializeField] PickUpController pickUpController;
+
+    private void Start()
+    {
+        enemyHoleObject.SetActive(false);
+    }
 
     private void Update()
     {
-        for(int i=0;i<popups.Length; i++)
+        Invoke("Tutorial", 3f);
+    }
+
+    private void Tutorial()
+    {
+        for (int i = 0; i < popups.Length; i++)
         {
             if (i == popUpIndex)
             {
@@ -21,11 +34,11 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
-        if(popUpIndex == 0)
+        if (popUpIndex == 0)
         {
-           if (player.isMoving)
-           {
-                if((timeBetweenPopUps <= 0))
+            if (player.isMoving)
+            {
+                if ((timeBetweenPopUps <= 0))
                 {
                     popups[popUpIndex].SetActive(false);
                     popUpIndex++;
@@ -36,9 +49,9 @@ public class TutorialManager : MonoBehaviour
                     timeBetweenPopUps -= Time.deltaTime;
                 }
             }
-            
+
         }
-        else if(popUpIndex == 1)
+        else if (popUpIndex == 1)
         {
             if (player.isRotating)
             {
@@ -46,7 +59,7 @@ public class TutorialManager : MonoBehaviour
                 {
                     popups[popUpIndex].SetActive(false);
                     popUpIndex++;
-                    timeBetweenPopUps = 3f;
+                    timeBetweenPopUps = 1.8f;
                 }
                 else
                 {
@@ -56,29 +69,30 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 2)
         {
-            if (weaponButton.isThrust)
+            if (player.isPlayerFly)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
                     popups[popUpIndex].SetActive(false);
                     popUpIndex++;
-                    timeBetweenPopUps = 3f;
+                    timeBetweenPopUps = 1.8f;
                 }
                 else
                 {
                     timeBetweenPopUps -= Time.deltaTime;
                 }
             }
+
         }
         else if (popUpIndex == 3)
         {
-            if (weaponButton.shotting)
+            if (gun.isPlayerShoot)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
                     popups[popUpIndex].SetActive(false);
                     popUpIndex++;
-                    timeBetweenPopUps = 3f;
+                    timeBetweenPopUps = 1f;
                 }
                 else
                 {
@@ -88,13 +102,13 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 4)
         {
-            if (weaponButton.isScope)
+            if (Gun.isScopeOn)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
                     popups[popUpIndex].SetActive(false);
                     popUpIndex++;
-                    timeBetweenPopUps = 3f;
+                    timeBetweenPopUps = 1f;
                 }
                 else
                 {
@@ -104,13 +118,13 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 5)
         {
-            if (weaponButton.isReload)
+            if (!Gun.isScopeOn)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
                     popups[popUpIndex].SetActive(false);
                     popUpIndex++;
-                    timeBetweenPopUps = 3f;
+                    timeBetweenPopUps = 2f;
                 }
                 else
                 {
@@ -120,13 +134,13 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 6)
         {
-            if (weaponButton.isPickUp)
+            if (gun.isGunReload)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
                     popups[popUpIndex].SetActive(false);
                     popUpIndex++;
-                    timeBetweenPopUps = 3f;
+                    timeBetweenPopUps = 2f;
                 }
                 else
                 {
@@ -136,7 +150,7 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 7)
         {
-            if (weaponButton.isPickUp)
+            if (!pickUpController.isGunPickUP)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
@@ -152,12 +166,28 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 8)
         {
-            if (isContinue && (timeBetweenPopUps <= 0))
+            if (pickUpController.isGunPickUP)
+            {
+                if ((timeBetweenPopUps <= 0))
+                {
+                    popups[popUpIndex].SetActive(false);
+                    popUpIndex++;
+                    timeBetweenPopUps = 3f;
+                }
+                else
+                {
+                    timeBetweenPopUps -= Time.deltaTime;
+                }
+            }
+        }
+        else if (popUpIndex == 9)
+        {
+            if (Input.GetMouseButtonDown(0) && (timeBetweenPopUps <= 0))
             {
                 popups[popUpIndex].SetActive(false);
                 popUpIndex++;
                 timeBetweenPopUps = 3f;
-                isContinue = false;
+                enemyHoleObject.SetActive(true);
             }
             else
             {
@@ -165,9 +195,5 @@ public class TutorialManager : MonoBehaviour
             }
         }
     }
-
-    public void ContinueButton()
-    {
-        isContinue = true;
-    }
 }
+

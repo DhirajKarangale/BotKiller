@@ -22,6 +22,7 @@ public class Gun : MonoBehaviour
     [SerializeField] byte magazineSize, bulletsPerTrap;
     [SerializeField] float spread = 0;
     private byte bulletsLeft, bulletsShots;
+    public bool isPlayerShoot,isGunReload;
    
 
     [Header("Prefab")]
@@ -114,6 +115,7 @@ public class Gun : MonoBehaviour
     
     public void Shoot()
     {
+        isPlayerShoot = true;
         recoil.Fire();
         readyToShoot = false;
         GunSound();
@@ -258,6 +260,7 @@ public class Gun : MonoBehaviour
     // Reload Start.
     private void Reload()
     {
+        isGunReload = true;
         reloadTimeCountGameObject.SetActive(true);
         weaponButton.isScope = false;
         animatation.reloading = true;
