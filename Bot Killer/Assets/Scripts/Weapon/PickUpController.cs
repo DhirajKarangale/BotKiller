@@ -14,7 +14,7 @@ public class PickUpController : MonoBehaviour
     public byte pickUpRange;
     public byte dropForwardForce, dropUpwardForce;
 
-    public bool equipped,isGunPickUP;
+    public bool equipped, isGunDrop, isGunPickUp;
     public static bool slotFull;
 
     private void Start()
@@ -67,7 +67,7 @@ public class PickUpController : MonoBehaviour
 
     private void PickUp()
     {
-        isGunPickUP = true;
+        isGunPickUp = true;
 
         equipped = true;
         slotFull = true;
@@ -89,7 +89,7 @@ public class PickUpController : MonoBehaviour
 
     private void Drop()
     {
-        isGunPickUP = false;
+        isGunDrop = true;
 
         equipped = false;
         slotFull = false;

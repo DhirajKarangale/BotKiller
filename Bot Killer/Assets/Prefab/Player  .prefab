@@ -11904,7 +11904,6 @@ GameObject:
   - component: {fileID: 932926553385010733}
   - component: {fileID: 932926553385010734}
   - component: {fileID: 932926553385010735}
-  - component: {fileID: 932926553385010728}
   - component: {fileID: 932926553385010729}
   - component: {fileID: 932926553385010730}
   - component: {fileID: 932926553385010731}
@@ -12062,25 +12061,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &932926553385010728
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932926553385010725}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 90c58c65f76dbe741b5dede2c0ac644d, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &932926553385010729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12102,6 +12082,8 @@ MonoBehaviour:
   magazineSize: 15
   bulletsPerTrap: 1
   spread: 0
+  isPlayerShoot: 0
+  isGunReload: 0
   bullets: {fileID: 1012668721457418666, guid: 942f86a1af78b804cb9aaa30405e1d5f, type: 3}
   bulletHole: {fileID: 7172238457444277931, guid: 2b8123ecc171e3a47b14369b37968087,
     type: 3}
@@ -12169,6 +12151,7 @@ MonoBehaviour:
   dropForwardForce: 5
   dropUpwardForce: 2
   equipped: 1
+  isGunPickUP: 0
 --- !u!1 &932926553566728995
 GameObject:
   m_ObjectHideFlags: 0
@@ -12406,8 +12389,11 @@ MonoBehaviour:
   decreaseThrustFuel: 30
   increaseThrustFuel: 18
   increaseThrustFuelAfterTime: 12
+  isPlayerFly: 0
   legsAnimation: {fileID: 932926551671273910}
   acceleration: 2
+  isMoving: 0
+  isRotating: 0
 --- !u!1 &932926553685656378
 GameObject:
   m_ObjectHideFlags: 0

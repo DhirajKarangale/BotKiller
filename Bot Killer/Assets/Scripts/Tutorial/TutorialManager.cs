@@ -5,7 +5,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject[] popups;
     private int popUpIndex;
     private float timeBetweenPopUps = 3f;
-    private bool isContinue;
+    private int saveRef = 0;
 
     [Header("Refrences")]
     [SerializeField] Player player;
@@ -21,7 +21,15 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        Invoke("Tutorial", 3f);
+        if (PlayerPrefs.GetInt("TutorialSave", 0) == 0)
+        {
+            Invoke("Tutorial", 2f);
+        }
+        else
+        {
+            enemyHoleObject.SetActive(true);
+            weaponButton.enabled = true;
+        }
     }
 
     private void Tutorial()
@@ -150,7 +158,7 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 7)
         {
-            if (!pickUpController.isGunPickUP)
+            if (pickUpController.isGunDrop)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
@@ -166,7 +174,7 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 8)
         {
-            if (pickUpController.isGunPickUP)
+            if (pickUpController.isGunPickUp)
             {
                 if ((timeBetweenPopUps <= 0))
                 {
@@ -182,12 +190,15 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 9)
         {
+
             if (Input.GetMouseButtonDown(0) && (timeBetweenPopUps <= 0))
             {
                 popups[popUpIndex].SetActive(false);
                 popUpIndex++;
                 timeBetweenPopUps = 3f;
                 enemyHoleObject.SetActive(true);
+                saveRef = 1;
+                PlayerPrefs.SetInt("TutorialSave", saveRef);
             }
             else
             {
@@ -195,5 +206,6 @@ public class TutorialManager : MonoBehaviour
             }
         }
     }
+
 }
 
