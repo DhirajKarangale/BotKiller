@@ -37,7 +37,7 @@ public class Health_Death : MonoBehaviour
     HealthBarController();
         if(isEnemyHit)
         {
-            Invoke("SetEnemyHitToFalse", 60f);
+            Invoke("SetEnemyHitToFalse", 20f);
         }
   }
 

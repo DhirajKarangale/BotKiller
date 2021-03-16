@@ -1710,6 +1710,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &599380612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6958352889882412635, guid: fb163d728a5648a41aa9adc85dacbec0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6958352891070490518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1402944945d23c8449dde958ab6ec6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &615505949
 GameObject:
   m_ObjectHideFlags: 0
@@ -9208,16 +9220,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1782205730}
+      objectReference: {fileID: 599380612}
     - target: {fileID: 8342757210537375488, guid: 7d151d2236125b540b8fb2a80fa60947,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayerReSpwan
+      value: ShowRewardVideoAd
       objectReference: {fileID: 0}
     - target: {fileID: 8342757210537375488, guid: 7d151d2236125b540b8fb2a80fa60947,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: RewardedVideoAd, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8342757211051692434, guid: 7d151d2236125b540b8fb2a80fa60947,
         type: 3}
