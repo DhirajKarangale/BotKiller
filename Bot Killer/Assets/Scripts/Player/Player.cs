@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // References
-    [SerializeField] private Transform cameraTransform;
+    public Transform cameraTransform;
     [SerializeField] private CharacterController characterController;
 
     // Player settings
@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public static float moveSpeed = 21f;
     private float currentMoveSpeed = moveSpeed;
     public Vector2 movementDirection;
+    [SerializeField] Health_Dye_Trigger playerDye;
 
 
     [Header("Player Attributes")]
@@ -90,22 +91,25 @@ public class Player : MonoBehaviour
         GetTouchInput();
 
 
-        if (rightFingerId != -1)
+        if(playerDye.isPlayerAlive)
         {
-            // Ony look around if the right finger is being tracked
-            //  Debug.Log("Rotating");
-            isRotating = true;
-            isMoving = false;
-            LookAround();
-        }
+            if (rightFingerId != -1)
+            {
+                // Ony look around if the right finger is being tracked
+                //  Debug.Log("Rotating");
+                isRotating = true;
+                isMoving = false;
+                LookAround();
+            }
 
-        if (leftFingerId != -1)
-        {
-            // Ony move if the left finger is being tracked
-            //  Debug.Log("Moving");
-            isRotating = false;
-            isMoving = true;
-            Move();
+            if (leftFingerId != -1)
+            {
+                // Ony move if the left finger is being tracked
+                //  Debug.Log("Moving");
+                isRotating = false;
+                isMoving = true;
+                Move();
+            }
         }
 
         // Giving Gravity

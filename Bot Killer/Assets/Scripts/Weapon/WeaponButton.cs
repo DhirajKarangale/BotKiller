@@ -8,7 +8,8 @@ public class WeaponButton : MonoBehaviour
     [SerializeField] GameObject pauseScreen;
     [SerializeField] GameObject crossHair;
     [SerializeField] Animatation gunContainer_Animation;
-    public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust,isPaussed;
+    public bool shotting,isReload,isPickUp,isDrop,isScope,throwGranide,isThrust;
+    public static bool isPaussed;
 
     private void Start()
     {
@@ -93,7 +94,7 @@ public class WeaponButton : MonoBehaviour
 
    public void ResumeButtom()
    {
-     isPaussed = false;
+        isPaussed = false;
      Time.timeScale = 1f;
         crossHair.SetActive(true);
     }

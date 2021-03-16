@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     private Player player;
    private int currentScene;
 
+   
+
    private void Start()
    {
         Time.timeScale = 1f;
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
      {
             PlayerDye();
      }
-     else if(playerDye.isPlayerAlive && !weaponButton.isPaussed && !playerDye.isPlayerHitToFinish)
+     else if(playerDye.isPlayerAlive && !WeaponButton.isPaussed && !playerDye.isPlayerHitToFinish)
      {
        Time.timeScale = 1f; 
        gameOverScreen.SetActive(false);
@@ -49,41 +51,43 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Escape))
         {
-            weaponButton.PauseButton();
+            if(WeaponButton.isPaussed)
+            {
+                weaponButton.ResumeButtom();
+            }
+            else
+            {
+                weaponButton.PauseButton();
+            }
         }
+        
     }
 
     private void PlayerDye()
     {
         Time.timeScale = 0.8f;
         Invoke("SetGameOverScreenActive", 1f);
+        weaponButton.shotting = false;
         UIScreen.SetActive(false);
-        GunContainer.SetActive(false);
         itemToIntroduce.SetActive(false);
-        firstCamRef.SetActive(false);
         cam2.SetActive(true);
         fps.SetActive(false);
-        player.enabled = false;
-        playerDye.enabled = false;
     }
 
     public void PlayerReSpwan()
     {
         playerDye.isPlayerAlive = true;
         Time.timeScale = 1f;
-        Invoke("SetGameOverScreenActive", 1f);
+        player.cameraTransform.localRotation = Quaternion.Euler(0, 0, 0);
         UIScreen.SetActive(true);
-        GunContainer.SetActive(true);
         itemToIntroduce.SetActive(true);
         firstCamRef.SetActive(true);
         cam2.SetActive(false);
-        fps.SetActive(true);
-        player.enabled = true;
-        playerDye.enabled = true;
         playerDye.currentHealth = playerDye.health;
         GameObject currentRespwanEffect = Instantiate(respWanEffect, player.transform.position, player.transform.rotation);
         Destroy(currentRespwanEffect, 10f);
         ThrowAndDamegeItem();
+        fps.SetActive(true);
     }
 
     private void ThrowAndDamegeItem()
@@ -116,9 +120,9 @@ public class GameManager : MonoBehaviour
     }
         
     private void SetGameOverScreenActive()
-   {
+    {
      gameOverScreen.SetActive(true);
-   }
+    }
 
    public void MainMenuButton(string sceneToLoad)
    {

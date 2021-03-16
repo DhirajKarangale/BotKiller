@@ -1775,7 +1775,7 @@ RectTransform:
   m_GameObject: {fileID: 973010437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.77343, y: 0.77343, z: 0.77343}
   m_Children:
   - {fileID: 1543705203}
   m_Father: {fileID: 1619165997}
@@ -1783,7 +1783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: 256}
+  m_AnchoredPosition: {x: -31, y: 210}
   m_SizeDelta: {x: 395.9562, y: 110.7219}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973010439
@@ -1832,7 +1832,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 119697708}
         m_TargetAssemblyTypeName: OptionMenu, Assembly-CSharp
-        m_MethodName: SceneButton
+        m_MethodName: ChangeColtrol
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3678,7 +3678,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -514.4479, y: 475.72412}
+  m_AnchoredPosition: {x: -536, y: 542}
   m_SizeDelta: {x: 85.1042, y: 46.8006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996496878
@@ -3727,8 +3727,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 119697708}
         m_TargetAssemblyTypeName: OptionMenu, Assembly-CSharp
-        m_MethodName: SceneButton
-        m_Mode: 5
+        m_MethodName: BackButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

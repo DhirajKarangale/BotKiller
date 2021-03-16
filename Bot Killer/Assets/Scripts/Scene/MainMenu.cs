@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -17,9 +18,13 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void Play_Option(string sceneToLoad)
+    public void Play()
     {
-      FindObjectOfType<SceneFader>().FadeTo(sceneToLoad);
+        SceneManager.LoadScene(1);
+    }
+    public void Option()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void Quit()

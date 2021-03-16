@@ -19,24 +19,24 @@ public class OptionMenu : MonoBehaviour
         // Slider
         // Setting Sensitivity Slider Value
         slider.minValue = 1f;
-        slider.maxValue = 100f;
+        slider.maxValue = 30f;
         slider.wholeNumbers = true;
 
         currentlookSensitivity = PlayerPrefs.GetFloat("LookSensitivity",5f); // Taking Previously saved slider Valve or Deafult 140.
         lookSensitivity = currentlookSensitivity;
         slider.value = lookSensitivity; // Setting Saved Slider valve.
-        sensitivityCountText.text = (int)((lookSensitivity / 100) *100) + "%"; // Setting Saved Text of Sensitivity count.
+        sensitivityCountText.text = (int)((lookSensitivity / 30) *100) + "%"; // Setting Saved Text of Sensitivity count.
 
 
         //Setting Speed Slider
         speedSlider.minValue = 1f;
-        speedSlider.maxValue = 200f;
+        speedSlider.maxValue = 50f;
         speedSlider.wholeNumbers = true;
 
         currentMoveSpeed = PlayerPrefs.GetFloat("MoveSpeed",20f); // Taking Previously saved slider Valve or Deafult 140.
         Player.moveSpeed = currentMoveSpeed;
         speedSlider.value = Player.moveSpeed; // Setting Saved Slider valve.
-       speedCountText.text = (int)((Player.moveSpeed / 200) * 100) + "%"; // Setting Saved Text of Sensitivity count.
+       speedCountText.text = (int)((Player.moveSpeed / 50) * 100) + "%"; // Setting Saved Text of Sensitivity count.
 
 
 
@@ -51,10 +51,10 @@ public class OptionMenu : MonoBehaviour
     private void Update()
     {
         slider.value = lookSensitivity; // Updating Slider valve.
-        sensitivityCountText.text = (int)((lookSensitivity/100) *100) + "%"; // Updating Text of Sensitivity count.
+        sensitivityCountText.text = (int)((lookSensitivity/30) *100) + "%"; // Updating Text of Sensitivity count.
 
         speedSlider.value = Player.moveSpeed;
-        speedCountText.text = (int)((Player.moveSpeed / 200) * 100) + "%";
+        speedCountText.text = (int)((Player.moveSpeed / 50) * 100) + "%";
 
         if (Input.GetKey(KeyCode.Escape))
         {
@@ -63,9 +63,14 @@ public class OptionMenu : MonoBehaviour
     }
     
     // Buttons.
-    public void SceneButton(string sceneToLoad)
+    public void ChangeColtrol(string sceneToLoad)
     {
         FindObjectOfType<SceneFader>().FadeTo(sceneToLoad);
+    }
+
+    public void BackButton()
+    {
+        SceneManager.LoadScene(0);
     }
 
     // Sensitivity Slider.

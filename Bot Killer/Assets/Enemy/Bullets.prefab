@@ -4915,7 +4915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  impactPosition: {x: -0.5, y: 1, z: -0.5}
+  impactPosition: {x: 0, y: 1, z: 0}
 --- !u!54 &-4016257315748919338
 Rigidbody:
   m_ObjectHideFlags: 0

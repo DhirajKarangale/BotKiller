@@ -428,7 +428,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41762923}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -942,7 +942,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72563981}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1447,6 +1447,7 @@ GameObject:
   - component: {fileID: 136559282}
   - component: {fileID: 136559281}
   - component: {fileID: 136559280}
+  - component: {fileID: 136559283}
   m_Layer: 6
   m_Name: wall (1)
   m_TagString: Sorrounding
@@ -1530,6 +1531,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136559278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &136559283
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136559278}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &149505051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1922,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194196912}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2080,6 +2097,7 @@ GameObject:
   - component: {fileID: 281182307}
   - component: {fileID: 281182306}
   - component: {fileID: 281182305}
+  - component: {fileID: 281182308}
   m_Layer: 6
   m_Name: wall (30)
   m_TagString: Sorrounding
@@ -2163,6 +2181,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281182303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &281182308
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281182303}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &283381378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2609,6 +2643,7 @@ GameObject:
   - component: {fileID: 326327949}
   - component: {fileID: 326327948}
   - component: {fileID: 326327947}
+  - component: {fileID: 326327950}
   m_Layer: 6
   m_Name: wall (39)
   m_TagString: Sorrounding
@@ -2692,6 +2727,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326327945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &326327950
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326327945}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &327038413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3483,6 +3534,7 @@ GameObject:
   - component: {fileID: 367973377}
   - component: {fileID: 367973376}
   - component: {fileID: 367973375}
+  - component: {fileID: 367973378}
   m_Layer: 6
   m_Name: wall (16)
   m_TagString: Sorrounding
@@ -3566,6 +3618,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367973373}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &367973378
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367973373}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &384642447
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,6 +4300,7 @@ GameObject:
   - component: {fileID: 417076235}
   - component: {fileID: 417076234}
   - component: {fileID: 417076233}
+  - component: {fileID: 417076236}
   m_Layer: 6
   m_Name: wall (10)
   m_TagString: Sorrounding
@@ -4315,6 +4384,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417076231}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &417076236
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417076231}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &420117635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4451,7 +4536,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424735838}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -4946,7 +5031,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511453579}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -5028,6 +5113,7 @@ GameObject:
   - component: {fileID: 536987551}
   - component: {fileID: 536987550}
   - component: {fileID: 536987549}
+  - component: {fileID: 536987552}
   m_Layer: 6
   m_Name: wall (11)
   m_TagString: Sorrounding
@@ -5111,6 +5197,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536987547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &536987552
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536987547}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &541201506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5253,6 +5355,7 @@ GameObject:
   - component: {fileID: 543337336}
   - component: {fileID: 543337335}
   - component: {fileID: 543337334}
+  - component: {fileID: 543337337}
   m_Layer: 6
   m_Name: wall (4)
   m_TagString: Sorrounding
@@ -5336,6 +5439,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543337332}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &543337337
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543337332}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &545327169
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,6 +5499,7 @@ GameObject:
   - component: {fileID: 548183691}
   - component: {fileID: 548183690}
   - component: {fileID: 548183689}
+  - component: {fileID: 548183692}
   m_Layer: 6
   m_Name: wall (37)
   m_TagString: Sorrounding
@@ -5463,6 +5583,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548183687}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &548183692
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548183687}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &574751914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5629,6 +5765,7 @@ GameObject:
   - component: {fileID: 579298505}
   - component: {fileID: 579298504}
   - component: {fileID: 579298503}
+  - component: {fileID: 579298506}
   m_Layer: 6
   m_Name: Ground (2)
   m_TagString: Sorrounding
@@ -5712,6 +5849,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579298501}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &579298506
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579298501}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &581151476
 GameObject:
   m_ObjectHideFlags: 0
@@ -6079,6 +6232,7 @@ GameObject:
   - component: {fileID: 639902126}
   - component: {fileID: 639902125}
   - component: {fileID: 639902124}
+  - component: {fileID: 639902127}
   m_Layer: 6
   m_Name: wall (17)
   m_TagString: Sorrounding
@@ -6162,6 +6316,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639902122}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &639902127
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639902122}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &641437669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6325,6 +6495,7 @@ GameObject:
   - component: {fileID: 649053242}
   - component: {fileID: 649053241}
   - component: {fileID: 649053240}
+  - component: {fileID: 649053243}
   m_Layer: 6
   m_Name: wall (18)
   m_TagString: Sorrounding
@@ -6408,6 +6579,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649053238}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &649053243
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649053238}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &679574031
 GameObject:
   m_ObjectHideFlags: 0
@@ -6420,6 +6607,7 @@ GameObject:
   - component: {fileID: 679574035}
   - component: {fileID: 679574034}
   - component: {fileID: 679574033}
+  - component: {fileID: 679574036}
   m_Layer: 6
   m_Name: wall (7)
   m_TagString: Sorrounding
@@ -6503,6 +6691,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679574031}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &679574036
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679574031}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &684846419
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,7 +6811,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684846419}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -9085,6 +9289,7 @@ GameObject:
   - component: {fileID: 959310505}
   - component: {fileID: 959310504}
   - component: {fileID: 959310503}
+  - component: {fileID: 959310506}
   m_Layer: 6
   m_Name: wall (6)
   m_TagString: Sorrounding
@@ -9168,6 +9373,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959310501}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &959310506
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959310501}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &964560224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9529,7 +9750,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023441550}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -10198,6 +10419,8 @@ MonoBehaviour:
   dropForwardForce: 12
   dropUpwardForce: 2
   equipped: 0
+  isGunDrop: 0
+  isGunPickUp: 0
 --- !u!114 &1047503342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10238,6 +10461,8 @@ MonoBehaviour:
   magazineSize: 21
   bulletsPerTrap: 3
   spread: 0
+  isPlayerShoot: 0
+  isGunReload: 0
   bullets: {fileID: 1012668721457418666, guid: 8d942bde8bfb71940a958667ceaf9d6f, type: 3}
   bulletHole: {fileID: 7172238457444277931, guid: 2b8123ecc171e3a47b14369b37968087,
     type: 3}
@@ -10470,6 +10695,7 @@ GameObject:
   - component: {fileID: 1056656519}
   - component: {fileID: 1056656518}
   - component: {fileID: 1056656517}
+  - component: {fileID: 1056656520}
   m_Layer: 6
   m_Name: Ground (3)
   m_TagString: Sorrounding
@@ -10553,6 +10779,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056656515}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1056656520
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056656515}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1061449318
 GameObject:
   m_ObjectHideFlags: 0
@@ -10565,6 +10807,7 @@ GameObject:
   - component: {fileID: 1061449322}
   - component: {fileID: 1061449321}
   - component: {fileID: 1061449320}
+  - component: {fileID: 1061449323}
   m_Layer: 6
   m_Name: wall (14)
   m_TagString: Sorrounding
@@ -10648,6 +10891,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061449318}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1061449323
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061449318}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1085233279
 GameObject:
   m_ObjectHideFlags: 0
@@ -10871,6 +11130,7 @@ GameObject:
   - component: {fileID: 1104495239}
   - component: {fileID: 1104495238}
   - component: {fileID: 1104495237}
+  - component: {fileID: 1104495240}
   m_Layer: 6
   m_Name: wall (9)
   m_TagString: Sorrounding
@@ -10954,6 +11214,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104495235}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1104495240
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104495235}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1128274130
 GameObject:
   m_ObjectHideFlags: 0
@@ -10966,6 +11242,7 @@ GameObject:
   - component: {fileID: 1128274134}
   - component: {fileID: 1128274133}
   - component: {fileID: 1128274132}
+  - component: {fileID: 1128274135}
   m_Layer: 6
   m_Name: wall (33)
   m_TagString: Sorrounding
@@ -11049,6 +11326,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128274130}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1128274135
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128274130}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1134306464
 GameObject:
   m_ObjectHideFlags: 0
@@ -11246,7 +11539,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135641205}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -12321,6 +12614,7 @@ GameObject:
   - component: {fileID: 1269392189}
   - component: {fileID: 1269392188}
   - component: {fileID: 1269392187}
+  - component: {fileID: 1269392190}
   m_Layer: 6
   m_Name: wall (19)
   m_TagString: Sorrounding
@@ -12404,6 +12698,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269392185}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1269392190
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269392185}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1271462337
 GameObject:
   m_ObjectHideFlags: 0
@@ -12603,7 +12913,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275304512}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -12623,6 +12933,7 @@ GameObject:
   - component: {fileID: 1284013862}
   - component: {fileID: 1284013861}
   - component: {fileID: 1284013860}
+  - component: {fileID: 1284013863}
   m_Layer: 6
   m_Name: wall (2)
   m_TagString: Sorrounding
@@ -12706,6 +13017,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284013858}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1284013863
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284013858}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1306032476
 GameObject:
   m_ObjectHideFlags: 0
@@ -12902,6 +13229,7 @@ GameObject:
   - component: {fileID: 1327756425}
   - component: {fileID: 1327756424}
   - component: {fileID: 1327756423}
+  - component: {fileID: 1327756426}
   m_Layer: 6
   m_Name: wall (13)
   m_TagString: Sorrounding
@@ -12985,6 +13313,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327756421}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1327756426
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327756421}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1343245863
 GameObject:
   m_ObjectHideFlags: 0
@@ -12997,6 +13341,7 @@ GameObject:
   - component: {fileID: 1343245867}
   - component: {fileID: 1343245866}
   - component: {fileID: 1343245865}
+  - component: {fileID: 1343245868}
   m_Layer: 6
   m_Name: wall (41)
   m_TagString: Sorrounding
@@ -13080,6 +13425,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343245863}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1343245868
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343245863}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1357049294
 GameObject:
   m_ObjectHideFlags: 0
@@ -13092,6 +13453,7 @@ GameObject:
   - component: {fileID: 1357049298}
   - component: {fileID: 1357049297}
   - component: {fileID: 1357049296}
+  - component: {fileID: 1357049299}
   m_Layer: 6
   m_Name: wall (15)
   m_TagString: Sorrounding
@@ -13175,6 +13537,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357049294}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1357049299
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357049294}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1360931949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13767,6 +14145,7 @@ GameObject:
   - component: {fileID: 1420405207}
   - component: {fileID: 1420405206}
   - component: {fileID: 1420405205}
+  - component: {fileID: 1420405208}
   m_Layer: 6
   m_Name: wall
   m_TagString: Sorrounding
@@ -13850,6 +14229,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420405203}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1420405208
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420405203}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1426930573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14355,6 +14750,7 @@ GameObject:
   - component: {fileID: 1483354283}
   - component: {fileID: 1483354282}
   - component: {fileID: 1483354281}
+  - component: {fileID: 1483354284}
   m_Layer: 6
   m_Name: wall (26)
   m_TagString: Sorrounding
@@ -14438,6 +14834,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483354279}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1483354284
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483354279}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1509737383
 GameObject:
   m_ObjectHideFlags: 0
@@ -14450,6 +14862,7 @@ GameObject:
   - component: {fileID: 1509737387}
   - component: {fileID: 1509737386}
   - component: {fileID: 1509737385}
+  - component: {fileID: 1509737388}
   m_Layer: 6
   m_Name: wall (40)
   m_TagString: Sorrounding
@@ -14533,6 +14946,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509737383}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1509737388
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509737383}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1519225526
 GameObject:
   m_ObjectHideFlags: 0
@@ -14575,7 +15004,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519225526}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -15162,6 +15591,7 @@ GameObject:
   - component: {fileID: 1563801508}
   - component: {fileID: 1563801507}
   - component: {fileID: 1563801506}
+  - component: {fileID: 1563801509}
   m_Layer: 6
   m_Name: wall (36)
   m_TagString: Sorrounding
@@ -15245,6 +15675,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563801504}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1563801509
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563801504}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1578237054
 GameObject:
   m_ObjectHideFlags: 0
@@ -15257,6 +15703,7 @@ GameObject:
   - component: {fileID: 1578237058}
   - component: {fileID: 1578237057}
   - component: {fileID: 1578237056}
+  - component: {fileID: 1578237059}
   m_Layer: 6
   m_Name: wall (3)
   m_TagString: Sorrounding
@@ -15340,6 +15787,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578237054}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1578237059
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578237054}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1580284569
 GameObject:
   m_ObjectHideFlags: 0
@@ -15352,6 +15815,7 @@ GameObject:
   - component: {fileID: 1580284573}
   - component: {fileID: 1580284572}
   - component: {fileID: 1580284571}
+  - component: {fileID: 1580284574}
   m_Layer: 6
   m_Name: wall (42)
   m_TagString: Sorrounding
@@ -15436,6 +15900,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580284569}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1580284574
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580284569}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1581294546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15601,6 +16081,7 @@ GameObject:
   - component: {fileID: 1584421907}
   - component: {fileID: 1584421906}
   - component: {fileID: 1584421905}
+  - component: {fileID: 1584421908}
   m_Layer: 6
   m_Name: wall (5)
   m_TagString: Sorrounding
@@ -15684,6 +16165,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584421903}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1584421908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584421903}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1593705799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16061,6 +16558,7 @@ GameObject:
   - component: {fileID: 1621608952}
   - component: {fileID: 1621608951}
   - component: {fileID: 1621608950}
+  - component: {fileID: 1621608953}
   m_Layer: 6
   m_Name: wall (34)
   m_TagString: Sorrounding
@@ -16144,6 +16642,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621608948}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1621608953
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621608948}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1633864621
 GameObject:
   m_ObjectHideFlags: 0
@@ -16156,6 +16670,7 @@ GameObject:
   - component: {fileID: 1633864625}
   - component: {fileID: 1633864624}
   - component: {fileID: 1633864623}
+  - component: {fileID: 1633864626}
   m_Layer: 6
   m_Name: Ground (5)
   m_TagString: Sorrounding
@@ -16239,6 +16754,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633864621}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1633864626
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633864621}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1636034490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17398,6 +17929,7 @@ GameObject:
   - component: {fileID: 1740994313}
   - component: {fileID: 1740994312}
   - component: {fileID: 1740994311}
+  - component: {fileID: 1740994314}
   m_Layer: 6
   m_Name: Ground (4)
   m_TagString: Sorrounding
@@ -17481,6 +18013,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740994309}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1740994314
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740994309}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1743718544
 GameObject:
   m_ObjectHideFlags: 0
@@ -17760,6 +18308,7 @@ GameObject:
   - component: {fileID: 1779654988}
   - component: {fileID: 1779654987}
   - component: {fileID: 1779654986}
+  - component: {fileID: 1779654989}
   m_Layer: 6
   m_Name: wall (38)
   m_TagString: Sorrounding
@@ -17843,6 +18392,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779654984}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1779654989
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779654984}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1792336108
 GameObject:
   m_ObjectHideFlags: 0
@@ -18041,6 +18606,7 @@ GameObject:
   - component: {fileID: 1837070661}
   - component: {fileID: 1837070660}
   - component: {fileID: 1837070659}
+  - component: {fileID: 1837070662}
   m_Layer: 6
   m_Name: wall (35)
   m_TagString: Sorrounding
@@ -18124,6 +18690,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837070657}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1837070662
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837070657}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1842766112
 GameObject:
   m_ObjectHideFlags: 0
@@ -18675,7 +19257,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866135701}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -18757,6 +19339,7 @@ GameObject:
   - component: {fileID: 1866868507}
   - component: {fileID: 1866868506}
   - component: {fileID: 1866868505}
+  - component: {fileID: 1866868508}
   m_Layer: 6
   m_Name: wall (12)
   m_TagString: Sorrounding
@@ -18840,6 +19423,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866868503}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1866868508
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866868503}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1880096441
 GameObject:
   m_ObjectHideFlags: 0
@@ -18852,6 +19451,7 @@ GameObject:
   - component: {fileID: 1880096445}
   - component: {fileID: 1880096444}
   - component: {fileID: 1880096443}
+  - component: {fileID: 1880096446}
   m_Layer: 6
   m_Name: wall (28)
   m_TagString: Sorrounding
@@ -18935,6 +19535,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880096441}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1880096446
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880096441}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1892101364
 GameObject:
   m_ObjectHideFlags: 0
@@ -19069,7 +19685,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912618924}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -19314,6 +19930,7 @@ GameObject:
   - component: {fileID: 1927399541}
   - component: {fileID: 1927399540}
   - component: {fileID: 1927399539}
+  - component: {fileID: 1927399542}
   m_Layer: 6
   m_Name: wall (32)
   m_TagString: Sorrounding
@@ -19397,6 +20014,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927399537}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1927399542
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927399537}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1955962943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19744,6 +20377,7 @@ GameObject:
   - component: {fileID: 1985197686}
   - component: {fileID: 1985197685}
   - component: {fileID: 1985197684}
+  - component: {fileID: 1985197687}
   m_Layer: 6
   m_Name: wall (8)
   m_TagString: Sorrounding
@@ -19827,6 +20461,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985197682}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1985197687
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985197682}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1990941717
 GameObject:
   m_ObjectHideFlags: 0
@@ -19931,7 +20581,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990941717}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -20306,6 +20956,7 @@ GameObject:
   - component: {fileID: 2033821344}
   - component: {fileID: 2033821343}
   - component: {fileID: 2033821342}
+  - component: {fileID: 2033821345}
   m_Layer: 6
   m_Name: Ground (1)
   m_TagString: Sorrounding
@@ -20389,6 +21040,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033821340}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2033821345
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033821340}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &2035821294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20691,6 +21358,7 @@ GameObject:
   - component: {fileID: 2042266271}
   - component: {fileID: 2042266270}
   - component: {fileID: 2042266269}
+  - component: {fileID: 2042266272}
   m_Layer: 6
   m_Name: wall (27)
   m_TagString: Sorrounding
@@ -20774,6 +21442,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042266267}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2042266272
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042266267}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &2048759284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20916,6 +21600,7 @@ GameObject:
   - component: {fileID: 2050930740}
   - component: {fileID: 2050930739}
   - component: {fileID: 2050930738}
+  - component: {fileID: 2050930741}
   m_Layer: 6
   m_Name: wall (31)
   m_TagString: Sorrounding
@@ -20999,6 +21684,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050930736}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2050930741
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050930736}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &2066166665
 GameObject:
   m_ObjectHideFlags: 0
@@ -21011,6 +21712,7 @@ GameObject:
   - component: {fileID: 2066166669}
   - component: {fileID: 2066166668}
   - component: {fileID: 2066166667}
+  - component: {fileID: 2066166670}
   m_Layer: 6
   m_Name: wall (29)
   m_TagString: Sorrounding
@@ -21094,6 +21796,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066166665}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2066166670
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066166665}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &2077794897
 GameObject:
   m_ObjectHideFlags: 0

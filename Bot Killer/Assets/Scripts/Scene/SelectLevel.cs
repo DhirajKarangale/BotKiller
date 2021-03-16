@@ -31,4 +31,9 @@ public class SelectLevel : MonoBehaviour
     { 
       FindObjectOfType<SceneFader>().FadeTo(level);
     }
+
+    public void BackButton()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

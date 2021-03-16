@@ -160,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932926551878191406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03000021, y: -1.48, z: -3.7999992}
+  m_LocalPosition: {x: 0.03000021, y: 0.01, z: -2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 932926553566728996}
@@ -1071,7 +1071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932926552616983867}
   m_LocalRotation: {x: -0, y: -0, z: -2.4970531e-18, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.0035543654, z: -0.09983593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 932926553385010724}
@@ -11258,7 +11258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932926553021745684}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.032577455, z: -0.28526264}
+  m_LocalPosition: {x: 0, y: -0.029023089, z: -0.21673617}
   m_LocalScale: {x: 0.07604019, y: 0.28267497, z: 0.08868733}
   m_Children: []
   m_Father: {fileID: 932926552616983866}
@@ -11922,8 +11922,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932926553385010725}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0035543654, z: -0.0780715}
-  m_LocalScale: {x: 0.80619186, y: 0.80619127, z: 0.8061914}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.80619174, y: 0.80619127, z: 0.8061914}
   m_Children:
   - {fileID: 932926553349102044}
   - {fileID: 932926552406978453}
@@ -12348,7 +12348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
-  health: 5
+  health: 500
   regainHealth: 10
   healthIncreaseAfterTime: 15
   currentHealth: 0
@@ -12376,6 +12376,7 @@ MonoBehaviour:
   characterController: {fileID: 932926553566728997}
   moveInputDeadZone: 10
   movementDirection: {x: 0, y: 0}
+  playerDye: {fileID: 932926553566728994}
   gravity: -25
   groundDistance: 0.4
   thrustSpeed: 15
