@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 136559283}
   m_Layer: 6
   m_Name: wall (1)
-  m_TagString: Sorrounding
+  m_TagString: XNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 139988162}
   m_Layer: 6
   m_Name: Ground (8)
-  m_TagString: Sorrounding
+  m_TagString: Roof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 182032013}
   m_Layer: 6
   m_Name: wall (26)
-  m_TagString: Sorrounding
+  m_TagString: ZPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1680,7 +1680,7 @@ GameObject:
   - component: {fileID: 258550541}
   m_Layer: 6
   m_Name: wall (16)
-  m_TagString: Sorrounding
+  m_TagString: XNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2350,7 +2350,7 @@ GameObject:
   - component: {fileID: 356739008}
   m_Layer: 6
   m_Name: wall (7)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3430,7 +3430,7 @@ GameObject:
   - component: {fileID: 543337337}
   m_Layer: 6
   m_Name: wall (4)
-  m_TagString: Sorrounding
+  m_TagString: ZPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3602,7 +3602,7 @@ GameObject:
   - component: {fileID: 587540824}
   m_Layer: 6
   m_Name: wall (20)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3904,7 +3904,7 @@ GameObject:
   - component: {fileID: 644379285}
   m_Layer: 6
   m_Name: wall (27)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3998,7 +3998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 682119114}
-  throwAmount: {x: 0, y: 0, z: 0}
+  throwAmount: {x: 0, y: 0, z: -2}
 --- !u!1 &665497170
 GameObject:
   m_ObjectHideFlags: 0
@@ -4014,7 +4014,7 @@ GameObject:
   - component: {fileID: 665497175}
   m_Layer: 6
   m_Name: wall (28)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6388,7 +6388,7 @@ GameObject:
   - component: {fileID: 959310506}
   m_Layer: 6
   m_Name: wall (6)
-  m_TagString: Sorrounding
+  m_TagString: ZPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8093,7 +8093,7 @@ GameObject:
   - component: {fileID: 1013244758}
   m_Layer: 6
   m_Name: wall (21)
-  m_TagString: Sorrounding
+  m_TagString: XNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8378,7 +8378,7 @@ GameObject:
   - component: {fileID: 1021608394}
   m_Layer: 6
   m_Name: wall (5)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9168,7 +9168,7 @@ GameObject:
   - component: {fileID: 1075121204}
   m_Layer: 6
   m_Name: Ground (14)
-  m_TagString: Sorrounding
+  m_TagString: Roof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10331,7 +10331,7 @@ GameObject:
   - component: {fileID: 1174428130}
   m_Layer: 6
   m_Name: wall (11)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10447,7 +10447,7 @@ GameObject:
   - component: {fileID: 1198851902}
   m_Layer: 6
   m_Name: wall (24)
-  m_TagString: Sorrounding
+  m_TagString: XPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10640,7 +10640,7 @@ GameObject:
   - component: {fileID: 1231698656}
   m_Layer: 6
   m_Name: wall (31)
-  m_TagString: Sorrounding
+  m_TagString: XPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11012,7 +11012,7 @@ GameObject:
   - component: {fileID: 1321606423}
   m_Layer: 6
   m_Name: wall (29)
-  m_TagString: Sorrounding
+  m_TagString: ZPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11280,7 +11280,7 @@ GameObject:
   - component: {fileID: 1342369592}
   m_Layer: 6
   m_Name: wall (23)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11684,7 +11684,7 @@ GameObject:
   - component: {fileID: 1367853796}
   m_Layer: 6
   m_Name: Ground (13)
-  m_TagString: Sorrounding
+  m_TagString: Roof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11930,7 +11930,7 @@ GameObject:
   - component: {fileID: 1419232758}
   m_Layer: 6
   m_Name: wall (17)
-  m_TagString: Sorrounding
+  m_TagString: XPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12040,7 +12040,7 @@ GameObject:
   - component: {fileID: 1420405208}
   m_Layer: 6
   m_Name: wall
-  m_TagString: Sorrounding
+  m_TagString: XPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12150,7 +12150,7 @@ GameObject:
   - component: {fileID: 1435435025}
   m_Layer: 6
   m_Name: Ground (10)
-  m_TagString: Ground
+  m_TagString: Roof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12326,7 +12326,7 @@ GameObject:
   - component: {fileID: 1446292573}
   m_Layer: 6
   m_Name: wall (8)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13094,7 +13094,7 @@ GameObject:
   - component: {fileID: 1578237059}
   m_Layer: 6
   m_Name: wall (3)
-  m_TagString: Sorrounding
+  m_TagString: ZPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14049,7 +14049,7 @@ GameObject:
   - component: {fileID: 1685178043}
   m_Layer: 6
   m_Name: wall (10)
-  m_TagString: Sorrounding
+  m_TagString: ZPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14220,7 +14220,7 @@ GameObject:
   - component: {fileID: 1699334886}
   m_Layer: 6
   m_Name: wall (9)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14330,7 +14330,7 @@ GameObject:
   - component: {fileID: 1716816503}
   m_Layer: 6
   m_Name: wall (22)
-  m_TagString: Sorrounding
+  m_TagString: XPE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15160,7 +15160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 682119114}
-  throwAmount: {x: 0, y: 2, z: 0}
+  throwAmount: {x: 0, y: 3, z: 0}
 --- !u!1 &1745632786
 GameObject:
   m_ObjectHideFlags: 0
@@ -16883,7 +16883,7 @@ GameObject:
   - component: {fileID: 1950161164}
   m_Layer: 6
   m_Name: wall (30)
-  m_TagString: Sorrounding
+  m_TagString: ZNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17358,7 +17358,7 @@ GameObject:
   - component: {fileID: 2033821345}
   m_Layer: 6
   m_Name: Ground (1)
-  m_TagString: Sorrounding
+  m_TagString: Roof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17468,7 +17468,7 @@ GameObject:
   - component: {fileID: 2065945380}
   m_Layer: 6
   m_Name: wall (32)
-  m_TagString: Sorrounding
+  m_TagString: XNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17764,7 +17764,7 @@ GameObject:
   - component: {fileID: 2106078126}
   m_Layer: 6
   m_Name: wall (25)
-  m_TagString: Sorrounding
+  m_TagString: XNE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

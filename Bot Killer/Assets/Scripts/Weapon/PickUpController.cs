@@ -97,14 +97,14 @@ public class PickUpController : MonoBehaviour
         //Set parent
         transform.SetParent(weaponHolder);
 
-        transform.localScale = new Vector3(10,10,10);
+        transform.localScale = new Vector3(5,5,5);
 
         //Make Rigidbody not kinematic and BoxCollider normal
         rb.isKinematic = false;
         coll.isTrigger = false;
 
         //Gun carries momentum of player
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+        rb.velocity = player.GetComponent<Rigidbody>().velocity/2;
 
         //AddForce
         rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);

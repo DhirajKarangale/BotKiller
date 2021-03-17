@@ -66,4 +66,32 @@ public class Petrolling_Look : MonoBehaviour
     Quaternion rot = Quaternion.LookRotation(lookVector);
     transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);
    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            transform.position = transform.position + new Vector3(2f, 3f, 2f);
+        }
+        if (collision.gameObject.tag == "Roof")
+        {
+            transform.position = transform.position + new Vector3(2f, -3f, 2f);
+        }
+        if (collision.gameObject.tag == "ZPE")
+        {
+            transform.position = transform.position + new Vector3(0f, 0f, 2f);
+        }
+        if(collision.gameObject.tag == "ZNE")
+        {
+            transform.position = transform.position + new Vector3(0f, 0f, -2f);
+        }
+        if(collision.gameObject.tag == "XEP")
+        {
+            transform.position = transform.position + new Vector3(2f, 0f, 0f);
+        }
+        if(collision.gameObject.tag == "XNE")
+        {
+            transform.position = transform.position + new Vector3(-2f, 0f, 0f);
+        }
+    }
 }
