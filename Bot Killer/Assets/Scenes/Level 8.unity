@@ -3837,7 +3837,7 @@ MonoBehaviour:
   movePoint: {fileID: 725678993}
   minX: -23
   maxX: 26
-  minY: 4
+  minY: 12
   maxY: 22
   minZ: 60
   maxZ: 100
@@ -3986,10 +3986,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &507435271
 GameObject:
@@ -4901,7 +4901,7 @@ MonoBehaviour:
   movePoint: {fileID: 1783422963}
   minX: -40
   maxX: 120
-  minY: -7
+  minY: 2
   maxY: 10
   minZ: 394
   maxZ: 494
@@ -5050,10 +5050,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &705214591
 GameObject:
@@ -5543,6 +5543,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: maxX
@@ -5566,7 +5576,7 @@ PrefabInstance:
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: minY
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
@@ -6271,7 +6281,7 @@ MonoBehaviour:
   movePoint: {fileID: 599777986}
   minX: -40
   maxX: 120
-  minY: -7
+  minY: 2
   maxY: 10
   minZ: 394
   maxZ: 494
@@ -6421,10 +6431,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &874687423
 GameObject:
@@ -7772,7 +7782,7 @@ MonoBehaviour:
   movePoint: {fileID: 1500240364}
   minX: 0
   maxX: 12
-  minY: 0
+  minY: 8
   maxY: 12
   minZ: 130
   maxZ: 180
@@ -7922,10 +7932,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &972271042
 GameObject:
@@ -8091,7 +8101,7 @@ MonoBehaviour:
   movePoint: {fileID: 206889162}
   minX: -135
   maxX: -67
-  minY: -10
+  minY: 0
   maxY: 1
   minZ: 271
   maxZ: 285
@@ -8242,10 +8252,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1001 &985698083
 PrefabInstance:
@@ -8380,7 +8390,7 @@ MonoBehaviour:
   movePoint: {fileID: 2103611492}
   minX: -25
   maxX: 30
-  minY: 0
+  minY: 8
   maxY: 17
   minZ: 270
   maxZ: 290
@@ -8531,10 +8541,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1001 &992059842
 PrefabInstance:
@@ -8669,7 +8679,7 @@ MonoBehaviour:
   movePoint: {fileID: 2006320789}
   minX: 0
   maxX: 12
-  minY: 0
+  minY: 8
   maxY: 12
   minZ: 180
   maxZ: 250
@@ -8820,10 +8830,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &997684615
 GameObject:
@@ -10712,7 +10722,7 @@ MonoBehaviour:
   movePoint: {fileID: 1437640438}
   minX: -40
   maxX: 120
-  minY: -7
+  minY: 2
   maxY: 10
   minZ: 394
   maxZ: 494
@@ -10848,10 +10858,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &1137952823
 BoxCollider:
@@ -16170,7 +16180,7 @@ MonoBehaviour:
   movePoint: {fileID: 7445511}
   minX: -23
   maxX: 26
-  minY: 4
+  minY: 12
   maxY: 22
   minZ: -1
   maxZ: 80
@@ -16308,10 +16318,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &1722252014
 BoxCollider:
@@ -17867,7 +17877,7 @@ MonoBehaviour:
   movePoint: {fileID: 972271043}
   minX: 0
   maxX: 12
-  minY: 0
+  minY: 8
   maxY: 12
   minZ: 140
   maxZ: 250
@@ -18016,10 +18026,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &1903978890
 GameObject:
@@ -19668,6 +19678,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251858399}
     m_Modifications:
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: minY
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: movePoint

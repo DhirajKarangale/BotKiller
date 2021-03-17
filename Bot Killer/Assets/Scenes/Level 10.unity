@@ -1091,7 +1091,7 @@ MonoBehaviour:
   movePoint: {fileID: 126323872}
   minX: -23
   maxX: 26
-  minY: 4
+  minY: 12
   maxY: 22
   minZ: -1
   maxZ: 58
@@ -1240,10 +1240,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &126323871
 GameObject:
@@ -2651,7 +2651,7 @@ GameObject:
   - component: {fileID: 326327950}
   m_Layer: 6
   m_Name: wall (39)
-  m_TagString: XNE
+  m_TagString: Sorrounding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2869,13 +2869,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
@@ -2900,7 +2915,7 @@ PrefabInstance:
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: minY
-      value: -2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
@@ -4413,7 +4428,7 @@ GameObject:
   - component: {fileID: 424735840}
   m_Layer: 6
   m_Name: Ground (12)
-  m_TagString: Roof
+  m_TagString: Sorrounding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4916,7 +4931,7 @@ GameObject:
   - component: {fileID: 511453581}
   m_Layer: 6
   m_Name: Ground (11)
-  m_TagString: Ground
+  m_TagString: Sorrounding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7156,7 +7171,7 @@ MonoBehaviour:
   movePoint: {fileID: 175151440}
   minX: -195
   maxX: -80
-  minY: -2
+  minY: 6
   maxY: 12
   minZ: 35
   maxZ: 50
@@ -7306,10 +7321,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &763721908
 GameObject:
@@ -12177,7 +12192,7 @@ MonoBehaviour:
   movePoint: {fileID: 1171100122}
   minX: -364
   maxX: -297
-  minY: -12
+  minY: -2
   maxY: 10
   minZ: -70
   maxZ: -12
@@ -12327,10 +12342,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1001 &1194228451
 PrefabInstance:
@@ -13261,7 +13276,7 @@ GameObject:
   - component: {fileID: 1343245868}
   m_Layer: 6
   m_Name: wall (41)
-  m_TagString: ZPE
+  m_TagString: Sorrounding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14794,7 +14809,7 @@ GameObject:
   - component: {fileID: 1509737388}
   m_Layer: 6
   m_Name: wall (40)
-  m_TagString: XPE
+  m_TagString: Sorrounding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16010,6 +16025,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251858399}
     m_Modifications:
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: maxX
@@ -16033,7 +16063,7 @@ PrefabInstance:
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: minY
-      value: -14
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
@@ -16203,6 +16233,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251858399}
     m_Modifications:
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345996892802449649, guid: 61fd82b1464e16841a09088c86376786,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8345996892802449650, guid: 61fd82b1464e16841a09088c86376786,
         type: 3}
       propertyPath: maxX
@@ -17372,7 +17417,7 @@ MonoBehaviour:
   movePoint: {fileID: 7445511}
   minX: -23
   maxX: 26
-  minY: 4
+  minY: 12
   maxY: 22
   minZ: -1
   maxZ: 58
@@ -17510,10 +17555,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &1722252014
 BoxCollider:
@@ -20216,7 +20261,7 @@ MonoBehaviour:
   movePoint: {fileID: 2008763657}
   minX: -364
   maxX: -297
-  minY: -12
+  minY: -2
   maxY: 10
   minZ: 136
   maxZ: 166
@@ -20365,10 +20410,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &1963069074
 GameObject:
@@ -21235,7 +21280,7 @@ MonoBehaviour:
   movePoint: {fileID: 205308766}
   minX: -260
   maxX: -240
-  minY: -12
+  minY: -2
   maxY: 10
   minZ: -65
   maxZ: 144
@@ -21386,10 +21431,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &2042266267
 GameObject:
@@ -22396,6 +22441,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251858399}
     m_Modifications:
+    - target: {fileID: 1895774418933355280, guid: 803c9dfec7065f34e80bb3a7a14c8226,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895774418933355280, guid: 803c9dfec7065f34e80bb3a7a14c8226,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1895774418933355282, guid: 803c9dfec7065f34e80bb3a7a14c8226,
         type: 3}
       propertyPath: levelManager

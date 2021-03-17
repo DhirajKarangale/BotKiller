@@ -1067,7 +1067,7 @@ MonoBehaviour:
   movePoint: {fileID: 126323872}
   minX: -23
   maxX: 26
-  minY: 4
+  minY: 12
   maxY: 22
   minZ: -1
   maxZ: 58
@@ -1216,10 +1216,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &113177847
 GameObject:
@@ -7262,7 +7262,7 @@ MonoBehaviour:
   movePoint: {fileID: 175151440}
   minX: -195
   maxX: -80
-  minY: -2
+  minY: 8
   maxY: 12
   minZ: 35
   maxZ: 50
@@ -7412,10 +7412,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &763721908
 GameObject:
@@ -9342,7 +9342,7 @@ MonoBehaviour:
   movePoint: {fileID: 409178670}
   minX: -195
   maxX: -80
-  minY: -2
+  minY: 8
   maxY: 12
   minZ: 35
   maxZ: 50
@@ -9493,10 +9493,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &916456485
 GameObject:
@@ -12408,7 +12408,7 @@ MonoBehaviour:
   movePoint: {fileID: 1171100122}
   minX: -364
   maxX: -297
-  minY: -12
+  minY: -2
   maxY: 10
   minZ: -70
   maxZ: -12
@@ -12558,10 +12558,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1001 &1194228451
 PrefabInstance:
@@ -16802,7 +16802,7 @@ MonoBehaviour:
   movePoint: {fileID: 7445511}
   minX: -23
   maxX: 26
-  minY: 4
+  minY: 12
   maxY: 22
   minZ: -1
   maxZ: 58
@@ -16940,10 +16940,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &1722252014
 BoxCollider:
@@ -19305,7 +19305,7 @@ MonoBehaviour:
   movePoint: {fileID: 2008763657}
   minX: -364
   maxX: -297
-  minY: -12
+  minY: -2
   maxY: 10
   minZ: 136
   maxZ: 166
@@ -19454,10 +19454,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &1963069074
 GameObject:
@@ -20381,7 +20381,7 @@ MonoBehaviour:
   movePoint: {fileID: 205308766}
   minX: -260
   maxX: -240
-  minY: -12
+  minY: -2
   maxY: 10
   minZ: -65
   maxZ: 144
@@ -20532,10 +20532,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1001 &2048759284
 PrefabInstance:
