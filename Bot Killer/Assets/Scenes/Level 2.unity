@@ -570,8 +570,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136559278}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 14.594763, y: 1.5165253, z: 53.7}
-  m_LocalScale: {x: 41.888874, y: 1, z: 184.04918}
+  m_LocalPosition: {x: 14.594763, y: 1.5165253, z: 56.8811}
+  m_LocalScale: {x: 41.888874, y: 1, z: 177.68108}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 1
@@ -981,6 +981,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Whisky_Bottle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3ae522e364a63d4da661cc7d4419c54,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sorrounding
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ae522e364a63d4da661cc7d4419c54, type: 3}
 --- !u!4 &211678550 stripped
@@ -1187,8 +1192,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258550536}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 3.2, y: -2.3, z: 218.5}
-  m_LocalScale: {x: 58.85387, y: 1, z: 150.80272}
+  m_LocalPosition: {x: 3.2, y: 1.412, z: 216.0952}
+  m_LocalScale: {x: 51.432396, y: 1, z: 145.99211}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 11
@@ -2000,8 +2005,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644379280}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -8.6, y: -2.1, z: 286}
-  m_LocalScale: {x: 60.24867, y: 1, z: 21.760307}
+  m_LocalPosition: {x: -8.6, y: 1.0555, z: 286}
+  m_LocalScale: {x: 43.0688, y: 1, z: 21.760307}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 13
@@ -2992,6 +2997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pots (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9eee2a98de10c884a9e417942b74dc7b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sorrounding
       objectReference: {fileID: 0}
     - target: {fileID: 3590086638062959488, guid: 9eee2a98de10c884a9e417942b74dc7b,
         type: 3}
@@ -4298,6 +4308,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pots (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9eee2a98de10c884a9e417942b74dc7b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sorrounding
+      objectReference: {fileID: 0}
     - target: {fileID: 3590086638062959488, guid: 9eee2a98de10c884a9e417942b74dc7b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5348,8 +5363,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419232753}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -18.7, y: -4.6, z: 226.16}
-  m_LocalScale: {x: 62.056614, y: 1, z: 167.34578}
+  m_LocalPosition: {x: -18.7, y: 2.2855, z: 216.1209}
+  m_LocalScale: {x: 48.28625, y: 1, z: 147.26428}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 12
@@ -5458,8 +5473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420405203}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -40.39, y: 1.62, z: 10.1}
-  m_LocalScale: {x: 41.888874, y: 1, z: 101.53878}
+  m_LocalPosition: {x: -40.39, y: 1.62, z: 14.5555}
+  m_LocalScale: {x: 41.888874, y: 1, z: 92.62367}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 0
@@ -5714,8 +5729,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446292568}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -30.1, y: 1.5, z: 142.8}
-  m_LocalScale: {x: 59.800564, y: 1, z: 25.32013}
+  m_LocalPosition: {x: -30.1, y: 3.4083, z: 142.8}
+  m_LocalScale: {x: 40.479607, y: 1, z: 25.32013}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 8
@@ -5938,8 +5953,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578237054}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -19.005238, y: 1.5165253, z: -30.9}
-  m_LocalScale: {x: 41.888878, y: 1, z: 85.82059}
+  m_LocalPosition: {x: -11.939, y: 1.5165253, z: -30.9}
+  m_LocalScale: {x: 41.888878, y: 1, z: 59.2859}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 3
@@ -6459,8 +6474,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699334881}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 10.6, y: 1.5, z: 142.8}
-  m_LocalScale: {x: 59.800564, y: 1, z: 18.044897}
+  m_LocalPosition: {x: 8.5299, y: 0.6528, z: 142.8}
+  m_LocalScale: {x: 44.366226, y: 1, z: 13.905398}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 9
@@ -6622,6 +6637,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pots (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9eee2a98de10c884a9e417942b74dc7b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sorrounding
       objectReference: {fileID: 0}
     - target: {fileID: 3590086638062959488, guid: 9eee2a98de10c884a9e417942b74dc7b,
         type: 3}
@@ -7115,8 +7135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740994309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.005238, y: -15.550474, z: 45.4}
-  m_LocalScale: {x: 59.399998, y: 1, z: 214.00568}
+  m_LocalPosition: {x: -15.005238, y: -15.5505, z: 59.7717}
+  m_LocalScale: {x: 59.399998, y: 1, z: 185.25752}
   m_Children: []
   m_Father: {fileID: 1819021128}
   m_RootOrder: 7
@@ -7478,6 +7498,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chopped_Wood_Pile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c92a1d0424b9e84418e0ddbd2503475f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sorrounding
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92a1d0424b9e84418e0ddbd2503475f, type: 3}
 --- !u!4 &1809109022 stripped
@@ -7801,6 +7826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WoodenStool (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79462aaa5ad6b844d9966ff2d346a911,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sorrounding
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79462aaa5ad6b844d9966ff2d346a911, type: 3}
