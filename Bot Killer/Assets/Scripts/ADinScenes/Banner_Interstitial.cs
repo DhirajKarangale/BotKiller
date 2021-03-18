@@ -6,8 +6,8 @@ public class Banner_Interstitial : MonoBehaviour
 {
     private const string appId = "ca-app-pub-5695466976308828~4454504695";
 
-    private const string bannerId = "ca-app-pub-3940256099942544/6300978111";
-    private const string interstatialId = "ca-app-pub-3940256099942544/1033173712";
+    private const string bannerId = "ca-app-pub-5695466976308828/4038737578";
+    private const string interstatialId = "ca-app-pub-5695466976308828/9323687998";
 
     public BannerView bannerView;
     private InterstitialAd interstitial;

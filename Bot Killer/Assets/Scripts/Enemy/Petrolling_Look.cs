@@ -71,11 +71,11 @@ public class Petrolling_Look : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
-            transform.position = transform.position + new Vector3(2f, 3f, 2f);
+            transform.position = transform.position + new Vector3(0.5f, 2f, 0.5f);
         }
         if (collision.gameObject.tag == "Roof")
         {
-            transform.position = transform.position + new Vector3(2f, -3f, 2f);
+            transform.position = transform.position + new Vector3(0.5f, -2f, 0.5f);
         }
         if (collision.gameObject.tag == "ZPE")
         {

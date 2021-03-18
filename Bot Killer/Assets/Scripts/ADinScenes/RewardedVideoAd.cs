@@ -7,7 +7,7 @@ public class RewardedVideoAd : MonoBehaviour
 {
     private const string appId = "ca-app-pub-5695466976308828~4454504695";
 
-    string rewardedId = "ca-app-pub-3940256099942544/5224354917";
+    string rewardedId = "ca-app-pub-5695466976308828/4071361319";
 
     [SerializeField] Text adStatus;
     [SerializeField] GameObject adTextObject;
@@ -54,7 +54,7 @@ public class RewardedVideoAd : MonoBehaviour
         }
         RequestRewardVideoAd();
     }
-
+  
     public void HandleRewardBasedVideoLoaded(object sender, EventArgs args)
     {
         MonoBehaviour.print("HandleRewardBasedVideoLoaded event received");
@@ -62,8 +62,11 @@ public class RewardedVideoAd : MonoBehaviour
 
     public void HandleRewardBasedVideoFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
+        MonoBehaviour.print(
+            "HandleRewardBasedVideoFailedToLoad event received with message: "
+                             + args.Message);
         adTextObject.SetActive(true);
-        adStatus.text = "Ad failed to show , try again !";
+        adStatus.text = "Ad failed to load , try again !";
     }
 
     public void HandleRewardBasedVideoOpened(object sender, EventArgs args)
@@ -78,19 +81,23 @@ public class RewardedVideoAd : MonoBehaviour
 
     public void HandleRewardBasedVideoClosed(object sender, EventArgs args)
     {
-      //  adTextObject.SetActive(true);
-       // adStatus.text = "Ad Closed , try again !";
+        MonoBehaviour.print("HandleRewardBasedVideoClosed event received");
     }
 
     public void HandleRewardBasedVideoRewarded(object sender, Reward args)
     {
+        string type = args.Type;
+        double amount = args.Amount;
+        MonoBehaviour.print(
+            "HandleRewardBasedVideoRewarded event received for "
+                        + amount.ToString() + " " + type);
+        RequestRewardVideoAd();
         adTextObject.SetActive(false);
         gameManager.PlayerReSpwan();
     }
 
     public void HandleRewardBasedVideoLeftApplication(object sender, EventArgs args)
     {
-        adTextObject.SetActive(true);
-        adStatus.text = "Ad Closed , try again !";
+        MonoBehaviour.print("HandleRewardBasedVideoLeftApplication event received");
     }
 }
